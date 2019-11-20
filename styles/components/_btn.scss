@@ -1,0 +1,13 @@
+.btn {
+  border-radius: 7%;
+  padding: 8px 14px;
+  color: white;
+  background-color: #e45028;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+
+  &:hover {
+    background-color: #931a1a;
+  }
+}

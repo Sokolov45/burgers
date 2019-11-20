@@ -1,0 +1,44 @@
+
+
+.greeting {
+  height: 650px;
+  width: 100%;
+  background: url(../img/bg_desc.jpg) no-repeat center center;
+  .container--greeting {
+    width: 960px;
+  }
+}
+
+
+.header {
+  @include flex;
+  padding-top: 10px;
+
+}
+
+.description {
+  @include flex;
+  font-family: 'ubuntu';
+
+  &__img {
+    margin-right: 20px;
+    padding-left: 20px;
+  }
+
+  &__title-wrap {
+    padding-top: 70px;
+  }
+
+  &__title-top {
+      font-family: 'gagalin';
+      font-size: 72px;
+      color: $title-color;
+      margin-bottom: 20px;
+    }
+
+  &__title-bottom {
+    font-family: 'Lifehack-Medium';
+    font-size: 65px;
+    // line-height: 1.42;
+  }
+}

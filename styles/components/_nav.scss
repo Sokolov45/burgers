@@ -1,0 +1,26 @@
+.nav {
+  @include flex;
+  font-size: 13px;
+  font-weight: 600;
+  flex-wrap: nowrap;
+  margin-right: 13px;
+  line-height:  30px;
+  line-height: 2.31;
+  // letter-spacing: normal;
+  font-family: 'ubuntu';
+
+	&__item {
+    list-style: disc;
+    list-style-position: inside;
+    margin-right: 14px;
+
+    &:first-child {
+      list-style: none;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+	}
+
+
+}

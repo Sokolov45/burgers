@@ -1,0 +1,14 @@
+@mixin rul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin color {
+  color: red;
+}
