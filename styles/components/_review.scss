@@ -22,7 +22,7 @@
     opacity: 0;
   }
 
-  &__title {
+  p {
     opacity: 0;
     margin-bottom: 10%;
     padding-left: 12%;
@@ -30,7 +30,7 @@
     font-family: 'gagalin';
   }
 
-  &__message {
+  article {
     opacity: 0;
     margin-bottom: 10%;
     padding-left: 12%;
@@ -68,11 +68,11 @@
 
 .review:hover {
 
- .review__title {
+ p {
     opacity: 100;
     transition-duration: .5s;
   }
-  .review__message {
+  article {
     opacity: 100;
     transition-duration: .5s;
   }

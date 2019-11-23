@@ -518,13 +518,13 @@ table {
     height: 100%;
     background-color: rgba(10, 10, 10, 0.5);
     opacity: 0; }
-  .review__title {
+  .review p {
     opacity: 0;
     margin-bottom: 10%;
     padding-left: 12%;
     z-index: 20;
     font-family: 'gagalin'; }
-  .review__message {
+  .review article {
     opacity: 0;
     margin-bottom: 10%;
     padding-left: 12%;
@@ -554,13 +554,13 @@ table {
   background-color: #474244;
   z-index: -1; }
 
-.review:hover .review__title {
+.review:hover p {
   opacity: 100;
   -webkit-transition-duration: .5s;
   -o-transition-duration: .5s;
   transition-duration: .5s; }
 
-.review:hover .review__message {
+.review:hover article {
   opacity: 100;
   -webkit-transition-duration: .5s;
   -o-transition-duration: .5s;
