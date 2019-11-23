@@ -9,6 +9,9 @@
   justify-content: center;
   align-items: center;
 }
-@mixin color {
-  color: red;
+
+@mixin title-style {
+  font-family: $title-font;
+	font-size: 72px;
+	color: $title-color;
 }

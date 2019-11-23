@@ -6,8 +6,8 @@
   margin-right: 13px;
   line-height:  30px;
   line-height: 2.31;
-  // letter-spacing: normal;
-  font-family: 'ubuntu';
+  font-family: 'Ubuntu';
+  font-weight: 500;
 
 	&__item {
     list-style: disc;
@@ -19,6 +19,11 @@
     }
     &:last-child {
       margin-right: 0;
+    }
+
+    .nav__link:hover {
+      border-bottom: 1px solid #fff;
+
     }
 	}
 

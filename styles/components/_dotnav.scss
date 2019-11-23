@@ -1,8 +1,10 @@
 .dotnav {
-  color: white;
+  color: rgb(215, 219, 215);
   position: fixed;
-  top: 84px;
-  right: 123px;
+  top: 15%;
+  right: 5%;
+  z-index: 20;
+
 
   &__item {
     list-style: disc;
@@ -18,15 +20,14 @@
 
 .dotnav__link::before {
   content: "";
-  // display: inline-block;
-  // vertical-align: middle;
   width: 20px;
   height: 20px;
+
   vertical-align: middle;
   background: center center / contain no-repeat;
   background-image: url('../img/Ellipse.png');
   position: absolute;
-  top: 50%;
+  top: 39%;
   left: 50%;
   transform: translate(-125%, -40%);
   opacity: 0;
