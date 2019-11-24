@@ -541,6 +541,22 @@ table {
     font-weight: 500;
     font-size: 13px; }
 
+.review__avatar {
+  z-index: -10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+  .review__avatar img {
+    width: 100%;
+    /* Ширина изображений */
+    height: 100%;
+    /* Высота изображении */
+    -o-object-fit: cover;
+    object-fit: cover;
+    /* Вписываем фотографию в область */ }
+
 .review__btn:before {
   border-radius: 6%;
   position: absolute;
@@ -726,38 +742,6 @@ table {
   width: 100%;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-
-.review--1 {
-  background: url(../img/avatars/1.jpg) no-repeat center center;
-  background-size: cover; }
-
-.review--2 {
-  background: url(../img/avatars/2.jpg) no-repeat center center;
-  background-size: cover; }
-
-.review--3 {
-  background: url(../img/avatars/3.jpg) no-repeat center center;
-  background-size: cover; }
-
-.review--4 {
-  background: url(../img/avatars/4.jpg) no-repeat center center;
-  background-size: cover; }
-
-.review--5 {
-  background: url(../img/avatars/5.jpg) no-repeat center center;
-  background-size: cover; }
-
-.review--6 {
-  background: url(../img/avatars/6.jpg) no-repeat center center;
-  background-size: cover; }
-
-.review--7 {
-  background: url(../img/avatars/7.jpg) no-repeat center center;
-  background-size: cover; }
-
-.review--8 {
-  background: url(../img/avatars/8.jpg) no-repeat center center;
-  background-size: cover; }
 
 .burgers-slaider {
   height: 100vh;

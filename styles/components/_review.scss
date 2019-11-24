@@ -52,6 +52,22 @@
 
 }
 
+.review__avatar {
+  z-index: -10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  img {
+     width: 100%; /* Ширина изображений */
+     height: 100%; /* Высота изображении */
+     object-fit: cover; /* Вписываем фотографию в область */
+  }
+}
+
+
+
 .review__btn:before {
   border-radius: 6%;
   position: absolute;
