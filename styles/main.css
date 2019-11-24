@@ -404,7 +404,7 @@ table {
 
 .container {
   margin: 0 auto;
-  width: 1000px; }
+  width: 1100px; }
 
 .nav {
   display: -webkit-box;
@@ -425,16 +425,17 @@ table {
   line-height: 2.31;
   font-family: 'Ubuntu';
   font-weight: 500; }
-  .nav__item {
-    list-style: disc;
-    list-style-position: inside;
-    margin-right: 14px; }
-    .nav__item:first-child {
-      list-style: none; }
-    .nav__item:last-child {
-      margin-right: 0; }
-    .nav__item .nav__link:hover {
-      border-bottom: 1px solid #fff; }
+
+.nav__item {
+  list-style: disc;
+  list-style-position: inside;
+  margin-right: 14px; }
+  .nav__item:first-child {
+    list-style: none; }
+  .nav__item:last-child {
+    margin-right: 0; }
+  .nav__item .nav__link:hover {
+    border-bottom: 1px solid #fff; }
 
 .logo {
   margin-right: 65px; }
@@ -684,22 +685,26 @@ table {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline; }
-  .list .list__item {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    margin-right: 5%;
-    text-align: center; }
-    .list .list__item .list__item-pic-wrap {
-      margin-bottom: 7%; }
-    .list .list__item .list__item-desc p {
-      font-family: 'lifehackmedium';
-      font-size: 24px;
-      margin-bottom: 7%; }
-    .list .list__item .list__item-desc article {
-      font-family: 'ubuntulight';
-      font-size: 14px;
-      color: rgba(47, 50, 52, 0.8); }
+
+.list__item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-right: 5%;
+  text-align: center; }
+
+.list__item-pic-wrap {
+  margin-bottom: 7%; }
+
+.list__item-desc p {
+  font-family: 'lifehackmedium';
+  font-size: 24px;
+  margin-bottom: 7%; }
+
+.list__item-desc article {
+  font-family: 'ubuntulight';
+  font-size: 14px;
+  color: rgba(47, 50, 52, 0.8); }
 
 .reviews {
   height: 100vh;
@@ -778,28 +783,34 @@ table {
 .team-description__accordeon {
   max-width: 70%;
   margin: 0 auto; }
-  .team-description__accordeon .team-description__item {
-    margin-bottom: 10%; }
-    .team-description__accordeon .team-description__item .team-description__item-name {
-      font-family: 'gagalin';
-      font-size: 14px;
-      margin-bottom: 5%; }
-    .team-description__accordeon .team-description__item .team-description__item-description {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      font-size: 14px; }
-      .team-description__accordeon .team-description__item .team-description__item-description .team-description__item-avatar-wrap {
-        max-width: 100%;
-        margin-right: 5%; }
-      .team-description__accordeon .team-description__item .team-description__item-description .team-description__item-scills .team-description__item-position {
-        font-family: 'Ubuntu';
-        font-weight: bold;
-        font-size: 1rem;
-        margin-bottom: 2%; }
-      .team-description__accordeon .team-description__item .team-description__item-description .team-description__item-scills .team-description__item-mes {
-        font-family: 'Ubuntu';
-        font-weight: 300; }
+
+.team-description__item {
+  margin-bottom: 10%; }
+
+.team-description__item-name {
+  font-family: 'gagalin';
+  font-size: 14px;
+  margin-bottom: 5%; }
+
+.team-description__item-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px; }
+
+.team-description__item-avatar-wrap {
+  max-width: 100%;
+  margin-right: 5%; }
+
+.team-description__item-scills .team-description__item-position {
+  font-family: 'Ubuntu';
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 2%; }
+
+.team-description__item-scills .team-description__item-mes {
+  font-family: 'Ubuntu';
+  font-weight: 300; }
 
 /*
 

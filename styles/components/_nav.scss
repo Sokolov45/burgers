@@ -8,24 +8,22 @@
   line-height: 2.31;
   font-family: 'Ubuntu';
   font-weight: 500;
+}
 
-	&__item {
-    list-style: disc;
-    list-style-position: inside;
-    margin-right: 14px;
+.nav__item {
+  list-style: disc;
+  list-style-position: inside;
+  margin-right: 14px;
 
-    &:first-child {
-      list-style: none;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
+  &:first-child {
+    list-style: none;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
 
-    .nav__link:hover {
-      border-bottom: 1px solid #fff;
-
-    }
-	}
-
+  .nav__link:hover {
+    border-bottom: 1px solid #fff;
+  }
 
 }
