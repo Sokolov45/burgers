@@ -22,11 +22,10 @@
 
 
 @font-face {
-    font-family: 'ubuntulight';
-    src: url('../fonts/ubuntu-light-webfont.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Light.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
-
 }
 
 @font-face {
@@ -38,9 +37,8 @@
 }
 
 @font-face {
-    font-family: 'ubuntubold';
-    src: url('../fonts/ubuntu-b-webfont.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
-
 }
