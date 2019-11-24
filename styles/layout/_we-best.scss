@@ -5,40 +5,33 @@
   font-family: 'ubunturegular';
   background: url(../img/bg_2.jpg) no-repeat center center;
   background-size: cover;
-
-  &__title {
-    @include title-style;
-    text-align: center;
-    margin-bottom: 10%;
-    padding-top: 10%;
-    color: #2f3234;
-  }
 }
 
 .list {
   @include flex;
   align-items: baseline;
 
-  &__item {
+  .list__item {
     flex: 1;
     margin-right: 5%;
     text-align: center;
-    
 
-    .list__nested-item-pic {
+
+    .list__item-pic-wrap {
       margin-bottom: 7%;
     }
 
-    .list__nested-item-title{
-      font-family: 'lifehackmedium';
-      font-size: 24px;
-      margin-bottom: 7%;
-    }
-    .list__nested-item-mes {
-      font-family: 'ubuntulight';
-      font-size: 14px;
-      color: rgba(47, 50, 52, 0.8);
+    .list__item-desc {
+      p {
+        font-family: 'lifehackmedium';
+        font-size: 24px;
+        margin-bottom: 7%;
+      }
+      article {
+        font-family: 'ubuntulight';
+        font-size: 14px;
+        color: rgba(47, 50, 52, 0.8);
+      }
     }
   }
-
 }

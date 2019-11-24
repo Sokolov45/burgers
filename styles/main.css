@@ -578,6 +578,29 @@ table {
   -o-transition: .5s;
   transition: .5s; }
 
+.title--we-best {
+  font-family: "gagalin";
+  font-size: 72px;
+  color: #f9b43b;
+  text-align: center;
+  margin-bottom: 10%;
+  padding-top: 10%;
+  color: #2f3234; }
+
+.title--greeting {
+  font-family: 'gagalin';
+  font-size: 72px;
+  color: #f9b43b;
+  margin-bottom: 20px; }
+
+.title--team {
+  font-family: "gagalin";
+  font-size: 72px;
+  color: #f9b43b;
+  text-align: center;
+  padding-top: 10%;
+  margin-bottom: 15%; }
+
 .greeting {
   height: 100vh;
   width: 100%;
@@ -636,11 +659,6 @@ table {
     padding-left: 20px; }
   .description__title-wrap {
     padding-top: 70px; }
-  .description__title-top {
-    font-family: 'gagalin';
-    font-size: 72px;
-    color: #f9b43b;
-    margin-bottom: 20px; }
   .description__title-bottom {
     font-family: 'lifehackmedium';
     font-size: 65px; }
@@ -652,14 +670,6 @@ table {
   font-family: 'ubunturegular';
   background: url(../img/bg_2.jpg) no-repeat center center;
   background-size: cover; }
-  .we-best__title {
-    font-family: "gagalin";
-    font-size: 72px;
-    color: #f9b43b;
-    text-align: center;
-    margin-bottom: 10%;
-    padding-top: 10%;
-    color: #2f3234; }
 
 .list {
   display: -webkit-box;
@@ -674,19 +684,19 @@ table {
   -webkit-box-align: baseline;
   -ms-flex-align: baseline;
   align-items: baseline; }
-  .list__item {
+  .list .list__item {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
     margin-right: 5%;
     text-align: center; }
-    .list__item .list__nested-item-pic {
+    .list .list__item .list__item-pic-wrap {
       margin-bottom: 7%; }
-    .list__item .list__nested-item-title {
+    .list .list__item .list__item-desc p {
       font-family: 'lifehackmedium';
       font-size: 24px;
       margin-bottom: 7%; }
-    .list__item .list__nested-item-mes {
+    .list .list__item .list__item-desc article {
       font-family: 'ubuntulight';
       font-size: 14px;
       color: rgba(47, 50, 52, 0.8); }
@@ -759,17 +769,11 @@ table {
   background-size: cover; }
 
 .team-description {
+  position: absolute;
+  right: 0;
   width: 50%;
   height: 100%;
-  background-color: rgba(14, 14, 14, 0.85);
-  margin-left: auto; }
-  .team-description__title {
-    font-family: "gagalin";
-    font-size: 72px;
-    color: #f9b43b;
-    text-align: center;
-    padding-top: 10%;
-    margin-bottom: 15%; }
+  background-color: rgba(14, 14, 14, 0.85); }
 
 .team-description__accordeon {
   max-width: 70%;

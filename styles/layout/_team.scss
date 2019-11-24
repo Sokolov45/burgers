@@ -6,17 +6,12 @@
   }
 
 .team-description {
+  position: absolute;
+  right: 0;
   width: 50%;
   height: 100%;
   background-color: rgba(14, 14, 14, 0.85);
-  margin-left: auto;
 
-  &__title {
-    @include title-style;
-    text-align: center;
-    padding-top: 10%;
-    margin-bottom: 15%;
-  }
 }
 
 .team-description__accordeon {
