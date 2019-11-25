@@ -5,13 +5,10 @@
   right: 5%;
   z-index: 20;
 
-
   &__item {
     list-style: disc;
     margin-bottom: 3px;
-
   }
-
 }
 
 .dotnav__link {
@@ -34,5 +31,9 @@
 }
 
 .dotnav__link:hover:before {
+  opacity: 100;
+}
+
+.dotnav__link--active:before {
   opacity: 100;
 }

@@ -1,10 +1,18 @@
 .we-best {
   height: 100vh;
+  min-height: 650px;
   width: 100%;
   color: black;
   font-family: 'ubunturegular';
   background: url(../img/bg_2.jpg) no-repeat center center;
   background-size: cover;
+}
+
+.container--we-best {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .list {
@@ -16,6 +24,10 @@
   flex: 1;
   margin-right: 5%;
   text-align: center;
+
+  &:nth-of-type(3) {
+    margin-right: 0;
+  }
 }
 
 

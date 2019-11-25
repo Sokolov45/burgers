@@ -1,5 +1,6 @@
 .team {
   height: 100vh;
+  min-height: 650px;
   width: 100%;
   background: url(../img/bg_team.jpg) no-repeat center center;
   background-size: cover;
@@ -41,7 +42,7 @@
 }
 
 .team-description__item-scills {
-  
+
   .team-description__item-position {
     font-family: 'Ubuntu';
     font-weight: bold;

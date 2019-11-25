@@ -404,7 +404,8 @@ table {
 
 .container {
   margin: 0 auto;
-  width: 1100px; }
+  width: 1100px;
+  height: 100%; }
 
 .nav {
   display: -webkit-box;
@@ -436,6 +437,9 @@ table {
     margin-right: 0; }
   .nav__item .nav__link:hover {
     border-bottom: 1px solid #fff; }
+
+.nav__link--active {
+  border-bottom: 1px solid #fff; }
 
 .logo {
   margin-right: 65px; }
@@ -482,8 +486,11 @@ table {
 .dotnav__link:hover:before {
   opacity: 100; }
 
+.dotnav__link--active:before {
+  opacity: 100; }
+
 .box-arrow-scroll {
-  position: fixed;
+  position: absolute;
   bottom: 5%;
   left: 50%;
   z-index: 30; }
@@ -503,7 +510,6 @@ table {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  border: 1px solid black;
   width: 25%;
   height: 50%;
   font-family: "gagalin";
@@ -519,24 +525,32 @@ table {
     height: 100%;
     background-color: rgba(10, 10, 10, 0.5);
     opacity: 0; }
-  .review p {
-    opacity: 0;
+  .review:hover:before {
+    opacity: 100;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s; }
+  .review:hover .review__content {
+    opacity: 100;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s; }
+
+.review__content {
+  z-index: 20;
+  opacity: 0; }
+  .review__content p {
     margin-bottom: 10%;
     padding-left: 12%;
-    z-index: 20;
     font-family: 'gagalin'; }
-  .review article {
-    opacity: 0;
+  .review__content article {
     margin-bottom: 10%;
     padding-left: 12%;
-    z-index: 20;
     font-family: 'ubuntulight'; }
-  .review__btn {
-    opacity: 0;
+  .review__content .review__btn {
     padding: 5% 5%;
     padding-left: 17%;
     position: relative;
-    z-index: 20;
     font-family: 'Ubuntu';
     font-weight: 500;
     font-size: 13px; }
@@ -571,37 +585,12 @@ table {
   background-color: #474244;
   z-index: -1; }
 
-.review:hover p {
-  opacity: 100;
-  -webkit-transition-duration: .5s;
-  -o-transition-duration: .5s;
-  transition-duration: .5s; }
-
-.review:hover article {
-  opacity: 100;
-  -webkit-transition-duration: .5s;
-  -o-transition-duration: .5s;
-  transition-duration: .5s; }
-
-.review:hover .review__btn {
-  opacity: 100;
-  -webkit-transition-duration: .5s;
-  -o-transition-duration: .5s;
-  transition-duration: .5s; }
-
-.review:hover:before {
-  opacity: 100;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s; }
-
 .title--we-best {
   font-family: "gagalin";
   font-size: 72px;
   color: #f9b43b;
   text-align: center;
   margin-bottom: 10%;
-  padding-top: 10%;
   color: #2f3234; }
 
 .title--greeting {
@@ -620,6 +609,7 @@ table {
 
 .greeting {
   height: 100vh;
+  min-height: 650px;
   width: 100%;
   background: url(../img/bg_desc.jpg) no-repeat center center;
   background-size: cover;
@@ -682,11 +672,27 @@ table {
 
 .we-best {
   height: 100vh;
+  min-height: 650px;
   width: 100%;
   color: black;
   font-family: 'ubunturegular';
   background: url(../img/bg_2.jpg) no-repeat center center;
   background-size: cover; }
+
+.container--we-best {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .list {
   display: -webkit-box;
@@ -708,6 +714,8 @@ table {
   flex: 1;
   margin-right: 5%;
   text-align: center; }
+  .list__item:nth-of-type(3) {
+    margin-right: 0; }
 
 .list__item-pic-wrap {
   margin-bottom: 7%; }
@@ -724,6 +732,7 @@ table {
 
 .reviews {
   height: 100vh;
+  min-height: 650px;
   width: 100%;
   background-color: #cfd8dc;
   background-size: cover; }
@@ -745,6 +754,7 @@ table {
 
 .burgers-slaider {
   height: 100vh;
+  min-height: 650px;
   width: 100%;
   background: -webkit-gradient(linear, left bottom, left top, from(#f9b43b), color-stop(#eb8c38), to(#f9b43b));
   background: -webkit-linear-gradient(bottom, #f9b43b, #eb8c38, #f9b43b);
@@ -753,6 +763,7 @@ table {
 
 .team {
   height: 100vh;
+  min-height: 650px;
   width: 100%;
   background: url(../img/bg_team.jpg) no-repeat center center;
   background-size: cover; }
