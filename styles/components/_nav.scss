@@ -1,0 +1,33 @@
+.nav {
+  @include flex;
+  font-size: 13px;
+  font-weight: 600;
+  flex-wrap: nowrap;
+  margin-right: 13px;
+  line-height:  30px;
+  line-height: 2.31;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+}
+
+.nav__item {
+  list-style: disc;
+  list-style-position: inside;
+  margin-right: 14px;
+
+  &:first-child {
+    list-style: none;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .nav__link:hover {
+    border-bottom: 1px solid #fff;
+  }
+
+}
+
+.nav__link--active {
+  border-bottom: 1px solid #fff;
+}

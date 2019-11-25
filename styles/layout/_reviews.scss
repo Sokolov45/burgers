@@ -1,0 +1,16 @@
+
+.reviews {
+  height: 100vh;
+  min-height: 650px;
+  width: 100%;
+  background-color: #cfd8dc;
+  background-size: cover;
+}
+
+.container--reviews {
+  @include flex;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+
+}

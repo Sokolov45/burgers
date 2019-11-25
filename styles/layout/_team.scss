@@ -1,0 +1,56 @@
+.team {
+  height: 100vh;
+  min-height: 650px;
+  width: 100%;
+  background: url(../img/bg_team.jpg) no-repeat center center;
+  background-size: cover;
+  }
+
+.team-description {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(14, 14, 14, 0.85);
+
+}
+
+.team-description__accordeon {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.team-description__item {
+  margin-bottom: 10%;
+}
+
+.team-description__item-name {
+  font-family: 'gagalin';
+  font-size: 14px;
+  margin-bottom: 5%;
+}
+
+.team-description__item-description {
+  display: flex;
+  font-size: 14px;
+}
+
+
+.team-description__item-avatar-wrap{
+  max-width: 100%;
+  margin-right: 5%;
+}
+
+.team-description__item-scills {
+
+  .team-description__item-position {
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 2%;
+  }
+  .team-description__item-mes {
+    font-family: 'Ubuntu';
+    font-weight: 300;
+  }
+}

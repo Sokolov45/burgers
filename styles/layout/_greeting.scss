@@ -1,0 +1,44 @@
+.greeting {
+  height: 100vh;
+  min-height: 650px;
+  width: 100%;
+  background: url(../img/bg_desc.jpg) no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.container--greeting {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  @include flex;
+  padding-top: 10px;
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include flex;
+
+  &__img {
+    margin-right: 20px;    MARGIN-RIGHT: 20PX;
+
+    padding-left: 20px;
+  }
+
+  &__title-wrap {
+    padding-top: 70px;
+  }
+
+  &__title-bottom {
+    font-family: 'lifehackmedium';
+    font-size: 65px;
+  }
+}

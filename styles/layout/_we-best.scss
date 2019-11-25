@@ -1,0 +1,49 @@
+.we-best {
+  height: 100vh;
+  min-height: 650px;
+  width: 100%;
+  color: black;
+  font-family: 'ubunturegular';
+  background: url(../img/bg_2.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.container--we-best {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  @include flex;
+  align-items: baseline;
+}
+
+.list__item {
+  flex: 1;
+  margin-right: 5%;
+  text-align: center;
+
+  &:nth-of-type(3) {
+    margin-right: 0;
+  }
+}
+
+
+.list__item-pic-wrap {
+  margin-bottom: 7%;
+}
+
+.list__item-desc {
+  p {
+    font-family: 'lifehackmedium';
+    font-size: 24px;
+    margin-bottom: 7%;
+  }
+  article {
+    font-family: 'ubuntulight';
+    font-size: 14px;
+    color: rgba(47, 50, 52, 0.8);
+  }
+}

@@ -1,0 +1,39 @@
+.dotnav {
+  color: rgb(215, 219, 215);
+  position: fixed;
+  top: 15%;
+  right: 5%;
+  z-index: 20;
+
+  &__item {
+    list-style: disc;
+    margin-bottom: 3px;
+  }
+}
+
+.dotnav__link {
+  position: relative;
+}
+
+.dotnav__link::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+
+  vertical-align: middle;
+  background: center center / contain no-repeat;
+  background-image: url('../img/Ellipse.png');
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-125%, -40%);
+  opacity: 0;
+}
+
+.dotnav__link:hover:before {
+  opacity: 100;
+}
+
+.dotnav__link--active:before {
+  opacity: 100;
+}
