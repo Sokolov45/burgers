@@ -1,0 +1,92 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.icon-name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.icon-arrow-scroll {
+  width: 1.9814453125em;
+}
+
+.icon-beef {
+  width: 1.1220703125em;
+}
+
+.icon-buns {
+  width: 1.5830078125em;
+}
+
+.icon-burger {
+  width: 1.025390625em;
+}
+
+.icon-cheese {
+  width: 1.1171875em;
+}
+
+.icon-cucumber {
+  width: 1.1123046875em;
+}
+
+.icon-drops {
+  width: 1.8662109375em;
+}
+
+.icon-hand {
+  width: 0.849609375em;
+}
+
+.icon-kkal {
+  width: 0.9970703125em;
+}
+
+.icon-logo {
+  width: 1.322265625em;
+}
+
+.icon-map-marker {
+  width: 0.796875em;
+}
+
+.icon-meat {
+  width: 1.080078125em;
+}
+
+.icon-natural {
+  width: 1.1650390625em;
+}
+
+.icon-play {
+  width: 0.6845703125em;
+}
+
+.icon-salad {
+  width: 0.9833984375em;
+}
+
+.icon-sauce {
+  width: 0.92578125em;
+}
+
+.icon-twitter {
+  width: 1.2001953125em;
+}
+
+.icon-vk {
+  width: 1.75em;
+}
+
+.icon-volume {
+  width: 0.8037109375em;
+}
