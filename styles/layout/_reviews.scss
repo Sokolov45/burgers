@@ -7,10 +7,10 @@
   background-size: cover;
 }
 
-.container--reviews {
+.reviews__list {
   @include flex;
   height: 100%;
-  width: 100%;
+  width: 100vw;
   flex-wrap: wrap;
 
 }
