@@ -13,7 +13,11 @@
     <section class="greeting">
       <div class='container container--greeting'>
         <header class="header">
-          <div class="logo logo--heeader"><img src="./img/logo.png" alt=""></div>
+          <div class="logo logo--heeader">
+            <svg class="icon">
+              <use xlink:href="sprite.svg#logo"></use>
+            </svg>
+          </div>
           <nav class="nav-wrap">
             <ul class="nav">
               <li class="nav__item"><a href='#' class='nav__link nav__link--active'>O НАС</a></li>
@@ -110,11 +114,27 @@
     <section class="team">
       <div class="team-description">
         <div class="title title--team">КОМАНДА</div>
-        <ul class="team-description__accordeon">
+        <ul class="team-description__list">
+          <svg
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           width="9px" height="7px">
+            <path fill-rule="evenodd"  fill="rgb(249, 180, 59)"
+             d="M4.506,6.272 L0.006,0.268 L9.007,0.268 L4.506,6.272 Z"/>
+          </svg>
+
+          <svg
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           width="9px" height="7px">
+          <path fill-rule="evenodd"  fill="rgb(249, 180, 59)"
+           d="M4.493,0.166 L8.994,6.169 L-0.007,6.169 L4.493,0.166 Z"/>
+          </svg>
           <li class="team-description__item">
             <div class="team-description__item-name">КОНСТАНТИН ПОМИДОРОВ</div>
             <div class="team-description__item-description">
-              <div class="team-description__item-avatar-wrap"><img src="img/avatars/aphex.png" alt=""></div>
+              <div class="team-description__item-avatar-wrap"><img src="img/avatars/aphex.png" alt="">
+              </div>
               <div class="team-description__item-scills">
                 <div class='team-description__item-position'>Оператор</div>
                 <div class="team-description__item-mes">
@@ -123,10 +143,14 @@
               </div>
             </div>
           </li>
-          <li class="team-description__item">
+
+
+          <li class="team-description__item team-description__item--active">
             <div class="team-description__item-name">КОНСТАНТИН ПОМИДОРОВ</div>
             <div class="team-description__item-description">
-              <div class="team-description__item-avatar-wrap"><img src="img/avatars/aphex.png" alt=""></div>
+              <div class="team-description__item-avatar-wrap">
+                <img src="img/avatars/aphex.png" alt="">
+              </div>
               <div class="team-description__item-scills">
                 <div class='team-description__item-position'>Оператор</div>
                 <div class="team-description__item-mes">
@@ -135,6 +159,8 @@
               </div>
             </div>
           </li>
+
+
           <li class="team-description__item">
             <div class="team-description__item-name">КОНСТАНТИН ПОМИДОРОВ</div>
             <div class="team-description__item-description">
@@ -162,131 +188,261 @@
         </ul>
       </div>
     </section>
+<!-- секция меню -->
+    <section class="menu">
+      <!-- <div class="container"> -->
+        <div class="title title--menu">Меню</div>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <div class="menu__item-title">
+              <p>Вегетерианское меню</p>
+            </div>
+            <article>
+              Моя бабушка курит трубку,
+              Чёрный-пречёрный табак,
+              Моя бабушка курит трубку
+              В суровый моряцкий затяг.
+              Моя бабушка курит трубку
+              И обожает огненный ром,
+              А когда я к бабуле
+              Заскочу на минутку,
+              Мы с ней его весело пьём.
+              У неё ничего не осталось,
+              У неё в кошельке три рубля,
+              Моя бабушка курит трубку,
+              Трубку курит бабушка моя.
+            </article>
+          </li>
+          <li class="menu__item">
+            <div class="menu__item-title"><p>Вегетерианское меню</p></div>
+            <!-- <article></article> -->
+          </li>
+          <li class="menu__item">
+            <div class="menu__item-title"><p>Вегетерианское меню</p></div>
+            <!-- <article>
+
+            </article> -->
+          </li>
+
+          </li>
+        </ul>
+      <!-- </div> -->
+    </section>
 <!-- секция отзывы -->
     <section class="reviews">
-      <div class="container container--reviews">
-        <div class="review">
-          <div class="review__avatar">
-            <img src="img/avatars/1.jpg" alt="">
+        <ul class="reviews__list">
+          <li class="review-item">
+            <div class="review__avatar">
+              <img src="img/avatars/1.jpg" alt="">
+            </div>
+            <div class="review__content">
+              <p>Мария Изабеллова</p>
+              <article>
+                A song without words, a night without sleep
+                Everything in due time - winter and spring,
+                Each star has its own piece of heaven
+                To each sea - a breath of rain.
+              </article>
+              <a href="" class="review__btn">ПОДРОБНЕЕ</a>
+            </div>
+          </li>
+          <li class="review-item">
+            <div class="review__avatar">
+              <img src="img/avatars/2.jpg" alt="">
+            </div>
+            <div class="review__content">
+              <p>Мария Изабеллова</p>
+              <article>
+                A song without words, a night without sleep
+                Everything in due time - winter and spring,
+                Each star has its own piece of heaven
+                To each sea - a breath of rain.
+              </article>
+              <a href="" class="review__btn">ПОДРОБНЕЕ</a>
+            </div>
+          </li>
+          <li class="review-item">
+            <div class="review__avatar">
+              <img src="img/avatars/3.jpg" alt="">
+            </div>
+            <div class="review__content">
+              <p>Мария Изабеллова</p>
+              <article>
+                A song without words, a night without sleep
+                Everything in due time - winter and spring,
+                Each star has its own piece of heaven
+                To each sea - a breath of rain.
+              </article>
+              <a href="" class="review__btn">ПОДРОБНЕЕ</a>
+            </div>
+          </li>
+          <li class="review-item">
+            <div class="review__avatar">
+              <img src="img/avatars/4.jpg" alt="">
+            </div>
+            <div class="review__content">
+              <p>Мария Изабеллова</p>
+              <article>
+                A song without words, a night without sleep
+                Everything in due time - winter and spring,
+                Each star has its own piece of heaven
+                To each sea - a breath of rain.
+              </article>
+              <a href="" class="review__btn">ПОДРОБНЕЕ</a>
+            </div>
+          </li>
+          <li class="review-item">
+            <div class="review__avatar">
+              <img src="img/avatars/5.jpg" alt="">
+            </div>
+            <div class="review__content">
+              <p>Мария Изабеллова</p>
+              <article>
+                A song without words, a night without sleep
+                Everything in due time - winter and spring,
+                Each star has its own piece of heaven
+                To each sea - a breath of rain.
+              </article>
+              <a href="" class="review__btn">ПОДРОБНЕЕ</a>
+            </div>
+          </li>
+          <li class="review-item">
+            <div class="review__avatar">
+              <img src="img/avatars/6.jpg" alt="">
+            </div>
+            <div class="review__content">
+              <p>Мария Изабеллова</p>
+              <article>
+                A song without words, a night without sleep
+                Everything in due time - winter and spring,
+                Each star has its own piece of heaven
+                To each sea - a breath of rain.
+              </article>
+              <a href="" class="review__btn">ПОДРОБНЕЕ</a>
+            </div>
+          </li>
+          <li class="review-item">
+            <div class="review__avatar">
+              <img src="img/avatars/7.jpg" alt="">
+            </div>
+            <div class="review__content">
+              <p>Мария Изабеллова</p>
+              <article>
+                A song without words, a night without sleep
+                Everything in due time - winter and spring,
+                Each star has its own piece of heaven
+                To each sea - a breath of rain.
+              </article>
+              <a href="" class="review__btn">ПОДРОБНЕЕ</a>
+            </div>
+          </li>
+          <li class="review-item">
+            <div class="review__avatar">
+              <img src="img/avatars/8.jpg" alt="">
+            </div>
+            <div class="review__content">
+              <p>Мария Изабеллова</p>
+              <article>
+                A song without words, a night without sleep
+                Everything in due time - winter and spring,
+                Each star has its own piece of heaven
+                To each sea - a breath of rain.
+              </article>
+              <a href="" class="review__btn">ПОДРОБНЕЕ</a>
+            </div>
+          </li>
+        </ul>
+    </section>
+<!-- секция контакты -->
+    <section class="contacts">
+      <div class="container">
+        <footer class="footer">
+          <div class="contacts-wrap">
+            <address class="adress">
+              Санкт-Петербург, ул.Бабушкина,д.12/1,15
+            </address>
+            <div class="phone">+7 (819) 777-23-23</div>
           </div>
-          <div class="review__content">
-            <p>Мария Изабеллова</p>
-            <article>
-              A song without words, a night without sleep
-              Everything in due time - winter and spring,
-              Each star has its own piece of heaven
-              To each sea - a breath of rain.
-            </article>
-            <a href="" class="review__btn">ПОДРОБНЕЕ</a>
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__item"><a href="#" class="social__link"></a></li>
+              <li class="social__item"><a href="#" class="social__link"></a></li>
+              <li class="social__item"><a href="#" class="social__link"></a></li>
+              <li class="social__item"><a href="#" class="social__link"></a></li>
+            </ul>
           </div>
-        </div>
-        <div class="review">
-          <div class="review__avatar">
-            <img src="img/avatars/2.jpg" alt="">
-          </div>
-          <div class="review__content">
-            <p>Мария Изабеллова</p>
-            <article>
-              A song without words, a night without sleep
-              Everything in due time - winter and spring,
-              Each star has its own piece of heaven
-              To each sea - a breath of rain.
-            </article>
-            <a href="" class="review__btn">ПОДРОБНЕЕ</a>
-          </div>
-        </div>
-        <div class="review">
-          <div class="review__avatar">
-            <img src="img/avatars/3.jpg" alt="">
-          </div>
-          <div class="review__content">
-            <p>Мария Изабеллова</p>
-            <article>
-              A song without words, a night without sleep
-              Everything in due time - winter and spring,
-              Each star has its own piece of heaven
-              To each sea - a breath of rain.
-            </article>
-            <a href="" class="review__btn">ПОДРОБНЕЕ</a>
-          </div>
-        </div>
-        <div class="review">
-          <div class="review__avatar">
-            <img src="img/avatars/4.jpg" alt="">
-          </div>
-          <div class="review__content">
-            <p>Мария Изабеллова</p>
-            <article>
-              A song without words, a night without sleep
-              Everything in due time - winter and spring,
-              Each star has its own piece of heaven
-              To each sea - a breath of rain.
-            </article>
-            <a href="" class="review__btn">ПОДРОБНЕЕ</a>
-          </div>
-        </div>
-        <div class="review">
-          <div class="review__avatar">
-            <img src="img/avatars/5.jpg" alt="">
-          </div>
-          <div class="review__content">
-            <p>Мария Изабеллова</p>
-            <article>
-              A song without words, a night without sleep
-              Everything in due time - winter and spring,
-              Each star has its own piece of heaven
-              To each sea - a breath of rain.
-            </article>
-            <a href="" class="review__btn">ПОДРОБНЕЕ</a>
-          </div>
-        </div>
-        <div class="review">
-          <div class="review__avatar">
-            <img src="img/avatars/6.jpg" alt="">
-          </div>
-          <div class="review__content">
-            <p>Мария Изабеллова</p>
-            <article>
-              A song without words, a night without sleep
-              Everything in due time - winter and spring,
-              Each star has its own piece of heaven
-              To each sea - a breath of rain.
-            </article>
-            <a href="" class="review__btn">ПОДРОБНЕЕ</a>
-          </div>
-        </div>
-        <div class="review">
-          <div class="review__avatar">
-            <img src="img/avatars/7.jpg" alt="">
-          </div>
-          <div class="review__content">
-            <p>Мария Изабеллова</p>
-            <article>
-              A song without words, a night without sleep
-              Everything in due time - winter and spring,
-              Each star has its own piece of heaven
-              To each sea - a breath of rain.
-            </article>
-            <a href="" class="review__btn">ПОДРОБНЕЕ</a>
-          </div>
-        </div>
-        <div class="review">
-          <div class="review__avatar">
-            <img src="img/avatars/8.jpg" alt="">
-          </div>
-          <div class="review__content">
-            <p>Мария Изабеллова</p>
-            <article>
-              A song without words, a night without sleep
-              Everything in due time - winter and spring,
-              Each star has its own piece of heaven
-              To each sea - a breath of rain.
-            </article>
-            <a href="" class="review__btn">ПОДРОБНЕЕ</a>
-          </div>
-        </div>
+        </footer>
       </div>
     </section>
+
+    </svg>
+
+<svg class="icon">
+  <use xlink:href="#cucumber"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="sprite.svg#drops"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="sprite.svg#fb"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="sprite.svg#hand"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="sprite.svg#inst"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="sprite.svg#kkal"></use>
+</svg>
+
+<svg class="icon">
+  <use xlink:href="sprite.svg#map-marker"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="sprite.svg#meat"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="sprite.svg#natural"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="sprite.svg#phone"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#play"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#salad"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#sauce"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#twitter"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#vk"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#volume"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#arrow-scroll"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#beef"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#buns"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#burger"></use>
+</svg>
+<svg class="icon">
+  <use xlink:href="#cheese"></use>
+</svg>
+
+<!-- точенчная навигация -->
     <ul class="dotnav">
       <li class="dotnav__item"><a href="" class="dotnav__link dotnav__link--active"></a></li>
       <li class="dotnav__item"><a href="" class="dotnav__link"></a></li>

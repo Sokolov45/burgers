@@ -1,0 +1,26 @@
+.contacts {
+  height: 100vh;
+  min-height: 650px;
+  width: 100%;
+  background: url(../img/map.jpg) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer {
+  background-color: rgb(9, 9, 9);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 8%;
+  display: flex;
+  justify-content: space-between;
+
+}
+.contacts-wrap {
+  display: flex;
+  flex-direction: column;
+
+}
