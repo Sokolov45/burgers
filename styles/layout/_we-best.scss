@@ -1,6 +1,6 @@
 .we-best {
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.62rem;
   width: 100%;
   color: black;
   font-family: 'ubunturegular';
@@ -18,6 +18,25 @@
 .list {
   @include flex;
   align-items: baseline;
+
+  @include phones {
+    display: flex;
+    flex-direction: column;
+
+    .list__item {
+      margin-bottom: 3rem;
+    }
+    .list__item-pic-wrap {
+      margin-right: 2rem;
+    }
+    .list__item-desc {
+      text-align: left;
+      p {
+        margin-top: 0;
+      }
+    }
+
+	  }
 }
 
 .list__item {
@@ -28,7 +47,13 @@
   &:nth-of-type(3) {
     margin-right: 0;
   }
+
+  @include phones {
+    display: flex;
+    justify-content: space-between;
+	  }
 }
+
 
 
 .list__item-pic-wrap {

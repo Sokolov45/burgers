@@ -1,10 +1,100 @@
-.burgers-slaider {
+.burgers {
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.62rem;
   width: 100%;
   background: linear-gradient(to top, #f9b43b, #eb8c38, #f9b43b);
+  position: relative;
+  display: flex;
+  
+  .burgers-container {
+    display: flex;
+    align-items: center;
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      }
+  }
   }
 
-.burgers {
+.burgers__pic-wrap {
+  max-width: 100%;
+}
 
+.burgers__desc {
+  article {
+    margin-bottom: 2rem;
+  }
+
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3rem;
+	  }
+}
+
+.burgers__price {
+  display: flex;
+  align-items: center;
+  .burger__desc-price {
+    margin-right: 1rem;;
+    
+  }
+
+  .burger__desc-price-how-many {
+    margin-right: 1rem;;
+  }
+}
+
+.burgers__icon-burger {
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  padding: 1rem 1.5rem 2rem;
+  background-color: #f08c33;
+  border-radius: 10%;
+  &:after {
+    content: 'состав';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 70%;
+    left: 20%;
+  }
+
+  @include tablets {
+    left: 10%;
+    top: 5%;
+    }
+}
+
+.burgers__icon-kkal {
+  position: absolute;
+  left: 15%;
+  bottom: 20%;
+  &:after {
+    content: '1200';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    left: 10%;
+ 
+  }
+  &:before {
+    content: 'ккал';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 100%;
+    left: 15%;
+    // transform: translate(-50%, 0);
+  }
+
+  @include tablets {
+    left: 85%;
+    bottom: 87%;
+    }
 }

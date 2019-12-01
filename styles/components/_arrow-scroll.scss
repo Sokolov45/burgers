@@ -1,6 +1,23 @@
-.box-arrow-scroll {
+.arrow-scroll {
   position: absolute;
-  bottom: 5%;
-  left: 50%;
-  z-index: 30;
+
+  &--greeting {
+    bottom: 5%;
+    left: 50%;
+    z-index: 30;
+  }
+  
+  &--burgers-slaider-left {
+    bottom: 50%;
+    left: 5%;
+    z-index: 30;
+    transform: rotate(90deg);
+  }
+  &--burgers-slaider-right {
+    bottom: 50%;
+    right: 5%;
+    z-index: 30;
+    transform: rotate(-90deg);
+  }
+
 }
