@@ -1,11 +1,13 @@
 .menu {
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.62rem;
   width: 100%;
   background: url(../img/bg_menu.jpg) no-repeat center center;
   background-size: cover;
   overflow: hidden;
   position: relative;
+  font-family: 'Ubuntu';
+  font-weight: 300;
   }
 
 .menu__list {
@@ -21,19 +23,21 @@
   display: flex;
   position: relative;
 
-  &:hover article {
-    width: 40vw;
-  }
-
   article {
     background-color: grey;
     text-align: center;
-    // padding: 5%;
+    padding: 0;
     font-size: 1.5rem;
     width: 0;
     overflow: hidden;
   }
+}
 
+.menu__item--active {
+  article {
+    width: 40vw;
+    padding: 5%;
+  }
 }
 
 .menu__item-title {
