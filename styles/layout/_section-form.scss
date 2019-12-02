@@ -1,0 +1,122 @@
+.section-form {
+    height: 100vh;
+    min-height: 40.62rem;
+    width: 100%;
+    position: relative;
+    background: url(../img/bg_forms.jpg) center center no-repeat;
+    background-size: cover;
+    font-family: 'Ubuntu';
+    font-weight: 300;
+}   
+
+.container--form {
+    @include flex;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+}
+
+.form {
+    width: 100%;
+}
+
+.form__left-block {
+    width: 50%;
+    overflow: hidden;
+    margin-right: 1rem;
+}
+
+.form__right-block {
+    width: 50%;
+    overflow: hidden;
+    .form__block {
+        margin-right: 0;
+    }
+}
+
+.title--form {
+    text-align: center;
+}
+
+.form__elem {
+    display: flex;
+}
+
+.form__row {
+    display: flex;
+}
+
+.form__block {
+    margin-right: 1rem;
+    flex: 1;
+    
+    
+    &:nth-last-child(1) {
+        margin-right: 0;
+    }
+}
+
+.form__input {
+    height: 2rem;    
+    border-radius: 5%;
+    width: 100%;
+    &--street {
+        margin-bottom: 1rem;
+    }
+    &--textarea {
+        margin-bottom: 1rem;
+        width: 100%;
+        height: 5.5rem;
+    }
+}
+
+.form__question {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    
+}
+
+.radio {
+    margin-right: 0.5rem;
+}
+
+.form__question-title {
+    margin-right: 1rem;
+}
+
+.form__question {
+    .form__question-change {
+        margin-right: 1rem;
+        display: flex;
+        align-items: center;
+        
+    }
+    .form__question-card {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.checkbox {
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    
+}
+
+.reset {
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    &:hover {
+        color: rgb(238, 141, 15);
+    }
+}
+
+.submit {
+    border: none;
+    outline: none;
+    // background: none;
+    color: white;
+}

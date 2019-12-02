@@ -1,0 +1,81 @@
+.contacts {
+  height: 100vh;
+  min-height: 650px;
+  width: 100%;
+  background: url(../img/map.jpg) no-repeat center center;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  font-family:  'Ubuntu';
+  font-weight: 500;
+}
+
+.footer {
+  background-color: rgb(9, 9, 9);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: auto;
+  display: flex;
+}
+
+.footer-conteiner {
+  display: flex;
+    @include phones {
+      flex-direction: column;
+      @include flex;
+      }
+}
+
+.contacts-wrap {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @include phones {
+    width: 90%;
+    margin-bottom: 0.5rem;
+    @include flex;
+  }
+}
+
+.adress {
+  @include phones {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.social {
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  @include phones {
+    padding-bottom: 0.5rem;
+  }
+}
+
+.social__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.social__item {
+  margin-right: 30%;
+}
+
+.phone {
+  color: #ff4800c9;
+}
+
+.icon--twitter,
+.icon--inst,
+.icon--fb,  
+.icon--vk {
+  fill: rgba(87, 84, 84, 0.774);
+  &:hover {
+    fill: white;
+    transition: 0.3s;
+  }
+}

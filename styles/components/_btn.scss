@@ -1,13 +1,21 @@
 .btn {
   border-radius: 7%;
-  padding: 8px 14px;
+  padding: 0.5rem 0.68rem;
   color: white;
   background-color: #e45028;
   font-family: 'Ubuntu', sans-serif;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 0.81rem;
 
   &:hover {
     background-color: #931a1a;
   }
+}
+
+.btn--greeting {
+  margin-right: 1rem;
+}
+
+.btn--burgers {
+  
 }
