@@ -1325,7 +1325,7 @@ table {
   bottom: 0;
   right: 0;
   left: 0;
-  height: 7%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1334,6 +1334,21 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 480px) {
+    .footer-conteiner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .contacts-wrap {
   width: 50%;
@@ -1346,6 +1361,23 @@ table {
   flex-direction: column;
   -ms-flex-pack: distribute;
   justify-content: space-around; }
+  @media screen and (max-width: 480px) {
+    .contacts-wrap {
+      width: 90%;
+      margin-bottom: 0.5rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
+
+@media screen and (max-width: 480px) {
+  .adress {
+    margin-bottom: 0.5rem; } }
 
 .social {
   display: -webkit-box;
@@ -1355,6 +1387,9 @@ table {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
+  @media screen and (max-width: 480px) {
+    .social {
+      padding-bottom: 0.5rem; } }
 
 .social__list {
   display: -webkit-box;
@@ -1372,6 +1407,20 @@ table {
 
 .phone {
   color: #ff4800c9; }
+
+.icon--twitter,
+.icon--inst,
+.icon--fb,
+.icon--vk {
+  fill: rgba(87, 84, 84, 0.774); }
+  .icon--twitter:hover,
+  .icon--inst:hover,
+  .icon--fb:hover,
+  .icon--vk:hover {
+    fill: white;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
 
 .player {
   height: 100vh;
