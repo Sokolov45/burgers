@@ -12,6 +12,12 @@
     font-family: 'gagalin';
     font-size: 4.5rem;
     margin-bottom: 1.25rem;
+    @include tablets {
+      font-size: 3.5rem;
+    }
+    @include laptop {
+      font-size: 3.5rem;
+    }
   }
 
   &--team {
@@ -37,6 +43,6 @@
   }
 
   &--form {
-    
+    margin-bottom: 3rem;
   }
 }

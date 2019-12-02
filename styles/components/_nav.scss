@@ -3,10 +3,11 @@
   font-size: 0.76rem;
   font-weight: 600;
   flex-wrap: nowrap;
-  margin-right: 0.8rem;
+  // margin-right: 0.8rem;
   font-family: 'Ubuntu';
   font-weight: 500;
 
+  
   @include tablets {
     display: none;
   }
@@ -15,7 +16,7 @@
 .nav__item {
   list-style: disc;
   list-style-position: inside;
-  margin-right: 0.87rem;
+  margin-right: 1rem;
 
   &:first-child {
     list-style: none;
@@ -26,6 +27,10 @@
 
   .nav__link:hover {
     border-bottom: 1px solid #fff;
+  }
+
+  @include laptop {
+    margin-right: 0.7rem;
   }
 
 }

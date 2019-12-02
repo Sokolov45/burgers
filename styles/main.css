@@ -30,7 +30,6 @@
   font-style: normal; }
 
 @font-face {
-  font-family: 'Ubuntu';
   src: url("../fonts/Ubuntu-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal; }
@@ -353,12 +352,15 @@ html, body {
   height: 100%;
   width: 100%;
   font-size: 16px; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     html, body {
       font-size: 15px; } }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     html, body {
       font-size: 14px; } }
+  @media screen and (max-width: 480px) {
+    html, body {
+      font-size: 13px; } }
 
 body {
   margin: 0;
@@ -428,7 +430,6 @@ table {
   font-weight: 600;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  margin-right: 0.8rem;
   font-family: 'Ubuntu';
   font-weight: 500; }
   @media screen and (max-width: 768px) {
@@ -438,19 +439,19 @@ table {
 .nav__item {
   list-style: disc;
   list-style-position: inside;
-  margin-right: 0.87rem; }
+  margin-right: 1rem; }
   .nav__item:first-child {
     list-style: none; }
   .nav__item:last-child {
     margin-right: 0; }
   .nav__item .nav__link:hover {
     border-bottom: 1px solid #fff; }
+  @media screen and (max-width: 992px) {
+    .nav__item {
+      margin-right: 0.7rem; } }
 
 .nav__link--active {
   border-bottom: 1px solid #fff; }
-
-.logo {
-  margin-right: 4rem; }
 
 .btn {
   border-radius: 7%;
@@ -458,13 +459,14 @@ table {
   color: white;
   background-color: #e45028;
   font-family: 'Ubuntu', sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.81rem; }
   .btn:hover {
     background-color: #931a1a; }
 
-.btn--greeting {
-  margin-right: 1rem; }
+@media screen and (max-width: 768px) {
+  .btn--greeting {
+    margin-right: 1rem; } }
 
 .dotnav {
   color: #d7dbd7;
@@ -613,7 +615,8 @@ table {
   .review__content article {
     margin-bottom: 10%;
     padding-left: 12%;
-    font-family: 'ubuntulight'; }
+    font-family: 'Ubuntu';
+    font-weight: 300; }
     @media screen and (max-width: 480px) {
       .review__content article {
         display: none; } }
@@ -693,6 +696,12 @@ table {
     font-family: 'gagalin';
     font-size: 4.5rem;
     margin-bottom: 1.25rem; }
+    @media screen and (max-width: 768px) {
+      .title--greeting {
+        font-size: 3.5rem; } }
+    @media screen and (max-width: 992px) {
+      .title--greeting {
+        font-size: 3.5rem; } }
   .title--team {
     text-align: center;
     padding-top: 10%;
@@ -709,6 +718,8 @@ table {
     @media screen and (max-width: 768px) {
       .title--burgers {
         text-align: center; } }
+  .title--form {
+    margin-bottom: 3rem; }
 
 .icon {
   width: 3.125rem;
@@ -823,13 +834,13 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 0.43rem;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  padding-top: 0.62rem; }
+  align-items: center; }
   @media screen and (max-width: 768px) {
     .header {
       display: -webkit-box;
@@ -856,14 +867,26 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .description__img {
-    margin-right: 1.25rem;
-    padding-left: 1.25rem; }
   .description__title-wrap {
-    padding-top: 4.37rem; }
+    padding-top: 4.37rem;
+    padding-right: 1rem; }
   .description__title-bottom {
     font-family: 'lifehackmedium';
     font-size: 4rem; }
+    @media screen and (max-width: 768px) {
+      .description__title-bottom {
+        font-size: 3rem;
+        width: 55vw;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content; } }
+    @media screen and (max-width: 992px) {
+      .description__title-bottom {
+        font-size: 3.5rem;
+        width: 55vw;
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content; } }
   @media screen and (max-width: 768px) {
     .description {
       -webkit-box-orient: vertical;
@@ -872,7 +895,23 @@ table {
       flex-direction: column;
       text-align: center; }
       .description .description__title-wrap {
-        padding-top: 1rem; } }
+        padding-top: 2rem; } }
+
+.description__img-wrap {
+  margin-right: 1.25rem;
+  padding-left: 1.25rem;
+  width: 50vw; }
+  @media screen and (max-width: 768px) {
+    .description__img-wrap {
+      width: 55vw; } }
+
+.description__img {
+  width: 100%;
+  /* Ширина изображений */
+  height: 100%;
+  /* Высота изображении */
+  -o-object-fit: cover;
+  object-fit: cover; }
 
 .buttons {
   display: -webkit-box;
@@ -959,12 +998,12 @@ table {
 
 .list__item-desc p {
   font-family: 'lifehackmedium';
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-bottom: 7%; }
 
 .list__item-desc article {
   font-family: 'ubuntulight';
-  font-size: 14px;
+  font-size: 0.87rem;
   color: rgba(47, 50, 52, 0.8); }
 
 .reviews {
@@ -972,7 +1011,9 @@ table {
   min-height: 40.62rem;
   width: 100%;
   background-color: #cfd8dc;
-  background-size: cover; }
+  background-size: cover;
+  font-family: 'Ubuntu';
+  font-weight: 300; }
 
 .reviews__list {
   display: -webkit-box;
@@ -1022,39 +1063,103 @@ table {
         justify-content: center; } }
 
 .burgers__pic-wrap {
-  max-width: 100%; }
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+  @media screen and (max-width: 768px) {
+    .burgers__pic-wrap {
+      height: 30%;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      width: 50vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; } }
+  @media screen and (max-width: 480px) {
+    .burgers__pic-wrap {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      width: 70vw;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
+      align-items: flex-end; } }
+  .burgers__pic-wrap img {
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
 
-.burgers__desc article {
-  margin-bottom: 2rem; }
-
-@media screen and (max-width: 768px) {
-  .burgers__desc {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 0 3rem; } }
+.burgers__desc {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline; }
+  .burgers__desc article {
+    margin-bottom: 2rem; }
+  @media screen and (max-width: 768px) {
+    .burgers__desc {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 0 3rem;
+      width: 80vw;
+      text-align: center; } }
 
 .burgers__price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline; }
   .burgers__price .burger__desc-price {
-    margin-right: 1rem; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    margin-right: 1rem;
+    color: #e35028;
+    font-family: 'gagalin';
+    font-size: 1.5rem; }
   .burgers__price .burger__desc-price-how-many {
-    margin-right: 1rem; }
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    font-size: 4rem;
+    margin-right: 0.5rem; }
 
 .burgers__icon-burger {
   position: absolute;
@@ -1064,12 +1169,14 @@ table {
   background-color: #f08c33;
   border-radius: 10%; }
   .burgers__icon-burger:after {
-    content: 'состав';
+    content: 'СОСТАВ';
     position: absolute;
     width: 70%;
     height: 70%;
     top: 70%;
-    left: 20%; }
+    left: 27%;
+    font-family: 'gagalin';
+    font-size: 0.87rem; }
   @media screen and (max-width: 768px) {
     .burgers__icon-burger {
       left: 10%;
@@ -1085,14 +1192,18 @@ table {
     width: 70%;
     height: 70%;
     top: 50%;
-    left: 10%; }
+    left: 20%;
+    font-family: 'gagalin';
+    font-size: 1.2rem; }
   .burgers__icon-kkal:before {
     content: 'ккал';
     position: absolute;
     width: 70%;
     height: 70%;
     top: 100%;
-    left: 15%; }
+    left: 22%;
+    font-family: 'gagalin';
+    font-size: 0.87rem; }
   @media screen and (max-width: 768px) {
     .burgers__icon-kkal {
       left: 85%;
@@ -1111,7 +1222,20 @@ table {
   right: 0;
   width: 50%;
   height: 100%;
-  background-color: rgba(14, 14, 14, 0.85); }
+  background-color: rgba(14, 14, 14, 0.85);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   @media screen and (max-width: 768px) {
     .team-description {
       width: 100%;
@@ -1199,7 +1323,7 @@ table {
       -ms-flex-align: center;
       align-items: center;
       text-align: center;
-      max-width: 60%; } }
+      max-width: 80%; } }
 
 .team-description__item--active .team-description__item-name {
   color: #f9b43b; }
@@ -1310,28 +1434,47 @@ table {
 
 .contacts {
   height: 100vh;
-  min-height: 650px;
+  min-height: 40.62rem;
   width: 100%;
   background: url(../img/map.jpg) no-repeat center center;
   background-size: cover;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  font-family: 'Ubuntu';
+  font-weight: 500; }
 
 .footer {
-  background-color: #090909;
+  background: url(../img/bg-footer.jpg) center center no-repeat;
+  background-size: cover;
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
-  height: 7%;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  padding: 1rem 0; }
 
 .footer-conteiner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 480px) {
+    .footer-conteiner {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .contacts-wrap {
   width: 50%;
@@ -1341,7 +1484,35 @@ table {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  @media screen and (max-width: 480px) {
+    .contacts-wrap {
+      width: 90%;
+      margin-bottom: 0.5rem;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
+
+.adress {
+  margin-bottom: 0.5rem;
+  font-family: 'Ubuntu';
+  font-weight: 300; }
+  @media screen and (max-width: 480px) {
+    .adress {
+      margin-bottom: 0.5rem; } }
+
+.phone {
+  color: #e45028;
+  font-family: 'Ubuntu'; }
 
 .social {
   display: -webkit-box;
@@ -1351,6 +1522,12 @@ table {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end; }
+  @media screen and (max-width: 480px) {
+    .social {
+      padding-bottom: 0.5rem;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .social__list {
   display: -webkit-box;
@@ -1362,12 +1539,34 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 480px) {
+    .social__list {
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      justify-content: center; } }
 
 .social__item {
   margin-right: 30%; }
+  .social__item:nth-last-child(1) {
+    margin-right: 0; }
 
 .phone {
-  color: #ff8000; }
+  color: #ff4800c9; }
+
+.icon--twitter,
+.icon--inst,
+.icon--fb,
+.icon--vk {
+  fill: rgba(87, 84, 84, 0.774); }
+  .icon--twitter:hover,
+  .icon--inst:hover,
+  .icon--fb:hover,
+  .icon--vk:hover {
+    fill: white;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
 
 .player {
   height: 100vh;
@@ -1377,7 +1576,7 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url(../img/bg-play.jpg) center center no-repeat;
+  background: url(../img/BG-play.jpg) center center no-repeat;
   background-size: cover; }
 
 .section-form {
@@ -1386,7 +1585,9 @@ table {
   width: 100%;
   position: relative;
   background: url(../img/bg_forms.jpg) center center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  font-family: 'Ubuntu';
+  font-weight: 300; }
 
 .container--form {
   display: -webkit-box;
@@ -1414,10 +1615,35 @@ table {
   width: 50%;
   overflow: hidden;
   margin-right: 1rem; }
+  @media screen and (max-width: 768px) {
+    .form__left-block {
+      margin-right: 0; } }
+  @media screen and (max-width: 480px) {
+    .form__left-block {
+      width: 90%; } }
 
 .form__right-block {
   width: 50%;
   overflow: hidden; }
+  .form__right-block .form__block {
+    margin-right: 0;
+    width: 100%; }
+  @media screen and (max-width: 480px) {
+    .form__right-block {
+      width: 90%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .title--form {
   text-align: center; }
@@ -1426,27 +1652,144 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .form__elem {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .form__row {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  margin-bottom: 2rem; }
 
 .form__block {
   margin-right: 1rem;
   -webkit-box-flex: 1;
   -ms-flex: 1;
-  flex: 1; }
+  flex: 1;
+  cursor: pointer; }
   .form__block:nth-last-child(1) {
     margin-right: 0; }
 
 .form__input {
   height: 2rem;
   border-radius: 5%;
-  width: 100%; }
+  width: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  cursor: pointer; }
+  .form__input--street {
+    margin-bottom: 2rem; }
   .form__input--textarea {
+    margin-bottom: 2rem;
     width: 100%;
     height: 5.5rem; }
+
+.form__question {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.radio {
+  display: none; }
+
+.radio:checked ~ .form__question-title:before {
+  background-image: url("../img/Ellipse-full.png"); }
+
+.form__question-title {
+  margin-right: 0.5rem;
+  cursor: pointer; }
+  .form__question-title:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 7px;
+    background: center center / contain no-repeat;
+    background-image: url("../img/Ellipse 5.png"); }
+
+.form__question {
+  margin-bottom: 2rem;
+  cursor: pointer; }
+  .form__question .form__question-change {
+    margin-right: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .form__question .form__question-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+
+.checkbox {
+  margin-right: 0.5rem;
+  margin-bottom: 2rem; }
+
+.reset {
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: 0.87rem; }
+  .reset:hover {
+    cursor: pointer;
+    color: #ee8d0f; }
+
+.submit {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  color: white;
+  margin-right: 1rem;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  font-size: 0.81rem; }
+
+.form__input:focus {
+  border-color: #f9b43b; }
+
+.form__no-call {
+  cursor: pointer; }
+
+.form__no-call-elem {
+  margin-bottom: 2rem; }
+  .form__no-call-elem:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.6rem;
+    background: center center / contain no-repeat;
+    background-image: url("../img/form-inp.png"); }
+
+.checkbox {
+  display: none; }
+
+.checkbox:checked ~ .form__no-call-elem:before {
+  background-image: url("../img/form-inp-full.png"); }
 
 /*
 

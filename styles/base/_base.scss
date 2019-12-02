@@ -8,11 +8,14 @@
   width: 100%;
   font-size: 16px;
 
-  @include tablets {
+  @include laptop {
     font-size: 15px;
   }
-  @include phones {
+  @include tablets {
     font-size: 14px;
+  }
+  @include phones {
+    font-size: 13px;
   }
 }
 

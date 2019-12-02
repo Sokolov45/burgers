@@ -16,8 +16,10 @@
 }
 
 .header {
-  @include flex;
-  padding-top: 0.62rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.43rem;
+  align-items: center;
 
   @include tablets {
     display: flex;
@@ -31,40 +33,55 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1rem 1rem;
+  // width: 80vw;
   @include flex;
-
-  &__img {
-    margin-right: 1.25rem;    
-    padding-left: 1.25rem;
-  }
 
   &__title-wrap {
     padding-top: 4.37rem;
+    padding-right: 1rem;
   }
-
   &__title-bottom {
     font-family: 'lifehackmedium';
     font-size: 4rem;
+    @include tablets {
+      font-size: 3rem;
+      width: 55vw;
+      width: fit-content;
+    }
+    @include laptop {
+      font-size: 3.5rem;
+      width: 55vw;
+      width: fit-content;
+    }
   }
 
   @include tablets {
     flex-direction: column;
     text-align: center;
     .description__title-wrap {
-      padding-top: 1rem;
+      padding-top: 2rem;
     }
   }
 }
 
+.description__img-wrap {
+  margin-right: 1.25rem;
+  padding-left: 1.25rem;
+  width: 50vw;
+  @include tablets {
+    width: 55vw;
+  }
+}
 .description__img {
-  // img {
-  //   max-width: 100%;
-  // }
+    width: 100%; /* Ширина изображений */
+    height: 100%; /* Высота изображении */
+    object-fit: cover;
+
 }
 
 
 .buttons {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 
 }

@@ -75,7 +75,8 @@
   article {
     margin-bottom: 10%;
     padding-left: 12%;
-    font-family: 'ubuntulight';
+    font-family: 'Ubuntu';
+    font-weight: 300;
 
     @include phones {
       display: none;
