@@ -1315,7 +1315,9 @@ table {
   background: url(../img/map.jpg) no-repeat center center;
   background-size: cover;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  font-family: 'Ubuntu';
+  font-weight: 500; }
 
 .footer {
   background-color: #090909;
@@ -1341,7 +1343,9 @@ table {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
 
 .social {
   display: -webkit-box;
@@ -1367,7 +1371,7 @@ table {
   margin-right: 30%; }
 
 .phone {
-  color: #ff8000; }
+  color: #ff4800c9; }
 
 .player {
   height: 100vh;
@@ -1377,7 +1381,7 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url(../img/bg-play.jpg) center center no-repeat;
+  background: url(../img/BG-play.jpg) center center no-repeat;
   background-size: cover; }
 
 .section-form {
@@ -1386,7 +1390,9 @@ table {
   width: 100%;
   position: relative;
   background: url(../img/bg_forms.jpg) center center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  font-family: 'Ubuntu';
+  font-weight: 300; }
 
 .container--form {
   display: -webkit-box;
@@ -1418,6 +1424,8 @@ table {
 .form__right-block {
   width: 50%;
   overflow: hidden; }
+  .form__right-block .form__block {
+    margin-right: 0; }
 
 .title--form {
   text-align: center; }
@@ -1444,9 +1452,61 @@ table {
   height: 2rem;
   border-radius: 5%;
   width: 100%; }
+  .form__input--street {
+    margin-bottom: 1rem; }
   .form__input--textarea {
+    margin-bottom: 1rem;
     width: 100%;
     height: 5.5rem; }
+
+.form__question {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.radio {
+  margin-right: 0.5rem; }
+
+.form__question-title {
+  margin-right: 1rem; }
+
+.form__question .form__question-change {
+  margin-right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.form__question .form__question-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.checkbox {
+  margin-right: 0.5rem;
+  margin-bottom: 1rem; }
+
+.reset {
+  border: none;
+  outline: none;
+  background: none;
+  color: white; }
+  .reset:hover {
+    color: #ee8d0f; }
+
+.submit {
+  border: none;
+  outline: none;
+  color: white; }
 
 /*
 
