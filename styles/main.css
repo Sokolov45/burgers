@@ -717,7 +717,12 @@ table {
     margin-bottom: 2rem; }
     @media screen and (max-width: 768px) {
       .title--burgers {
-        text-align: center; } }
+        text-align: center;
+        font-size: 3.5rem; } }
+    @media screen and (max-width: 480px) {
+      .title--burgers {
+        text-align: center;
+        font-size: 3rem; } }
   .title--form {
     margin-bottom: 3rem; }
 
@@ -1042,25 +1047,46 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  .burgers .burgers-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    @media screen and (max-width: 768px) {
-      .burgers .burgers-container {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; } }
+
+.burgers-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .burgers-container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
+
+.burgers__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .burgers__slider {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .burgers__pic-wrap {
   -webkit-box-flex: 1;
@@ -1163,7 +1189,7 @@ table {
 
 .burgers__icon-burger {
   position: absolute;
-  left: 15%;
+  left: 10%;
   top: 15%;
   padding: 1rem 1.5rem 2rem;
   background-color: #f08c33;
@@ -1179,12 +1205,12 @@ table {
     font-size: 0.87rem; }
   @media screen and (max-width: 768px) {
     .burgers__icon-burger {
-      left: 10%;
+      left: 5%;
       top: 5%; } }
 
 .burgers__icon-kkal {
   position: absolute;
-  left: 15%;
+  left: 10%;
   bottom: 20%; }
   .burgers__icon-kkal:after {
     content: '1200';
@@ -1208,6 +1234,9 @@ table {
     .burgers__icon-kkal {
       left: 85%;
       bottom: 87%; } }
+
+.arrow-scroll {
+  cursor: pointer; }
 
 .team {
   height: 100vh;

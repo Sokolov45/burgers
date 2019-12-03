@@ -114,20 +114,22 @@
     <!-- секция "бургеры" -->
     <section class="burgers">
       <div class="container burgers-container">
-        <div class="burgers__pic-wrap">
-          <img src="./img/burger-niger.png" alt="">
-        </div>
-        <div class="burgers__desc">
-          <div class="title title--burgers">dark beef burger</div>
-          <article>
-            Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
-            кусочками нежнейшего сыраэмменталь, двумя помидорами, луком, салатом, и соусом гриль.
-          </article>
-          <div class='burgers__price'>
-            <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
-            <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+       <div class='burgers__slider'>
+          <div class="burgers__pic-wrap">
+            <img src="./img/burger-niger.png" alt="">
           </div>
-        </div>
+          <div class="burgers__desc">
+            <div class="title title--burgers">dark beef burger</div>
+            <article>
+              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+              кусочками нежнейшего сыраэмменталь, двумя помидорами, луком, салатом, и соусом гриль.
+            </article>
+            <div class='burgers__price'>
+              <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
+              <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+            </div>
+          </div>
+       </div>
         <div class='arrow-scroll arrow-scroll--burgers-slaider-right'>
           <svg class="icon icon--arrow-scroll">
             <use xlink:href="sprite.svg#arrow-scroll"></use>
@@ -222,7 +224,7 @@
             <p>Для мясоедов</p>
           </div>
           <article>
-            Моя бабушко курит трубку,
+            Моя бабушка курит трубку,
             Чёрный-пречёрный табак,
             Моя бабушка курит трубку
             В суровый моряцкий затяг.
@@ -456,15 +458,11 @@
                 <input type="submit" value="Заказать" class="submit btn">
                 <input type="reset" value="Очистить" class="reset">
               </div>
-            </div>
+            </label>
           </form>
-
-
-
         </div>
       </div>
     </section>
-
     <!-- секция контакты -->
     <section class="contacts">
       <footer class="footer">
@@ -528,6 +526,7 @@
       <li class="dotnav__item"><a href="" class="dotnav__link"></a></li>
     </ul>
   </div>
+  <script src="./js/main.js"></script>
 </body>
 
 </html>
