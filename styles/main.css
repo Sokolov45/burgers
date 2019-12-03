@@ -434,12 +434,18 @@ table {
   font-weight: 500; }
   @media screen and (max-width: 768px) {
     .nav {
+      font-size: 0.7rem; } }
+  @media screen and (max-width: 768px) {
+    .nav {
       display: none; } }
 
 .nav__item {
   list-style: disc;
   list-style-position: inside;
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content; }
   .nav__item:first-child {
     list-style: none; }
   .nav__item:last-child {
@@ -448,7 +454,7 @@ table {
     border-bottom: 1px solid #fff; }
   @media screen and (max-width: 992px) {
     .nav__item {
-      margin-right: 0.7rem; } }
+      margin-right: 0.6rem; } }
 
 .nav__link--active {
   border-bottom: 1px solid #fff; }
@@ -466,7 +472,8 @@ table {
 
 @media screen and (max-width: 768px) {
   .btn--greeting {
-    margin-right: 1rem; } }
+    margin-right: 1rem;
+    padding: 0.45rem 0.5rem; } }
 
 .dotnav {
   color: #d7dbd7;
