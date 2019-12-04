@@ -115,8 +115,8 @@
     <section class="burgers">
       <div class="container burgers-container">
 <!-- ----------------------------------------------------------------------------         -->
-       <ul class='burgers__list'>
-          <li class='burgers__item burgers__item--active'>
+       <ul class='slides'>
+          <li class='slide visible'>
             <div class="burgers__pic-wrap">
               <img src="./img/burger-niger.png" alt="">
             </div>
@@ -132,7 +132,7 @@
               </div>
             </div>
           </li>
-          <li class='burgers__item'>
+          <li class='slide'>
             <div class="burgers__pic-wrap">
               <img src="./img/burgers/1.png" alt="">
             </div>
@@ -148,9 +148,9 @@
               </div>
             </div>
           </li>
-          <li class='burgers__item'>
+          <li class='slide'>
             <div class="burgers__pic-wrap">
-              <img src="./img/burger-niger.png" alt="">
+              <img src="./img/burgers/2.png"" alt="">
             </div>
             <div class="burgers__desc">
               <div class="title title--burgers">dark beef burger</div>
@@ -164,14 +164,48 @@
               </div>
             </div>
           </li>
+        </li>
+        <li class='slide'>
+          <div class="burgers__pic-wrap">
+            <img src="./img/burgers/3.png"" alt="">
+          </div>
+          <div class="burgers__desc">
+            <div class="title title--burgers">dark beef burger</div>
+            <article>
+              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+              кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом, и соусом гриль.
+            </article>
+            <div class='burgers__price'>
+              <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
+              <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+            </div>
+          </div>
+        </li>
+      </li>
+      <li class='slide'>
+        <div class="burgers__pic-wrap">
+          <img src="./img/burgers/4.png"" alt="">
+        </div>
+        <div class="burgers__desc">
+          <div class="title title--burgers">dark beef burger</div>
+          <article>
+            Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+            кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом, и соусом гриль.
+          </article>
+          <div class='burgers__price'>
+            <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
+            <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+          </div>
+        </div>
+      </li>
         </ul>
 <!-- -----------------------------------------------------------------------         -->
-        <div class='arrow-scroll arrow-scroll--burgers-slaider-right' onclick="showSlides()">
+        <div class='arrow-scroll arrow-scroll--burgers-slaider-right' onclick="nextSlide()">
           <svg class="icon icon--arrow-scroll">
             <use xlink:href="sprite.svg#arrow-scroll"></use>
           </svg>
         </div>
-        <div class='arrow-scroll arrow-scroll--burgers-slaider-left' onclick="showSlides()">
+        <div class='arrow-scroll arrow-scroll--burgers-slaider-left' onclick="previosSlide()">
           <svg class="icon icon--arrow-scroll">
             <use xlink:href="sprite.svg#arrow-scroll"></use>
           </svg>

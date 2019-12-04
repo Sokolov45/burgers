@@ -1199,31 +1199,6 @@ table {
       -ms-flex-pack: center;
       justify-content: center; } }
 
-.burgers__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  display: none; }
-  .burgers__item--active {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-  @media screen and (max-width: 768px) {
-    .burgers__item {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center; } }
-
 .burgers__pic-wrap {
   -webkit-box-flex: 1;
   -ms-flex: 1;
@@ -1370,6 +1345,33 @@ table {
     .burgers__icon-kkal {
       left: 85%;
       bottom: 87%; } }
+
+.slide {
+  display: none; }
+
+.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .visible--active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  @media screen and (max-width: 768px) {
+    .visible {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .team {
   height: 100vh;

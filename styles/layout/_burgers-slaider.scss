@@ -33,19 +33,19 @@
   }
 }
 
-.burgers__item {
-  display: flex;
-  align-items: center;
-  display: none;
-  &--active {
-    display: flex;
-  }
-  @include tablets {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
+// .burgers__item {
+//   display: flex;
+//   align-items: center;
+//   display: none;
+//   &--active {
+//     display: flex;
+//   }
+//   @include tablets {
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
 
 .burgers__pic-wrap {
   flex: 1;
@@ -172,3 +172,20 @@
     }
 }
 
+.slide {
+  display: none;
+}
+
+.visible {
+  display: flex;
+  align-items: center;
+  // display: none;
+  &--active {
+    display: flex;
+  }
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
