@@ -17,6 +17,12 @@
 	}
 }
 
+@mixin tablets-gorizontal {
+	@media screen and (max-height: 450px) {
+		@content;
+	}
+}
+
 @mixin phones {
 	@media screen and (max-width: $phones) {
 		@content;

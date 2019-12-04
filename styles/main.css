@@ -522,6 +522,13 @@ table {
     left: 50%;
     z-index: 30;
     fill: #fff; }
+    @media screen and (max-width: 768px) {
+      .arrow-scroll--greeting {
+        width: 1rem;
+        height: 1rem; } }
+    @media screen and (max-width: 480px) {
+      .arrow-scroll--greeting {
+        margin-bottom: 5%; } }
     .arrow-scroll--greeting:hover {
       fill: #f9b43b;
       -webkit-transition: 0.6s ease;
@@ -716,6 +723,10 @@ table {
     text-align: center;
     margin-bottom: 10%;
     color: #2f3234; }
+    @media screen and (max-height: 450px) {
+      .title--we-best {
+        font-size: 4rem;
+        margin-bottom: 1rem; } }
   .title--greeting {
     font-family: 'gagalin';
     font-size: 4.5rem;
@@ -727,6 +738,12 @@ table {
     @media screen and (max-width: 768px) {
       .title--greeting {
         font-size: 2.5rem; } }
+    @media screen and (max-height: 450px) {
+      .title--greeting {
+        width: -webkit-max-content;
+        width: -moz-max-content;
+        width: max-content;
+        font-size: 2rem; } }
   .title--team {
     text-align: center;
     padding-top: 10%;
@@ -886,9 +903,19 @@ table {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  height: 100%; }
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative; }
 
 .header {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -910,12 +937,6 @@ table {
 
 .description {
   overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   padding: 1rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -927,8 +948,17 @@ table {
   -ms-flex-align: center;
   align-items: center; }
   .description__title-wrap {
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
     padding-top: 4.37rem;
     padding-right: 1rem; }
+    @media screen and (max-width: 768px) {
+      .description__title-wrap {
+        padding-top: 2rem; } }
+    @media screen and (max-height: 450px) {
+      .description__title-wrap {
+        font-size: 1.5rem; } }
   .description__title-bottom {
     font-family: 'lifehackmedium';
     font-size: 4rem; }
@@ -946,6 +976,9 @@ table {
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content; } }
+    @media screen and (max-height: 450px) {
+      .description__title-bottom {
+        font-size: 1.5rem; } }
   @media screen and (max-width: 768px) {
     .description {
       -webkit-box-orient: vertical;
@@ -959,11 +992,13 @@ table {
 
 .description__img-wrap {
   margin-right: 1.25rem;
-  padding-left: 1.25rem;
-  width: 50vw; }
+  width: 45vw; }
   @media screen and (max-width: 768px) {
     .description__img-wrap {
       width: 50vw; } }
+  @media screen and (max-height: 450px) {
+    .description__img-wrap {
+      width: 30vw; } }
 
 .description__img {
   width: 100%;
@@ -983,7 +1018,6 @@ table {
 
 .we-best {
   height: 100vh;
-  min-height: 40.62rem;
   width: 100%;
   color: black;
   font-family: 'ubunturegular';
@@ -1010,6 +1044,11 @@ table {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-height: 450px) {
+    .container--we-best {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: end; } }
 
 .list {
   display: -webkit-box;

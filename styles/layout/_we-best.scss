@@ -1,6 +1,6 @@
 .we-best {
   height: 100vh;
-  min-height: 40.62rem;
+  // min-height: 40.62rem;
   width: 100%;
   color: black;
   font-family: 'ubunturegular';
@@ -19,6 +19,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include tablets-gorizontal {
+  justify-content: end;
+  }
 }
 
 .list {

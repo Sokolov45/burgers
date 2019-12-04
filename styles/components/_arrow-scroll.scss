@@ -6,6 +6,13 @@
     left: 50%;
     z-index: 30;
     fill: #fff;
+    @include tablets {
+      width: 1rem;
+      height: 1rem;
+    }
+    @include phones {
+      margin-bottom: 5%;;
+    }
 
     &:hover {
     fill: $title-color;

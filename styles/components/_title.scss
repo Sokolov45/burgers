@@ -6,6 +6,10 @@
   text-align: center;
   margin-bottom: 10%;
   color: #2f3234;
+  @include tablets-gorizontal {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
   }
 
   &--greeting {
@@ -18,6 +22,10 @@
     }
     @include tablets {
       font-size: 2.5rem;
+    }
+    @include tablets-gorizontal {
+      width: max-content;
+      font-size: 2rem;
     }
   }
 
