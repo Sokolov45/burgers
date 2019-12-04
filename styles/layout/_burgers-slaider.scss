@@ -5,6 +5,12 @@
   background: linear-gradient(to top, #f9b43b, #eb8c38, #f9b43b);
   position: relative;
   display: flex;
+  @include tablets {
+    min-height: 0;
+  }
+  @include phones {
+    min-height: 0;
+  }
 }
   
 .burgers-container {
@@ -20,6 +26,20 @@
 .burgers__slider {
   display: flex;
   align-items: center;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.burgers__item {
+  display: flex;
+  align-items: center;
+  display: none;
+  &--active {
+    display: flex;
+  }
   @include tablets {
     flex-direction: column;
     align-items: center;
@@ -152,7 +172,3 @@
     }
 }
 
-
-.arrow-scroll {
-  cursor: pointer;
-}

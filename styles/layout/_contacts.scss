@@ -8,6 +8,12 @@
   position: relative;
   font-family:  'Ubuntu';
   font-weight: 500;
+  @include tablets {
+    min-height: 0;
+  }
+  @include phones {
+    min-height: 0;
+  }
 }
 
 .footer {

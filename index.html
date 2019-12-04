@@ -114,28 +114,64 @@
     <!-- секция "бургеры" -->
     <section class="burgers">
       <div class="container burgers-container">
-       <div class='burgers__slider'>
-          <div class="burgers__pic-wrap">
-            <img src="./img/burger-niger.png" alt="">
-          </div>
-          <div class="burgers__desc">
-            <div class="title title--burgers">dark beef burger</div>
-            <article>
-              Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
-              кусочками нежнейшего сыраэмменталь, двумя помидорами, луком, салатом, и соусом гриль.
-            </article>
-            <div class='burgers__price'>
-              <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
-              <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+<!-- ----------------------------------------------------------------------------         -->
+       <ul class='burgers__list'>
+          <li class='burgers__item burgers__item--active'>
+            <div class="burgers__pic-wrap">
+              <img src="./img/burger-niger.png" alt="">
             </div>
-          </div>
-       </div>
-        <div class='arrow-scroll arrow-scroll--burgers-slaider-right'>
+            <div class="burgers__desc">
+              <div class="title title--burgers">dark beef burger</div>
+              <article>
+                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом, и соусом гриль.
+              </article>
+              <div class='burgers__price'>
+                <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
+                <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+              </div>
+            </div>
+          </li>
+          <li class='burgers__item'>
+            <div class="burgers__pic-wrap">
+              <img src="./img/burgers/1.png" alt="">
+            </div>
+            <div class="burgers__desc">
+              <div class="title title--burgers">dark beef burger</div>
+              <article>
+                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом, и соусом гриль.
+              </article>
+              <div class='burgers__price'>
+                <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
+                <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+              </div>
+            </div>
+          </li>
+          <li class='burgers__item'>
+            <div class="burgers__pic-wrap">
+              <img src="./img/burger-niger.png" alt="">
+            </div>
+            <div class="burgers__desc">
+              <div class="title title--burgers">dark beef burger</div>
+              <article>
+                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
+                кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом, и соусом гриль.
+              </article>
+              <div class='burgers__price'>
+                <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
+                <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+<!-- -----------------------------------------------------------------------         -->
+        <div class='arrow-scroll arrow-scroll--burgers-slaider-right' onclick="showSlides()">
           <svg class="icon icon--arrow-scroll">
             <use xlink:href="sprite.svg#arrow-scroll"></use>
           </svg>
         </div>
-        <div class='arrow-scroll arrow-scroll--burgers-slaider-left'>
+        <div class='arrow-scroll arrow-scroll--burgers-slaider-left' onclick="showSlides()">
           <svg class="icon icon--arrow-scroll">
             <use xlink:href="sprite.svg#arrow-scroll"></use>
           </svg>

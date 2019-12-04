@@ -6,4 +6,10 @@
     display: flex;
     background: url(../img/BG-play.jpg) center center no-repeat;
     background-size: cover;
+    @include tablets {
+        min-height: 0;
+      }
+    @include phones {
+    min-height: 0;
+    }
 }

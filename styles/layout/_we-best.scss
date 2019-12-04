@@ -6,6 +6,12 @@
   font-family: 'ubunturegular';
   background: url(../img/bg_2.jpg) no-repeat center center;
   background-size: cover;
+  @include tablets {
+    min-height: 0;
+  }
+  @include phones {
+  min-height: 0;
+  }
 }
 
 .container--we-best {
