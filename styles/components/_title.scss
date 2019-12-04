@@ -6,18 +6,39 @@
   text-align: center;
   margin-bottom: 10%;
   color: #2f3234;
+  @include tablets-gorizontal {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
   }
 
   &--greeting {
     font-family: 'gagalin';
     font-size: 4.5rem;
     margin-bottom: 1.25rem;
+    @include laptop {
+      font-size: 3.5rem;
+      margin-bottom: 0.7rem;
+    }
+    @include tablets {
+      font-size: 2.5rem;
+    }
+    @include tablets-gorizontal {
+      width: max-content;
+      font-size: 2rem;
+    }
   }
 
   &--team {
     text-align: center;
     padding-top: 10%;
     margin-bottom: 15%;
+    @include tablets {
+      margin-bottom: 10%;
+    }
+    @include phones {
+      margin-bottom: 5%;;
+    }
   }
 
   &--menu {
@@ -26,6 +47,12 @@
     position: absolute;
     padding-left: 10%;
     padding-right: 5%;
+    @include tablets {
+      font-size: 3rem;
+      }
+      @include phones {
+      font-size: 2rem;
+      }
   }
   
   &--burgers {
@@ -33,10 +60,24 @@
     margin-bottom: 2rem;
     @include tablets {
       text-align: center;
-      }
+      font-size: 3.5rem;
+    }
+    @include phones {
+      text-align: center;
+      font-size: 3rem;
+    }
+
   }
 
   &--form {
-    
+    margin-bottom: 3rem;
+    @include tablets {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    @include phones {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      }
   }
 }

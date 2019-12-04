@@ -9,7 +9,14 @@
     list-style: disc;
     margin-bottom: 0.18rem;
   }
+  @include tablets {
+    display: none;
+  }
+  @include phones {
+    display: none;
+  }
 }
+
 
 .dotnav__link {
   position: relative;

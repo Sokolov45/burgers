@@ -1,23 +1,39 @@
 .greeting {
   height: 100vh;
-  min-height: 40.62rem;
   width: 100%;
   background: url(../img/bg_desc.jpg) no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
   position: relative;
+  @include laptop {
+    min-height: 0;
+  }
+  @include tablets {
+    min-height: 0;
+  }
+  @include phones {
+    min-height: 0;
+  }
 }
 
 .container--greeting {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 100%;
+  align-items: center;
+  position: relative;
 }
 
 .header {
-  @include flex;
-  padding-top: 0.62rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.43rem;
+  align-items: center;
 
   @include tablets {
     display: flex;
@@ -26,45 +42,78 @@
 }
 
 .description {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  overflow: hidden;
+
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   padding: 1rem 1rem;
   @include flex;
 
-  &__img {
-    margin-right: 1.25rem;    
-    padding-left: 1.25rem;
-  }
-
   &__title-wrap {
+    width: min-content;
     padding-top: 4.37rem;
+    padding-right: 1rem;
+    @include tablets {
+      padding-top: 2rem;
+    }
+    @include tablets-gorizontal {
+      font-size: 1.5rem;
+      // padding-top: 12rem;
+    }
+    
+    
   }
-
   &__title-bottom {
     font-family: 'lifehackmedium';
     font-size: 4rem;
+    @include laptop {
+      font-size: 2.7rem;
+      width: 55vw;
+      width: fit-content;
+    }
+    @include tablets {
+      font-size: 2,5rem;
+      width: 55vw;
+      width: fit-content;
+    }
+    @include tablets-gorizontal {
+      font-size: 1.5rem;
+    }
   }
 
   @include tablets {
     flex-direction: column;
     text-align: center;
+    top: 45%;
     .description__title-wrap {
-      padding-top: 1rem;
+      padding-top: 2rem;
     }
   }
 }
 
+.description__img-wrap {
+  margin-right: 1.25rem;
+  width: 45vw;
+  @include tablets {
+    width: 50vw;
+    // height: 50vh;
+  }
+  @include tablets-gorizontal {
+    width: 30vw;
+  }
+}
 .description__img {
-  // img {
-  //   max-width: 100%;
-  // }
+    width: 100%; /* Ширина изображений */
+    height: 100%; /* Высота изображении */
+    object-fit: cover;
+
 }
 
 
 .buttons {
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 
 }
