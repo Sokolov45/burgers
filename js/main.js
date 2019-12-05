@@ -15,20 +15,23 @@ var currentSlide = 0;
         
         function nextSlide() {
           // showSlides(currentSlide += 1);
-          if (currentSlide > slides.length) {
-            currentSlide == 0;
-          }
-// alert(slides.length);
-          
+//           if (currentSlide > slides.length) {
+//             currentSlide == 0;
+//           }
+// // alert(slides.length);
+
+if (currentSlide > 4) {
+  slides[4].className = 'slide';
+  currentSlide = 0;
+  slides[currentSlide].className = 'slide visible';
+  return currentSlide = 0;
+  // slides[currentSlide].className = 'slide visible'
+  // currentSlide = 1;          
+}
           slides[currentSlide].className = 'slide';
           ++currentSlide;
           slides[currentSlide].className = 'slide visible';
-          if (currentSlide == 4) {
-            slides[currentSlide].className = 'slide';
-            currentSlide = 0;
-            slides[currentSlide].className = 'slide visible'
-                       
-          }
+          ++currentSlide;
 // alert(slides
           return currentSlide;
   
