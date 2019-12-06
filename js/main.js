@@ -1,8 +1,46 @@
 
+// var slides = document.getElementsByClassName("slide");
+// var currentSlide = 0;
+
+// function show(currentSlide) {
+  
+//   for (var i=0; i < slides.length; i++){
+//     slides[i].className = 'slide';
+//   }
+//   slides[currentSlide].className = 'slide visible';
+// }
+
+// function nextSlide() {
+//   if (currentSlide == 4) {
+//     currentSlide = 0;
+//     show(currentSlide);
+//     return currentSlide;
+//   } else{
+//     ++currentSlide;
+//     show(currentSlide);
+//   }
+// }
+
+// function prevSlide() {
+//   if (currentSlide == 0) {
+//     currentSlide = slides.length - 1;
+//     show(currentSlide);
+//     return currentSlide;
+//   }else{
+//     --currentSlide;
+//     show(currentSlide);
+//   } 
+// }
+
+// show(currentSlide);
+
+
+
 var slides = document.getElementsByClassName("slide");
 var currentSlide = 0;
 
 function show(currentSlide) {
+  
   for (var i=0; i < slides.length; i++){
     slides[i].className = 'slide';
   }
@@ -32,6 +70,24 @@ function prevSlide() {
 }
 
 show(currentSlide);
+
+
+var t = document.getElementById('test');
+t.addEventListener('click', function(e){
+  e.preventDefault();
+  nextSlide();
+});
+
+
+
+
+
+
+
+
+
+
+
 
 // аккордеон для меню-----------------------------------------------------------
 
