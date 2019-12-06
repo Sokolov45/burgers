@@ -28,27 +28,23 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    
   }
-
 }
 
 .team-description__list {
   max-width: 70%;
   margin: 0 auto;
-
   @include tablets {
     display: flex;
     flex-direction: column;
     // justify-content: center;
     // align-items: center;
-    
   }
 }
 
 .team-description__item {
   margin-bottom: 10%;
-  
+  cursor: pointer;
   @include tablets {
     margin-bottom: 5%;
     display: flex;
@@ -67,6 +63,9 @@
   font-size: 14px;
   margin-bottom: 5%;
   position: relative;
+  &:hover {
+    color: $title-color;
+  }
 
   &::before {
       display: block;
@@ -83,7 +82,7 @@
         left: -17%;
         }
     }
-      transition: 0.5s;
+      transition: 0.3s;
   }
 
 
@@ -93,6 +92,8 @@
   font-size: 14px;
   height: 0;
   overflow: hidden;
+  transition: 0.3s;
+  
 
   @include tablets {
     display: flex;
@@ -128,7 +129,8 @@
 
   }
   .team-description__item-description {
-    height: auto;
+    height: 7rem;
+    transition: 0.3s;
   }
 
 }
