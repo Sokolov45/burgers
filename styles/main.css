@@ -1376,6 +1376,8 @@ table {
   padding: 1rem 1.5rem 2rem;
   background-color: #f08c33;
   border-radius: 10%; }
+  .burgers__icon-burger:hover {
+    background-color: #e35028; }
   .burgers__icon-burger:after {
     content: 'СОСТАВ';
     position: absolute;
@@ -1389,6 +1391,14 @@ table {
     .burgers__icon-burger {
       left: 5%;
       top: 5%; } }
+
+.burgers__icon-burger:hover .composition {
+  opacity: 100;
+  display: block;
+  left: 100%;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
 
 .burgers__icon-kkal {
   position: absolute;
@@ -1416,6 +1426,60 @@ table {
     .burgers__icon-kkal {
       left: 85%;
       bottom: 87%; } }
+
+.composition {
+  width: 13rem;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 1231rem;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  top: 0;
+  opacity: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  background-color: #fff;
+  color: black;
+  border-radius: 5%; }
+  .composition__item {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: baseline;
+    -ms-flex-pack: baseline;
+    justify-content: baseline;
+    margin-bottom: 1rem;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    .composition__item .icon {
+      margin-right: 1rem; }
+
+.composition--visible {
+  opacity: 100;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  left: 100%; }
+
+.composition__name {
+  margin-right: 1rem; }
 
 .team {
   height: 100vh;

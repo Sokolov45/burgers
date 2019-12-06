@@ -120,3 +120,11 @@ for (var i = 0; i < listTeam.length; i++) {
     this.classList.toggle("team-description__item--active");
   });
 };
+
+// всплывашка состав бургера ----------------------------------------------------
+
+var iconBurg = document.getElementById('icon-burger');
+var compBurg = document.getElementById('composition');
+iconBurg.addEventListener("click", function(){
+    compBurg.classList.toggle("composition--visible");
+});

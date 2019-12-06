@@ -160,6 +160,9 @@
   top: 15%;
   padding: 1rem 1.5rem 2rem;
   background-color: #f08c33;
+  &:hover {
+    background-color: #e35028;
+  }
   border-radius: 10%;
   &:after {
     content: 'СОСТАВ';
@@ -177,7 +180,12 @@
     top: 5%;
     }
 }
-
+.burgers__icon-burger:hover .composition{
+  opacity: 100;
+  display: block;
+  left: 100%;
+  transition: 0.2s;
+}
 .burgers__icon-kkal {
   position: absolute;
   left: 10%;
@@ -211,3 +219,40 @@
     }
 }
 
+.composition {
+  width: 13rem;
+  position: absolute;
+  display: flex;
+  left: 1231rem;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  top: 0;
+  
+  opacity: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
+  background-color: #fff;
+  color: black;
+  border-radius: 5%;
+  &__item {
+    width: 100%;
+    @include flex;
+    justify-content: baseline;
+    margin-bottom: 1rem;
+    justify-content: space-around;
+    .icon {
+      margin-right: 1rem;
+    }
+  }
+}
+
+.composition--visible {
+  opacity: 100;
+  transition: 0.5s;
+  left: 100%;
+}
+
+.composition__name {
+  margin-right: 1rem;
+}
