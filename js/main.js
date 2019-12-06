@@ -28,7 +28,10 @@ function prevSlide() {
   }else{
     --currentSlide;
     show(currentSlide);
-  }
+  } 
 }
 
 show(currentSlide);
+
+
+var slides = document.getElementsByClassName("menu__item");
