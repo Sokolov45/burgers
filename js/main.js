@@ -89,7 +89,7 @@ var sectMenu = document.getElementById('hamburger-menu');
 var hamburgerOpen = document.getElementById('hamburger-open');
 
 hamburger.addEventListener("click", function(){
-    sectMenu.style.left = 0;
+    sectMenu.style.top = 0;
 });
 hamburgerOpen.addEventListener("click", function(){
     sectMenu.style.left = 1231 + 'rem';
