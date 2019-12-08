@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mr. Burger</title>
   <link rel="stylesheet" href="styles/main.css">
-  <!-- <script src="js/jquery.js"></script>
-  <script src="js/jquery.onepage-scroll.min.js"></script> -->
 </head>
 
 <body>
@@ -89,7 +87,7 @@
       </div>
     </section>
     <!-- секция - Мы лучшие -->
-    <!-- <section class="we-best">
+    <section class="we-best">
       <div class="container container--we-best">
         <div class="title title--we-best">МЫ ЛУЧШИЕ</div>
         <ul class="list ">
@@ -143,11 +141,12 @@
             </div>
           </li>
         </ul>
+      </div>
     </section>
-    <!-- секция "бургеры" ------------------------------->
+    <!-- секция "бургеры" ----------------------------- -->
     <section class="burgers">
-      <ul class="container burgers-container">
-       <ul class='slides'>
+      <div class="container burgers-container">
+        <ul class='slides'>
           <li class='slide'>
             <div class="burgers__pic-wrap">
               <img src="./img/burger-niger.png" alt="">
@@ -156,7 +155,7 @@
               <div class="title title--burgers">dark beef burger</div>
               <article>
                 Курочка, приготовленная на гриле, в сочетании с сыром Чеддер и сыром Пармезан, хрустящим луком,
-                 свежими овощами под несравненным соусом Цезарь. Много-много сыра!
+                свежими овощами под несравненным соусом Цезарь. Много-много сыра!
               </article>
               <div class='burgers__price'>
                 <div class="burger__desc-price"><div class="burger__desc-price-how-many">400</div>рублей</div>
@@ -197,30 +196,28 @@
               </div>
             </div>
           </li>
-        </li>
-        <li class='slide'>
-          <div class="burgers__pic-wrap">
-            <img src="./img/burgers/3.png" alt="">
-          </div>
-          <div class="burgers__desc">
-            <div class="title title--burgers">Лютый burger</div>
-            <article>
-              Два приготовленных на огне фирменных говяжьих бифштекса, два ломтика слегка расплавленного сыра,
-              хрустящий маринованный огурчик, горчица и кетчуп. .
-            </article>
-            <div class='burgers__price'>
-              <div class="burger__desc-price"><div class="burger__desc-price-how-many">700</div>рублей</div>
-              <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+          <li class='slide'>
+            <div class="burgers__pic-wrap">
+              <img src="./img/burgers/3.png" alt="">
             </div>
-          </div>
-        </li>
-      </li>
-      <li class='slide'>
-        <div class="burgers__pic-wrap">
-          <img src="./img/burgers/4.png" alt="">
-        </div>
-        <div class="burgers__desc">
-          <div class="title title--burgers">Беконайзер</div>
+            <div class="burgers__desc">
+              <div class="title title--burgers">Лютый burger</div>
+              <article>
+                Два приготовленных на огне фирменных говяжьих бифштекса, два ломтика слегка расплавленного сыра,
+                хрустящий маринованный огурчик, горчица и кетчуп. .
+              </article>
+              <div class='burgers__price'>
+                <div class="burger__desc-price"><div class="burger__desc-price-how-many">700</div>рублей</div>
+                <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+              </div>
+            </div>
+          </li>
+          <li class='slide'>
+            <div class="burgers__pic-wrap">
+              <img src="./img/burgers/4.png" alt="">
+            </div>
+            <div class="burgers__desc">
+              <div class="title title--burgers">Беконайзер</div>
           <article>
             Встречай самый внушительный бургер в коллекции Бургер Кинг. Бекон, двойная порция говядины на гриле.
           </article>
@@ -229,14 +226,13 @@
             <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
           </div>
         </div>
-      </li>
+          </li>
         </ul>
-        <!-- <span class='arrow-scroll arrow-scroll--burgers-slaider-right' onclick="nextSlide()"> -->
-          <a class='arrow-scroll arrow-scroll--burgers-slaider-right' id="test">
-          <svg class="icon icon--arrow-scroll">
-            <use xlink:href="sprite.svg#arrow-scroll"></use>
-          </svg>
-        </a>
+        <div class='arrow-scroll arrow-scroll--burgers-slaider-right' id="test">
+            <svg class="icon icon--arrow-scroll">
+              <use xlink:href="sprite.svg#arrow-scroll"></use>
+            </svg>
+          </div>
         <div class='arrow-scroll arrow-scroll--burgers-slaider-left' onclick="prevSlide()">
           <svg class="icon icon--arrow-scroll">
             <use xlink:href="sprite.svg#arrow-scroll"></use>
@@ -246,54 +242,51 @@
           <svg class="icon icon--burger">
             <use xlink:href="sprite.svg#burger"></use>
           </svg>
-
-
-          <ul class="composition" id="composition">
-            <li class="composition__item">
-              <svg class="icon icon--arrow-scroll">
-                <use xlink:href="sprite.svg#beef"></use>
-              </svg>
-              <span class="composition__name">Говядина</span>
-              <span class='composition__weight'>300 г</span>
-            </li>
-            <li class="composition__item">
-              <svg class="icon">
-                <use xlink:href="sprite.svg#buns"></use>
-              </svg>
-              <span class="composition__name">Булочки</span>
-              <span class='composition__weight'>100 г</span>
-            </li>
-            <li class="composition__item">
-              <svg class="icon icon--arrow-scroll">
-                <use xlink:href="sprite.svg#salad"></use>
-              </svg>
-              <span class="composition__name">Зелень</span>
-              <span class='composition__weight'>70 г</span>
-            </li>
-            <li class="composition__item">
-              <svg class="icon icon--arrow-scroll">
-                <use xlink:href="sprite.svg#sauce"></use>
-              </svg>
-              <span class="composition__name">Соус</span>
-              <span class='composition__weight'>150 г</span>
-            </li>
-            <li class="composition__item">
-              <svg class="icon icon--arrow-scroll">
-                <use xlink:href="sprite.svg#cucumber"></use>
-              </svg>
-              <span class="composition__name">Овощи</span>
-              <span class='composition__weight'>200 г</span>
-            </li>
-            <li class="composition__item">
-              <svg class="icon icon--arrow-scroll">
-                <use xlink:href="sprite.svg#cheese"></use>
-              </svg>
-              <span class="composition__name">Сыр</span>
-              <span class='composition__weight'>80 г</span>
-            </li>
-          </ul>
         </div>
-
+        <ul class="composition" id="composition">
+          <li class="composition__item">
+            <svg class="icon icon--arrow-scroll">
+              <use xlink:href="sprite.svg#beef"></use>
+            </svg>
+            <span class="composition__name">Говядина</span>
+            <span class='composition__weight'>300 г</span>
+          </li>
+          <li class="composition__item">
+            <svg class="icon">
+              <use xlink:href="sprite.svg#buns"></use>
+            </svg>
+            <span class="composition__name">Булочки</span>
+            <span class='composition__weight'>100 г</span>
+          </li>
+          <li class="composition__item">
+            <svg class="icon icon--arrow-scroll">
+              <use xlink:href="sprite.svg#salad"></use>
+            </svg>
+            <span class="composition__name">Зелень</span>
+            <span class='composition__weight'>70 г</span>
+          </li>
+          <li class="composition__item">
+            <svg class="icon icon--arrow-scroll">
+              <use xlink:href="sprite.svg#sauce"></use>
+            </svg>
+            <span class="composition__name">Соус</span>
+            <span class='composition__weight'>150 г</span>
+          </li>
+          <li class="composition__item">
+            <svg class="icon icon--arrow-scroll">
+              <use xlink:href="sprite.svg#cucumber"></use>
+            </svg>
+            <span class="composition__name">Овощи</span>
+            <span class='composition__weight'>200 г</span>
+          </li>
+          <li class="composition__item">
+            <svg class="icon icon--arrow-scroll">
+              <use xlink:href="sprite.svg#cheese"></use>
+            </svg>
+            <span class="composition__name">Сыр</span>
+            <span class='composition__weight'>80 г</span>
+          </li>
+        </ul>
         <div class='burgers__icon-kkal'>
           <svg class="icon icon--kkal">
             <use xlink:href="sprite.svg#kkal"></use>
@@ -301,7 +294,7 @@
         </div>
       </div>
     </section>
-    <!-- секкия команда --------------------------------->
+     <!-- секкия команда ------------------------------- -->
     <section class="team">
       <div class="team-description">
         <div class="title title--team">КОМАНДА</div>
