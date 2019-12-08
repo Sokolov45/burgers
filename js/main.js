@@ -3,7 +3,7 @@
 // var currentSlide = 0;
 
 // function show(currentSlide) {
-  
+
 //   for (var i=0; i < slides.length; i++){
 //     slides[i].className = 'slide';
 //   }
@@ -29,7 +29,7 @@
 //   }else{
 //     --currentSlide;
 //     show(currentSlide);
-//   } 
+//   }
 // }
 
 // show(currentSlide);
@@ -40,7 +40,7 @@ var slides = document.getElementsByClassName("slide");
 var currentSlide = 0;
 
 function show(currentSlide) {
-  
+
   for (var i=0; i < slides.length; i++){
     slides[i].className = 'slide';
   }
@@ -66,7 +66,7 @@ function prevSlide() {
   }else{
     --currentSlide;
     show(currentSlide);
-  } 
+  }
 }
 
 show(currentSlide);
@@ -95,7 +95,7 @@ var listMenu = document.getElementsByClassName("menu__item");
 for (var i = 0; i < listMenu.length; i++) {
   listMenu[i].addEventListener("click", accordeon);
 };
-  
+
 function accordeon() {
     for (var i=0; i < 3; i++){
       if(this.classList.contains('menu__item--active') ) {
@@ -127,4 +127,17 @@ var iconBurg = document.getElementById('icon-burger');
 var compBurg = document.getElementById('composition');
 iconBurg.addEventListener("click", function(){
     compBurg.classList.toggle("composition--visible");
+});
+
+// гамбургер------------------------------------------------------------
+
+var hamburger = document.getElementById('hamburger');
+var sectMenu = document.getElementById('hamburger-menu');
+var hamburgerOpen = document.getElementById('hamburger-open');
+
+hamburger.addEventListener("click", function(){
+    sectMenu.style.left = 0;
+});
+hamburgerOpen.addEventListener("click", function(){
+    sectMenu.style.left = 1231 + 'rem';
 });

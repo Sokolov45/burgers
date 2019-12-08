@@ -9,10 +9,26 @@
   @include tablets {
     font-size: 0.7rem;
   }
-  
   @include tablets {
     display: none;
 
+  }
+  &--hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    @include tablets {
+      font-size: 1.5rem;
+    .nav__item {
+      list-style-type: none;
+
+    }
+    }
+
+    // position: absolute;
+    // left: 50;
+    // top: 50;
   }
 }
 

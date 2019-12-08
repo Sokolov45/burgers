@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mr. Burger</title>
   <link rel="stylesheet" href="styles/main.css">
+  <!-- <script src="js/jquery.js"></script>
+  <script src="js/jquery.onepage-scroll.min.js"></script> -->
 </head>
 
 <body>
   <div class="wrapper">
     <!-- секция приветствие ----------------------------->
+    <section class="hamburger-menu" id="hamburger-menu">
+      <div class='container container--hamburger-menu'>
+        <header class="header--hamburger-menu">
+          <div class="logo logo--heeader">
+            <svg class="icon icon--logo">
+              <use xlink:href="sprite.svg#logo"></use>
+            </svg>
+          </div>
+          <a class="hamburger-menu-link" href="#" id='hamburger-open'>
+            <div class='hamburger-menu-badge--open'></div>
+          </a>
+        </header>
+        <nav class="nav-wrap">
+            <ul class="nav nav--hamburger-menu">
+              <li class="nav__item"><a href='#' class='nav__link nav__link--active'>O НАС</a></li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>БУРГЕРЫ</a></li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>КОМАНДА</a></li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>МЕНЮ</a></li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>ОТЗЫВЫ</a></li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>КАК МЫ РАБОТАЕМ</a>
+              </li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>КОНТАКТЫ</a></li>
+            </ul>
+          </nav>
+      </div>
+    </section>
     <section class="greeting">
       <div class='container container--greeting'>
         <header class="header">
@@ -26,7 +59,7 @@
               <li class="nav__item"><a href='#' class='nav__link'>БУРГЕРЫ</a></li>
               <li class="nav__item"><a href='#' class='nav__link'>КОМАНДА</a></li>
               <li class="nav__item"><a href='#' class='nav__link'>МЕНЮ</a></li>
-              <li class="nav__item"><a href='#' class='nav__link'>ОТЗЫВЫ</a></li>
+              <li class="nav__item"><a href='#' class='nav__link'>ОffТЗЫВЫ</a></li>
               <li class="nav__item"><a href='#' class='nav__link'>КАК МЫ РАБОТАЕМ</ф>
               </li>
               <li class="nav__item"><a href='#' class='nav__link'>КОНТАКТЫ</a></li>
@@ -34,7 +67,7 @@
           </nav>
           <div class='buttons'>
             <a class="btn btn--greeting" href="#">ЗАКАЗАТЬ</a>
-            <a class="hamburger-menu-link" href="#">
+            <a class="hamburger-menu-link" href="#" id='hamburger'>
               <div class='hamburger-menu-badge'></div>
             </a>
           </div>
@@ -56,7 +89,7 @@
       </div>
     </section>
     <!-- секция - Мы лучшие -->
-    <section class="we-best">
+    <!-- <section class="we-best">
       <div class="container container--we-best">
         <div class="title title--we-best">МЫ ЛУЧШИЕ</div>
         <ul class="list ">
@@ -140,7 +173,7 @@
               <article>
                 Сколько бы ни говорилось о вреде быстрого питания, душа все равно иногда просит какой-нибудь бургер,
                 да посочнее. А потому, если уж есть такое желание, то лучше сделать его самому, или попросить вторую половинку.
-                Бургеры – наиболее популярный вид перекуса. Простая и сытная еда ещё и очень удобна. 
+                Бургеры – наиболее популярный вид перекуса. Простая и сытная еда ещё и очень удобна.
               </article>
               <div class='burgers__price'>
                 <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
@@ -150,7 +183,7 @@
           </li>
           <li class='slide'>
             <div class="burgers__pic-wrap">
-              <img src="./img/burgers/2.png"" alt="">
+              <img src="./img/burgers/2.png" alt="">
             </div>
             <div class="burgers__desc">
               <div class="title title--burgers">Фиш Кинг burger</div>
@@ -167,12 +200,12 @@
         </li>
         <li class='slide'>
           <div class="burgers__pic-wrap">
-            <img src="./img/burgers/3.png"" alt="">
+            <img src="./img/burgers/3.png" alt="">
           </div>
           <div class="burgers__desc">
             <div class="title title--burgers">Лютый burger</div>
             <article>
-              Два приготовленных на огне фирменных говяжьих бифштекса, два ломтика слегка расплавленного сыра, 
+              Два приготовленных на огне фирменных говяжьих бифштекса, два ломтика слегка расплавленного сыра,
               хрустящий маринованный огурчик, горчица и кетчуп. .
             </article>
             <div class='burgers__price'>
@@ -184,7 +217,7 @@
       </li>
       <li class='slide'>
         <div class="burgers__pic-wrap">
-          <img src="./img/burgers/4.png"" alt="">
+          <img src="./img/burgers/4.png" alt="">
         </div>
         <div class="burgers__desc">
           <div class="title title--burgers">Беконайзер</div>
@@ -221,46 +254,46 @@
                 <use xlink:href="sprite.svg#beef"></use>
               </svg>
               <span class="composition__name">Говядина</span>
-              <span class='composition__weight'>300 г</span> 
+              <span class='composition__weight'>300 г</span>
             </li>
             <li class="composition__item">
               <svg class="icon">
                 <use xlink:href="sprite.svg#buns"></use>
               </svg>
               <span class="composition__name">Булочки</span>
-              <span class='composition__weight'>100 г</span> 
+              <span class='composition__weight'>100 г</span>
             </li>
             <li class="composition__item">
               <svg class="icon icon--arrow-scroll">
                 <use xlink:href="sprite.svg#salad"></use>
               </svg>
               <span class="composition__name">Зелень</span>
-              <span class='composition__weight'>70 г</span> 
+              <span class='composition__weight'>70 г</span>
             </li>
             <li class="composition__item">
               <svg class="icon icon--arrow-scroll">
                 <use xlink:href="sprite.svg#sauce"></use>
               </svg>
               <span class="composition__name">Соус</span>
-              <span class='composition__weight'>150 г</span> 
+              <span class='composition__weight'>150 г</span>
             </li>
             <li class="composition__item">
               <svg class="icon icon--arrow-scroll">
                 <use xlink:href="sprite.svg#cucumber"></use>
               </svg>
               <span class="composition__name">Овощи</span>
-              <span class='composition__weight'>200 г</span> 
+              <span class='composition__weight'>200 г</span>
             </li>
             <li class="composition__item">
               <svg class="icon icon--arrow-scroll">
                 <use xlink:href="sprite.svg#cheese"></use>
               </svg>
               <span class="composition__name">Сыр</span>
-              <span class='composition__weight'>80 г</span> 
+              <span class='composition__weight'>80 г</span>
             </li>
-          </ul> 
+          </ul>
         </div>
-       
+
         <div class='burgers__icon-kkal'>
           <svg class="icon icon--kkal">
             <use xlink:href="sprite.svg#kkal"></use>
@@ -388,7 +421,7 @@
               This is my snow covered home
               This is my December
               This is me alone
-              
+
               And I
               Just wish that
               I didn't feel
@@ -695,7 +728,7 @@
       <li class="dotnav__item"><a href="" class="dotnav__link"></a></li>
     </ul>
   </div>
-  <script src="./js/main.js"></script>
+  <script src="./js/main.js"></script> -->
 </body>
 
 </html>
