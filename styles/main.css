@@ -1763,8 +1763,10 @@ table {
       min-height: 0; } }
 
 .menu__list {
+  position: absolute;
   right: 0;
   top: 0;
+  bottom: 0;
   left: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1794,8 +1796,7 @@ table {
         font-size: 1rem; } }
 
 .menu__item--active article {
-  width: 10rem;
-  margin-right: 5rem; }
+  width: 40vw; }
 
 .menu__item-title {
   display: -webkit-box;
