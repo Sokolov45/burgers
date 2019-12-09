@@ -45,4 +45,3 @@ hamburgerOpen.addEventListener("click", function(){
     sectMenu.style.top = 100 + 'rem';
     html.style.overflowY = 'auto';
 });
-git 
