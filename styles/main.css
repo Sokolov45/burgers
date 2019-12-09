@@ -1796,7 +1796,7 @@ table {
 
 .menu__item--active article {
   width: 10rem;
-  padding: 5%; }
+  margin-right: 5rem; }
 
 .menu__item-title {
   display: -webkit-box;
