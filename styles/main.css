@@ -1795,7 +1795,7 @@ table {
         font-size: 1rem; } }
 
 .menu__item--active article {
-  width: 40vw;
+  width: 10rem;
   padding: 5%; }
 
 .menu__item-title {
