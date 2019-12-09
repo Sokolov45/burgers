@@ -43,6 +43,7 @@
 
 .description {
   overflow: hidden;
+  max-width: 100%;
 
   // position: absolute;
   // top: 50%;
@@ -62,8 +63,8 @@
       font-size: 1.5rem;
       // padding-top: 12rem;
     }
-    
-    
+
+
   }
   &__title-bottom {
     font-family: 'lifehackmedium';
