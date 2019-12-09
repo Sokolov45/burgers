@@ -63,7 +63,7 @@ t.addEventListener('click', function(e){
   // баг ios 
 var listMenu = document.getElementsByClassName("menu__item");
 for (var i = 0; i < listMenu.length; i++) {
-  listMenu[i].addEventListener("click", function(e){
+  listMenu[i].addEventListener("click", function(){
     for (var i=0; i < 3; i++){
       if(this.classList.contains('menu__item--active') ) {
         continue}else{
