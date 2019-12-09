@@ -92,5 +92,5 @@ hamburger.addEventListener("click", function(){
     sectMenu.style.top = 0;
 });
 hamburgerOpen.addEventListener("click", function(){
-    sectMenu.style.left = 1231 + 'rem';
+    sectMenu.style.top = 100 + 'rem';
 });
