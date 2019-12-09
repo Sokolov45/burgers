@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +10,39 @@
 
 <body>
   <div class="wrapper">
-    <!-- секция приветствие -->
+    <!-- секция приветствие ----------------------------->
+    <section class="hamburger-menu" id="hamburger-menu">
+      <div class='container container--hamburger-menu'>
+        <header class="header--hamburger-menu">
+          <div class="logo logo--heeader">
+            <svg class="icon icon--logo">
+              <use xlink:href="sprite.svg#logo"></use>
+            </svg>
+          </div>
+          <a class="hamburger-menu-link" href="#" id='hamburger-open'>
+            <div class='hamburger-menu-badge--open'></div>
+          </a>
+        </header>
+        <nav class="nav-wrap">
+            <ul class="nav nav--hamburger-menu">
+              <li class="nav__item"><a href='#' class='nav__link nav__link--active'>O НАС</a></li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>БУРГЕРЫ</a></li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>КОМАНДА</a></li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>МЕНЮ</a></li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>ОТЗЫВЫ</a></li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>КАК МЫ РАБОТАЕМ</a>
+              </li>
+              <li class="nav__item">•</li>
+              <li class="nav__item"><a href='#' class='nav__link'>КОНТАКТЫ</a></li>
+            </ul>
+          </nav>
+      </div>
+    </section>
     <section class="greeting">
       <div class='container container--greeting'>
         <header class="header">
@@ -26,7 +57,7 @@
               <li class="nav__item"><a href='#' class='nav__link'>БУРГЕРЫ</a></li>
               <li class="nav__item"><a href='#' class='nav__link'>КОМАНДА</a></li>
               <li class="nav__item"><a href='#' class='nav__link'>МЕНЮ</a></li>
-              <li class="nav__item"><a href='#' class='nav__link'>ОТЗЫВЫ</a></li>
+              <li class="nav__item"><a href='#' class='nav__link'>ОffТЗЫВЫ</a></li>
               <li class="nav__item"><a href='#' class='nav__link'>КАК МЫ РАБОТАЕМ</ф>
               </li>
               <li class="nav__item"><a href='#' class='nav__link'>КОНТАКТЫ</a></li>
@@ -34,7 +65,7 @@
           </nav>
           <div class='buttons'>
             <a class="btn btn--greeting" href="#">ЗАКАЗАТЬ</a>
-            <a class="hamburger-menu-link" href="#">
+            <a class="hamburger-menu-link" href="#" id='hamburger'>
               <div class='hamburger-menu-badge'></div>
             </a>
           </div>
@@ -110,37 +141,38 @@
             </div>
           </li>
         </ul>
+      </div>
     </section>
-    <!-- секция "бургеры" -->
+    <!-- секция "бургеры" ----------------------------- -->
     <section class="burgers">
       <div class="container burgers-container">
-<!-- ----------------------------------------------------------------------------         -->
-       <ul class='burgers__list'>
-          <li class='burgers__item burgers__item--active'>
+        <ul class='slides'>
+          <li class='slide'>
             <div class="burgers__pic-wrap">
               <img src="./img/burger-niger.png" alt="">
             </div>
             <div class="burgers__desc">
               <div class="title title--burgers">dark beef burger</div>
               <article>
-                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
-                кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом, и соусом гриль.
+                Курочка, приготовленная на гриле, в сочетании с сыром Чеддер и сыром Пармезан, хрустящим луком,
+                свежими овощами под несравненным соусом Цезарь. Много-много сыра!
               </article>
               <div class='burgers__price'>
-                <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
+                <div class="burger__desc-price"><div class="burger__desc-price-how-many">400</div>рублей</div>
                 <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
               </div>
             </div>
           </li>
-          <li class='burgers__item'>
+          <li class='slide'>
             <div class="burgers__pic-wrap">
               <img src="./img/burgers/1.png" alt="">
             </div>
             <div class="burgers__desc">
-              <div class="title title--burgers">dark beef burger</div>
+              <div class="title title--burgers">Двойной ВОППЕР</div>
               <article>
-                Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
-                кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом, и соусом гриль.
+                Сколько бы ни говорилось о вреде быстрого питания, душа все равно иногда просит какой-нибудь бургер,
+                да посочнее. А потому, если уж есть такое желание, то лучше сделать его самому, или попросить вторую половинку.
+                Бургеры – наиболее популярный вид перекуса. Простая и сытная еда ещё и очень удобна.
               </article>
               <div class='burgers__price'>
                 <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
@@ -148,38 +180,112 @@
               </div>
             </div>
           </li>
-          <li class='burgers__item'>
+          <li class='slide'>
             <div class="burgers__pic-wrap">
-              <img src="./img/burger-niger.png" alt="">
+              <img src="./img/burgers/2.png" alt="">
             </div>
             <div class="burgers__desc">
-              <div class="title title--burgers">dark beef burger</div>
+              <div class="title title--burgers">Фиш Кинг burger</div>
               <article>
                 Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками
                 кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом, и соусом гриль.
               </article>
               <div class='burgers__price'>
-                <div class="burger__desc-price"><div class="burger__desc-price-how-many">500</div>рублей</div>
+                <div class="burger__desc-price"><div class="burger__desc-price-how-many">335</div>рублей</div>
                 <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
               </div>
             </div>
           </li>
+          <li class='slide'>
+            <div class="burgers__pic-wrap">
+              <img src="./img/burgers/3.png" alt="">
+            </div>
+            <div class="burgers__desc">
+              <div class="title title--burgers">Лютый burger</div>
+              <article>
+                Два приготовленных на огне фирменных говяжьих бифштекса, два ломтика слегка расплавленного сыра,
+                хрустящий маринованный огурчик, горчица и кетчуп. .
+              </article>
+              <div class='burgers__price'>
+                <div class="burger__desc-price"><div class="burger__desc-price-how-many">700</div>рублей</div>
+                <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+              </div>
+            </div>
+          </li>
+          <li class='slide'>
+            <div class="burgers__pic-wrap">
+              <img src="./img/burgers/4.png" alt="">
+            </div>
+            <div class="burgers__desc">
+              <div class="title title--burgers">Беконайзер</div>
+          <article>
+            Встречай самый внушительный бургер в коллекции Бургер Кинг. Бекон, двойная порция говядины на гриле.
+          </article>
+          <div class='burgers__price'>
+            <div class="burger__desc-price"><div class="burger__desc-price-how-many">300</div>рублей</div>
+            <a class="btn btn--burgers" href="#">ЗАКАЗАТЬ</a>
+          </div>
+        </div>
+          </li>
         </ul>
-<!-- -----------------------------------------------------------------------         -->
-        <div class='arrow-scroll arrow-scroll--burgers-slaider-right' onclick="showSlides()">
+        <div class='arrow-scroll arrow-scroll--burgers-slaider-right' id="test">
+            <svg class="icon icon--arrow-scroll">
+              <use xlink:href="sprite.svg#arrow-scroll"></use>
+            </svg>
+          </div>
+        <div class='arrow-scroll arrow-scroll--burgers-slaider-left' onclick="prevSlide()">
           <svg class="icon icon--arrow-scroll">
             <use xlink:href="sprite.svg#arrow-scroll"></use>
           </svg>
         </div>
-        <div class='arrow-scroll arrow-scroll--burgers-slaider-left' onclick="showSlides()">
-          <svg class="icon icon--arrow-scroll">
-            <use xlink:href="sprite.svg#arrow-scroll"></use>
-          </svg>
-        </div>
-        <div class='burgers__icon-burger'>
+        <div class='burgers__icon-burger' id="icon-burger">
           <svg class="icon icon--burger">
             <use xlink:href="sprite.svg#burger"></use>
           </svg>
+          <ul class="composition" id="composition">
+            <li class="composition__item">
+              <svg class="icon icon--arrow-scroll">
+                <use xlink:href="sprite.svg#beef"></use>
+              </svg>
+              <span class="composition__name">Говядина</span>
+              <span class='composition__weight'>300 г</span>
+            </li>
+            <li class="composition__item">
+              <svg class="icon">
+                <use xlink:href="sprite.svg#buns"></use>
+              </svg>
+              <span class="composition__name">Булочки</span>
+              <span class='composition__weight'>100 г</span>
+            </li>
+            <li class="composition__item">
+              <svg class="icon icon--arrow-scroll">
+                <use xlink:href="sprite.svg#salad"></use>
+              </svg>
+              <span class="composition__name">Зелень</span>
+              <span class='composition__weight'>70 г</span>
+            </li>
+            <li class="composition__item">
+              <svg class="icon icon--arrow-scroll">
+                <use xlink:href="sprite.svg#sauce"></use>
+              </svg>
+              <span class="composition__name">Соус</span>
+              <span class='composition__weight'>150 г</span>
+            </li>
+            <li class="composition__item">
+              <svg class="icon icon--arrow-scroll">
+                <use xlink:href="sprite.svg#cucumber"></use>
+              </svg>
+              <span class="composition__name">Овощи</span>
+              <span class='composition__weight'>200 г</span>
+            </li>
+            <li class="composition__item">
+              <svg class="icon icon--arrow-scroll">
+                <use xlink:href="sprite.svg#cheese"></use>
+              </svg>
+              <span class="composition__name">Сыр</span>
+              <span class='composition__weight'>80 г</span>
+            </li>
+          </ul>
         </div>
         <div class='burgers__icon-kkal'>
           <svg class="icon icon--kkal">
@@ -188,7 +294,7 @@
         </div>
       </div>
     </section>
-    <!-- секкия команда -->
+     <!-- секкия команда ------------------------------- -->
     <section class="team">
       <div class="team-description">
         <div class="title title--team">КОМАНДА</div>
@@ -251,11 +357,11 @@
         </ul>
       </div>
     </section>
-    <!-- секция меню -->
+    <!-- секция меню ------------------------------------>
     <section class="menu">
       <div class="title title--menu">Меню</div>
       <ul class="menu__list">
-        <li class="menu__item menu__item--active">
+        <li class="menu__item">
           <div class="menu__item-title">
             <p>Для мясоедов</p>
           </div>
@@ -279,13 +385,66 @@
           <div class="menu__item-title">
             <p>Вегетерианское меню</p>
           </div>
-          <article></article>
+          <article>
+            Холодный ветер с дождём
+            Усилился стократно
+            Всё говорит об одном
+            Что нет пути обратно
+            Что ты не мой Лопушок
+            А я не твой Андрейка
+            Что у любви у нашей
+            Села батарейка.
+
+            Припев:
+
+            Оо ия иё Батарейка
+            Оо ия иё Батарейка
+          </article>
         </li>
         <li class="menu__item">
           <div class="menu__item-title">
             <p>Диетическое меню</p>
           </div>
           <article>
+              This is my December
+              This is my time of the year
+              This is my December
+              This is all so clear
+              This is my December
+              This is my snow covered home
+              This is my December
+              This is me alone
+
+              And I
+              Just wish that
+              I didn't feel
+              Like there was
+              Something I missed
+              And I
+              Take back all
+              The things I said
+              To make you
+              Feel like that
+              And I
+              Just wish that
+              I didn't feel
+              Like there was
+              Something I missed
+              And I
+              Take back all the
+              Things I said to you
+
+              And I give it all away
+              Just to have somewhere
+              To go to
+              Give it all away
+              To have someone
+              To come home to
+
+              This is my December
+              These are my snow-covered trees
+              This is me pretending
+              This is all I need
           </article>
         </li>
       </ul>
@@ -549,7 +708,7 @@
         </div>
       </footer>
     </section>
-    <!-- точенчная навигация -->
+    <!-- точенчная навигация -------------------------->
     <ul class="dotnav">
       <li class="dotnav__item"><a href="" class="dotnav__link dotnav__link--active"></a></li>
       <li class="dotnav__item"><a href="" class="dotnav__link"></a></li>

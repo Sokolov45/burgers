@@ -1,36 +1,96 @@
-var slides = document.getElementsByClassName("burgers__item");
+
+var slides = document.getElementsByClassName("slide");
 var currentSlide = 0;
 
-function showSlides() {
-  slides[currentSlide].className = 'visible';
-  currentSlide = (currentSlide+1)%slides.length;
-  slides[currentSlide].className = 'slide showing';
-}
+function show(currentSlide) {
 
-
-
-  if (n > slides.length) {
-    n = 0;
-  }if else (n < 0) {
-    slideIndex = slides.length
+  for (var i=0; i < slides.length; i++){
+    slides[i].className = 'slide';
   }
-
-  // for (var i = 0; i < slides.length; i++) {
-  //   slides[i].style.display = "none";
-  // }
-
-  slides[currentSlide].className += "--active";
+  slides[currentSlide].className = 'slide visible';
 }
-
 
 function nextSlide() {
-  showSlides(currentSlide += 1);
+  if (currentSlide == 4) {
+    currentSlide = 0;
+    show(currentSlide);
+    return currentSlide;
+  } else{
+    ++currentSlide;
+    show(currentSlide);
+  }
 }
 
-/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-function previosSlide() {
-  showSlides(currentSlide -= 1);  
+function prevSlide() {
+  if (currentSlide == 0) {
+    currentSlide = slides.length - 1;
+    show(currentSlide);
+    return currentSlide;
+  }else{
+    --currentSlide;
+    show(currentSlide);
+  }
 }
 
+show(currentSlide);
 
-showSlides(currentSlide);
+
+var t = document.getElementById('test');
+t.addEventListener('click', function(e){
+  e.preventDefault();
+  nextSlide();
+});
+
+
+// аккордеон для меню-----------------------------------------------------------
+
+var listMenu = document.getElementsByClassName("menu__item");
+for (var i = 0; i < listMenu.length; i++) {
+  listMenu[i].addEventListener("click", accordeon);
+};
+
+function accordeon() {
+    for (var i=0; i < 3; i++){
+      if(this.classList.contains('menu__item--active') ) {
+        continue}else{
+          listMenu[i].classList.remove("menu__item--active");
+        };
+    };
+    this.classList.toggle("menu__item--active");
+  };
+
+// аккордеон для команды ----------------------------------------------------
+
+var listTeam = document.getElementsByClassName("team-description__item");
+for (var i = 0; i < listTeam.length; i++) {
+  listTeam[i].addEventListener("click", function() {
+    for (var i=0; i < 4; i++){
+      if(this.classList.contains('team-description__item--active') ) {
+        continue}else{
+          listTeam[i].classList.remove("team-description__item--active");
+        };
+    };
+    this.classList.toggle("team-description__item--active");
+  });
+};
+
+// всплывашка состав бургера ----------------------------------------------------
+
+var iconBurg = document.getElementById('icon-burger');
+var compBurg = document.getElementById('composition');
+iconBurg.addEventListener("click", function(){
+    compBurg.classList.toggle("composition--visible");
+});
+
+// гамбургер------------------------------------------------------------
+
+var hamburger = document.getElementById('hamburger');
+var sectMenu = document.getElementById('hamburger-menu');
+var hamburgerOpen = document.getElementById('hamburger-open');
+
+hamburger.addEventListener("click", function(){
+    sectMenu.style.top = 0;
+});
+hamburgerOpen.addEventListener("click", function(){
+    sectMenu.style.top = 100 + 'rem';
+});
