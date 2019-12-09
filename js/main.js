@@ -44,12 +44,26 @@ t.addEventListener('click', function(e){
 
 // аккордеон для меню-----------------------------------------------------------
 
+// var listMenu = document.getElementsByClassName("menu__item");
+// for (var i = 0; i < listMenu.length; i++) {
+//   listMenu[i].addEventListener("click", accordeon);
+// };
+
+// function accordeon() {
+//     for (var i=0; i < 3; i++){
+//       if(this.classList.contains('menu__item--active') ) {
+//         continue}else{
+//           listMenu[i].classList.remove("menu__item--active");
+//         };
+//     };
+//     this.classList.toggle("menu__item--active");
+//   };
+
+
+  // баг ios 
 var listMenu = document.getElementsByClassName("menu__item");
 for (var i = 0; i < listMenu.length; i++) {
-  listMenu[i].addEventListener("click", accordeon);
-};
-
-function accordeon() {
+  listMenu[i].addEventListener("click", function(e){
     for (var i=0; i < 3; i++){
       if(this.classList.contains('menu__item--active') ) {
         continue}else{
@@ -57,8 +71,8 @@ function accordeon() {
         };
     };
     this.classList.toggle("menu__item--active");
-  };
-
+});
+} ;
 // аккордеон для команды ----------------------------------------------------
 
 var listTeam = document.getElementsByClassName("team-description__item");
