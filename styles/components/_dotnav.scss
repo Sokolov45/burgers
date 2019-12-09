@@ -2,14 +2,21 @@
   color: rgb(215, 219, 215);
   position: fixed;
   top: 15%;
-  right: 5%;
+  right: 2%;
   z-index: 20;
 
   &__item {
     list-style: disc;
     margin-bottom: 0.18rem;
   }
+  @include tablets {
+    display: none;
+  }
+  @include phones {
+    display: none;
+  }
 }
+
 
 .dotnav__link {
   position: relative;

@@ -8,11 +8,14 @@
   width: 100%;
   font-size: 16px;
 
-  @include tablets {
+  @include laptop {
     font-size: 15px;
   }
-  @include phones {
+  @include tablets {
     font-size: 14px;
+  }
+  @include phones {
+    font-size: 13px;
   }
 }
 
@@ -68,7 +71,8 @@ table {
 
 .container {
   margin: 0 auto;
-  max-width: 940px;
+  max-width: 60rem;
   width: 95%;
   height: 100%;
+  overflow: hidden;
 }

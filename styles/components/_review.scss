@@ -1,5 +1,6 @@
 .review-item {
   box-sizing: border-box;
+  overflow: auto;
   display: flex;
   position: relative;
   flex-flow: column nowrap;
@@ -49,9 +50,11 @@
 
 .review__content {
   z-index: 20;
+  overflow: hidden;
   opacity: 0;
   display: flex;
   flex-direction: column;
+  padding-left: 2rem;
   @include tablets {
     align-items: center
   }
@@ -61,12 +64,16 @@
 
   p {
     margin-bottom: 10%;
-    padding-left: 12%;
     font-family: 'gagalin';
-
+    @include tablets {
+      font-size: 1.5rem;
+      margin-bottom: 3%;
+      text-align: center;
+      margin-top: 0;
+    }
     @include phones {
       font-size: 1.5rem;
-
+      margin-bottom: 5%;
       text-align: center;
       padding: 0;
     }
@@ -74,21 +81,26 @@
 
   article {
     margin-bottom: 10%;
-    padding-left: 12%;
-    font-family: 'ubuntulight';
-
+    font-family: 'Ubuntu';
+    font-weight: 300;
+    @include tablets {
+      margin-bottom: 3%;
+    }
     @include phones {
       display: none;
     }
   }
 
   .review__btn {
-    padding: 5% 5%;
-    padding-left: 17%;
+    width: max-content;
+    display: inline;
+    padding: 0.6rem 1rem;
     position: relative;
     font-family: 'Ubuntu';
     font-weight: 500;
     font-size: 0.81rem;
+    background-color: #2f3135;
+    border-radius: 7%;
     @include phones {
       display: none;
     }
@@ -98,11 +110,12 @@
     display: none;
     @include phones {
     display: flex;
-    padding: 0.7rem 1rem;
+    padding: 5% 5%;
     background-color: #2f3135;
     border-radius: 11%;
-    }
+    font-size: 0.6rem;
   }
+}
 }
 
 .review__avatar {
@@ -119,24 +132,4 @@
   }
 }
 
-.review__btn:before {
-  border-radius: 6%;
-  position: absolute;
-  top: 50%;
-  left: 37%;
-  transform: translate(-50%, -50%);
-  width: 55%;
-  height: 70%;
-  content: '';
-  background-color: rgb(71, 66, 68);
-  z-index: -1;
-  @include tablets {
-  display: flex;
-  top: 50%;
-  left: 62%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 70%;
-  }
-}
 

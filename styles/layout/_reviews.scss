@@ -1,16 +1,24 @@
 
 .reviews {
   height: 100vh;
-  min-height: 40.62rem;
+  // min-height: 40.62rem;
   width: 100%;
   background-color: #cfd8dc;
   background-size: cover;
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  @include tablets {
+    min-height: 0;
+  }
+  @include phones {
+  min-height: 0;
+  }
 }
 
 .reviews__list {
   @include flex;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   flex-wrap: wrap;
 
 }
