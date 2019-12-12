@@ -44,12 +44,26 @@ t.addEventListener('click', function(e){
 
 // аккордеон для меню-----------------------------------------------------------
 
+// var listMenu = document.getElementsByClassName("menu__item");
+// for (var i = 0; i < listMenu.length; i++) {
+//   listMenu[i].addEventListener("click", accordeon);
+// };
+
+// function accordeon() {
+//     for (var i=0; i < 3; i++){
+//       if(this.classList.contains('menu__item--active') ) {
+//         continue}else{
+//           listMenu[i].classList.remove("menu__item--active");
+//         };
+//     };
+//     this.classList.toggle("menu__item--active");
+//   };
+
+
+  // баг ios 
 var listMenu = document.getElementsByClassName("menu__item");
 for (var i = 0; i < listMenu.length; i++) {
-  listMenu[i].addEventListener("click", accordeon);
-};
-
-function accordeon() {
+  listMenu[i].addEventListener("click", function(){
     for (var i=0; i < 3; i++){
       if(this.classList.contains('menu__item--active') ) {
         continue}else{
@@ -57,8 +71,8 @@ function accordeon() {
         };
     };
     this.classList.toggle("menu__item--active");
-  };
-
+});
+} ;
 // аккордеон для команды ----------------------------------------------------
 
 var listTeam = document.getElementsByClassName("team-description__item");
@@ -97,3 +111,57 @@ hamburgerOpen.addEventListener("click", function(){
     sectMenu.style.top = 100 + 'rem';
     html.style.overflowY = 'auto';
 });
+
+
+// работа с формой-----------------------------------------------------
+var myForm = document.querySelector('#myForm');
+var laodButton = document.querySelector('#loadButton');
+
+laodButton.addEventListener('click', event => {
+  event.preventDefault();
+  if (validateForm(myForm)) {
+   var formData = new FormData(myForm);
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData); 
+    console.log('запрос отправлен');
+    xhr.addEventListener('load', () => {
+      debugger
+      if(xhr.response.status){
+        console.log("всё ок");
+      }else{
+        console.log('что-то не так');
+      }
+    });
+  }else{
+    console.log('не прошёл валидацию');
+  }
+});
+// валидация
+function validateForm(form) {
+  let valid = true;
+  if (!form.elements.name.checkValidity()) {
+    valid = false;
+  }
+  if (!form.elements.phone.checkValidity()) {
+    valid = false;
+  }
+  if (!form.elements.comment.checkValidity()) {
+    valid = false;
+  }
+  if (!form.elements.email.checkValidity()) {
+    valid = false;
+  }
+  return valid;
+};
+
+
+
+// xhr.timeout = 10000; // таймаут указывается в миллисекундах, т.е. 10 секунд
+  // xhr.onload = function() {
+  //   alert(`Загружено: ${xhr.status} ${xhr.response}`);
+  // };
+  
+  // xhr.onerror = function() { // происходит, только когда запрос совсем не получилось выполнить
+  //   alert(`Ошибка соединения`);
+  // };
