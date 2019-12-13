@@ -120,17 +120,29 @@ var laodButton = document.querySelector('#loadButton');
 laodButton.addEventListener('click', event => {
   event.preventDefault();
   if (validateForm(myForm)) {
-   var formData = new FormData(myForm);
+   var formData = new FormData();
+   formData.append('name', myForm.elements.name.value);
+   formData.append('phone', myForm.elements.phone.value);
+   formData.append('comment', myForm.elements.comment.value);
+   formData.append('to', myForm.elements.to.value);
+  //  console.log(formData);
+  for(let [name, value] of formData) {
+    alert(`${name} = ${value}`); // key1=value1, потом key2=value2
+  }
+   
     var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.responseType = 'json';
+    xhr.open("POST", 'https://webdev-api.loftschool.com/sendmail');
     xhr.send(formData); 
     console.log('запрос отправлен');
     xhr.addEventListener('load', () => {
-      debugger
-      if(xhr.response.status){
+      // debugger
+      if(xhr.status){
+        console.log(xhr.status);
+        
         console.log("всё ок");
       }else{
-        console.log('что-то не так');
+        alert( xhr.status + ': ' + xhr.statusText )
       }
     });
   }else{
@@ -149,7 +161,7 @@ function validateForm(form) {
   if (!form.elements.comment.checkValidity()) {
     valid = false;
   }
-  if (!form.elements.email.checkValidity()) {
+  if (!form.elements.to.checkValidity()) {
     valid = false;
   }
   return valid;
