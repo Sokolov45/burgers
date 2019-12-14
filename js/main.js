@@ -111,3 +111,30 @@ hamburgerOpen.addEventListener("click", function(){
     sectMenu.style.top = 100 + 'rem';
     html.style.overflowY = 'auto';
 });
+
+
+// работа с формой-----------------------------------------------------
+
+получаем 
+
+var myForm = document.querySelector('#myForm');
+var laodButton = document.querySelector('#loadButton');
+
+
+laodButton.addEventListener('click', function(event) {
+  event.preventDefault();
+  console.log(myForm.elements.name.value );
+  
+  var xhr = new XMLHttpRequest();
+
+  xhr.open('GET', 'content0.txt');
+  xhr.send(); 
+  xhr.addEventListener('load', () => {
+    if(xhr.status >= 400){
+      console.log("что-то пошло не т ак");
+    }else {
+    console.log(xhr.responseText);
+    }
+  })
+});
+ 
