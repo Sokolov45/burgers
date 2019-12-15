@@ -29,6 +29,7 @@
 .menu__item {
   display: flex;
   position: relative;
+  cursor: pointer;
 
   article {
     background-color: grey;

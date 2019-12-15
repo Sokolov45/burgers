@@ -1777,7 +1777,8 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative; }
+  position: relative;
+  cursor: pointer; }
   .menu__item article {
     background-color: grey;
     text-align: center;

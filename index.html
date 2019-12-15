@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mr. Burger</title>
   <link rel="stylesheet" href="styles/main.css">
+
 </head>
 
 <body>
   <div class="wrapper">
-<!-- секция приветствие ----------------------------->
+<!-- секция полнокэранного меню  -->
     <section class="hamburger-menu" id="hamburger-menu">
       <div class='container container--hamburger-menu'>
         <header class="header--hamburger-menu">
@@ -43,6 +44,7 @@
           </nav>
       </div>
     </section>
+<!-- секция приветствие ------------------------------------->
     <section class="greeting">
       <div class='container container--greeting'>
         <header class="header">
@@ -86,7 +88,7 @@
         </div>
       </div>
     </section>
-<!-- секция - Мы лучшие -->
+<!-- секция - Мы лучшие ------------------------------------->
     <section class="we-best">
       <div class="container container--we-best">
         <div class="title title--we-best">МЫ ЛУЧШИЕ</div>
@@ -143,7 +145,7 @@
         </ul>
       </div>
     </section>
-<!-- секция "бургеры" ------------------------------->
+<!-- секция "бургеры" --------------------------------------->
     <section class="burgers">
       <div class="container burgers-container">
         <ul class='slides'>
@@ -294,7 +296,7 @@
         </div>
       </div>
     </section>
-<!-- секкия команда --------------------------------->
+<!-- секкия команда ----------------------------------------->
     <section class="team">
       <div class="team-description">
         <div class="title title--team">КОМАНДА</div>
@@ -357,7 +359,7 @@
         </ul>
       </div>
     </section>
-<!-- секция меню ------------------------------------>
+<!-- секция меню -------------------------------------------->
     <section class="menu">
       <div class="title title--menu">Меню</div>
       <ul class="menu__list">
@@ -449,7 +451,7 @@
         </li>
       </ul>
     </section>
-<!-- секция отзывы --------------------------------->
+<!-- секция отзывы ------------------------------------------>
     <section class="reviews">
       <ul class="reviews__list">
         <li class="review-item">
@@ -582,74 +584,74 @@
         </li>
       </ul>
     </section>
-<!-- секция как мы работаем ------------------------>
+<!-- секция как мы работаем --------------------------------->
     <section class="player">
     </section>
-<!-- секция формы ---------------------------------->
+<!-- секция формы ------------------------------------------->
     <section class='section-form'>
       <div class='container container--form'>
         <div class="title title--form">закажите доставку</div>
         <div class="form">
-          <form action="#" method="GET" class="form__elem" id='myForm'>
+          <form  method='post' name='test' class="form__elem" id="myForm">
             <div class="form__left-block">
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__block-title">Имя</div>
-                  <input type="text" name="name" class="form__input">
+                  <input type="text" name="name" class="form__input" required>
                 </label>
                 <label class="form__block">
                   <div class="form__block-title">Телефон</div>
-                  <input placeholder="89198887745245" type="text" name="" class="form__input">
+                  <input placeholder="89198887745245" type="text" name="phone" class="form__input" required>
                 </label>
               </div>
               <label class="form__block">
                 <div class="form__block-title">Улица</div>
-                <input type="text" name="" class="form__input form__input--street">
+                <input type="text" name="street" class="form__input form__input--street">
               </label>
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__block-title">Дом</div>
-                  <input type="text" name="" class="form__input">
+                  <input type="text" name="home" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form__block-title">Корпус</div>
-                  <input type="text" name="" class="form__input">
+                  <input type="text" name="housing" class="form__input">
                 </label>
                 <label class="form__block">
                   <div class="form__block-title">Квартира</div>
-                  <input type="text" name="" class="form__input">
+                  <input type="text" name="flat" class="form__input">
                 </label>
                 <label class="form__block">
-                  <div class="form__block-title">Этаж</div>
-                  <input type="text" name="" class="form__input">
+                  <div class="form__block-title">этаж</div>
+                  <input type="text" name="floor" class="form__input">
                 </label>
               </div>
             </div>
             <label class="form__right-block">
               <label class="form__block">
                 <div class="form__block-title">Коментарий</div>
-                <textarea name="" class="form__input form__input--textarea"></textarea>
+                <textarea name="comment" class="form__input form__input--textarea" required></textarea>
               </label>
               <div class="form__question">
                 <label class='form__question-change'>
-                  <input type="radio" name="payment" value="" class="radio">
+                  <input type="radio" name="payment-money" value="" class="radio">
                   <div class="form__question-title">
                     Потребуется сдача?
                   </div>
                 </label>
                 <label class='form__question-card'>
-                  <input type="radio" name="payment" value="" class="radio">
+                  <input type="radio" name="payment-card" value="" class="radio">
                   <div class="form__question-title">
                     Оплата по карте
                   </div>
                 </label>
               </div>
               <label class="form__no-call">
-                <input type="checkbox" name="" id="" class="checkbox">
+                <input type="checkbox" name="no-call" id="" class="checkbox">
                 <div class='form__no-call-elem'>Не перезванивать</div>
               </label>
               <div class="form__buttons">
-                <input type="submit" value="Заказать" class="submit btn" id="loadButton">
+                <input type="submit" value="Заказать" class="submit btn" id='loadButton'>
                 <input type="reset" value="Очистить" class="reset">
               </div>
             </label>
@@ -657,7 +659,7 @@
         </div>
       </div>
     </section>
-<!-- секция контакты ------------------------------->
+<!-- секция контакты ------------------------------------------>
     <section class="contacts">
       <footer class="footer">
         <div class="container footer-conteiner">
@@ -707,7 +709,7 @@
         </div>
       </footer>
     </section>
-<!-- точенчная навигация --------------------------->
+<!-- точенчная навигация -------------------------------------->
     <ul class="dotnav">
       <li class="dotnav__item"><a href="" class="dotnav__link dotnav__link--active"></a></li>
       <li class="dotnav__item"><a href="" class="dotnav__link"></a></li>
@@ -722,5 +724,4 @@
   </div>
   <script src="./js/main.js"></script>
 </body>
-
 </html>

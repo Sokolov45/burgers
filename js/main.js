@@ -114,27 +114,32 @@ hamburgerOpen.addEventListener("click", function(){
 
 
 // работа с формой-----------------------------------------------------
-
-получаем 
-
 var myForm = document.querySelector('#myForm');
 var laodButton = document.querySelector('#loadButton');
 
-
-laodButton.addEventListener('click', function(event) {
+myForm.addEventListener('submit', event => {
   event.preventDefault();
-  console.log(myForm.elements.name.value );
-  
-  var xhr = new XMLHttpRequest();
 
-  xhr.open('GET', 'content0.txt');
-  xhr.send(); 
-  xhr.addEventListener('load', () => {
-    if(xhr.status >= 400){
-      console.log("что-то пошло не т ак");
-    }else {
-    console.log(xhr.responseText);
-    }
-  })
+   var formData = new FormData();
+   formData.append('name', myForm.elements.name.value);
+   formData.append('phone', myForm.elements.phone.value);
+   formData.append('comment', myForm.elements.comment.value);
+   formData.append('to', 'niheraNePonyatno@asdfsda');
+
+   var xhr = new XMLHttpRequest();
+   xhr.responseType = 'json';
+   xhr.open("POST", 'https://webdev-api.loftschool.com/sendmail');
+   xhr.send(formData); 
+
+   xhr.addEventListener('load', () => {
+     if(xhr.status){
+       console.log(xhr.status);
+       console.log(xhr);
+      }else{
+        alert( xhr.status + ': ' + xhr.statusText )
+      }
+    });
+    // xhr.onload = function() {
+    //     alert(`Загружено: ${xhr.status} ${xhr.response}`);
+    //   };
 });
- 
