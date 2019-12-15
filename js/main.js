@@ -133,8 +133,8 @@ myForm.addEventListener('submit', event => {
 
    xhr.addEventListener('load', () => {
      if(xhr.status){
-       console.log(xhr.status);
-       console.log(xhr);
+      //  console.log(xhr.status);
+       console.log(xhr.response);
       }else{
         alert( xhr.status + ': ' + xhr.statusText )
       }
