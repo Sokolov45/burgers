@@ -1246,6 +1246,7 @@ table {
 
 .reviews {
   height: 100vh;
+  position: relative;
   width: 100%;
   background-color: #cfd8dc;
   background-size: cover;
@@ -1272,6 +1273,49 @@ table {
   width: 100%;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+
+.reviews__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 10%;
+  width: 50rem;
+  height: 30rem;
+  background-color: #d8bae4f8;
+  color: #1f2518;
+  font-size: 1.5rem;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .reviews__modal .reviews__modal-content {
+    width: 90%;
+    height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  .reviews__modal .revies-close {
+    position: absolute;
+    top: 0;
+    left: 90%; }
 
 .burgers {
   height: 100vh;
