@@ -1282,11 +1282,11 @@ table {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   border-radius: 10%;
-  width: 50rem;
-  height: 30rem;
+  width: 50%;
+  height: 30%;
   background-color: #d8bae4f8;
   color: #1f2518;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1296,7 +1296,9 @@ table {
   justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  font-family: 'Ubuntu';
+  font-weight: 500; }
   .reviews__modal .reviews__modal-content {
     width: 90%;
     height: 90%;
@@ -1312,10 +1314,17 @@ table {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
+  .reviews__modal .reviews__modal-title {
+    font-size: 1.7rem;
+    color: darkmagenta; }
   .reviews__modal .revies-close {
     position: absolute;
     top: 0;
-    left: 90%; }
+    left: 90%;
+    color: red;
+    border-radius: 50%; }
+    .reviews__modal .revies-close:hover {
+      color: black; }
 
 .burgers {
   height: 100vh;

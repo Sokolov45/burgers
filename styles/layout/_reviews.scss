@@ -31,16 +31,18 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10%;
-  width: 50rem;
-  height: 30rem;
+  width: 50%;
+  height: 30%;
   background-color: #d8bae4f8;
   color: #1f2518;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   // display: flex;
   display: none;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font-family: 'Ubuntu';
+  font-weight: 500;
 
 
 
@@ -53,9 +55,19 @@
     align-items: center;
   }
 
+  .reviews__modal-title {
+    font-size: 1.7rem;
+    color: darkmagenta;
+  }
+
   .revies-close {
     position: absolute;
     top: 0;
     left: 90%;
+    color: red;
+    border-radius: 50%;
+    &:hover {
+      color: grayscale($color: #000000);
+    }
   }
 }
