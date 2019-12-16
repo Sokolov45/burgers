@@ -124,15 +124,15 @@ myForm.addEventListener('submit', event => {
   
   // -------------------------------------------------------------------------------------------
   
-  var formData = new FormData();
-  formData.append('name', myForm.elements.name.value);
-  formData.append('phone', myForm.elements.phone.value);
-  formData.append('comment', myForm.elements.comment.value);
-  formData.append('to', 'niheraNePonyatno@asdfsda');
+  var formData = new FormData(myForm);
+  formData.append("name", myForm.elements.name.value);
+  formData.append("phone", myForm.elements.phone.value);
+  formData.append("comment", myForm.elements.comment.value);
+  formData.append("to", 'mail@mail.com');
   
   var xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
-  xhr.open("POST", 'https://webdev-api.loftschool.com/sendmail/fail');
+  xhr.open('POST','https://webdev-api.loftschool.com/sendmail');
   xhr.send(formData); 
   
   xhr.addEventListener('load', () => {
@@ -149,7 +149,7 @@ myForm.addEventListener('submit', event => {
     //   };
   });
   
-  
+
   // overlay----------------------------------------------------------------------------------
   var overlayElement = document.querySelector(".overlay");
   var orerlayMessage = document.querySelector('.overlay__content')
@@ -187,10 +187,10 @@ myForm.addEventListener('submit', event => {
       
     });
     
+    modalReviewDiv.addEventListener("click", function(e) {
+        if (e.target === modalReviewDiv) {
+          closeElement.click();
+        }
+      });
   });
 };
-  overlayElement.addEventListener("click", function(e) {
-    if (e.target === overlayElement) {
-      closeElement.click();
-    }
-  });
