@@ -132,7 +132,7 @@ myForm.addEventListener('submit', event => {
   
   var xhr = new XMLHttpRequest();
   xhr.responseType = 'json';
-  xhr.open("POST", 'https://webdev-api.loftschool.com/sendmail.fail');
+  xhr.open("POST", 'https://webdev-api.loftschool.com/sendmail/fail');
   xhr.send(formData); 
   
   xhr.addEventListener('load', () => {
@@ -173,22 +173,22 @@ myForm.addEventListener('submit', event => {
 
 
   // модалка у отзывов---------------------------------------------------------------------------
-  var modalReviewBtn = document.querySelectorAll(".review__btn");
-  var modalReviewDiv = document.querySelector(".reviews__modal");
-  for (let i = 0; i < modalReviewBtn.length; i++) {
+//   var modalReviewBtn = document.querySelectorAll(".review__btn");
+//   var modalReviewDiv = document.querySelector(".reviews__modal");
+//   for (let i = 0; i < modalReviewBtn.length; i++) {
         
-    modalReviewBtn[i].addEventListener("click", function(e) {
-      e.preventDefault();
-      modalReviewDiv.style.display = "flex";
-      var closeReview = document.querySelector(".revies-close");
-      closeReview.addEventListener("click", function(e) {
-        e.preventDefault();
-        modalReviewDiv.style.display = "none";
+//     modalReviewBtn[i].addEventListener("click", function(e) {
+//       e.preventDefault();
+//       modalReviewDiv.style.display = "flex";
+//       var closeReview = document.querySelector(".revies-close");
+//       closeReview.addEventListener("click", function(e) {
+//         e.preventDefault();
+//         modalReviewDiv.style.display = "none";
       
-    });
+//     });
     
-  });
-};
+//   });
+// };
   // overlayElement.addEventListener("click", function(e) {
   //   if (e.target === overlayElement) {
   //     closeElement.click();
