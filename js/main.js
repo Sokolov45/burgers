@@ -113,17 +113,26 @@ hamburgerOpen.addEventListener("click", function(){
 });
 
 
-
-
-// работа с формой-----------------------------------------------------
+// форма
 var myForm = document.querySelector('#myForm');
 var laodButton = document.querySelector('#loadButton');
+var overlayElement = document.querySelector(".overlay");
+var orerlayMessage = document.querySelector('.overlay__content');
+var closeElement = overlayElement.querySelector(".close");
+
+closeElement.addEventListener("click", function(e) {
+  e.preventDefault();
+  overlayElement.style.display = "none";
+});
+
+overlayElement.addEventListener("click", function(e) {
+  if (e.target === overlayElement) {
+    closeElement.click();
+  }
+});
 
 myForm.addEventListener('submit', event => {
   event.preventDefault();
-  
-  // -------------------------------------------------------------------------------------------
-  
   var formData = new FormData(myForm);
   formData.append("name", myForm.elements.name.value);
   formData.append("phone", myForm.elements.phone.value);
@@ -137,6 +146,8 @@ myForm.addEventListener('submit', event => {
   
   xhr.addEventListener('load', () => {
     if(xhr.status){
+      overlayElement.style.display = "flex";
+
       console.log(xhr.status);
       console.log(typeof xhr.response );
       orerlayMessage.innerHTML = xhr.response.message;
@@ -144,31 +155,6 @@ myForm.addEventListener('submit', event => {
       alert( xhr.status + ': ' + xhr.statusText )
     }
   });
-  // xhr.onload = function() {
-    //     alert(`Загружено: ${xhr.status} ${xhr.response}`);
-    //   };
-  });
-  
-
-  // overlay----------------------------------------------------------------------------------
-  var overlayElement = document.querySelector(".overlay");
-  var orerlayMessage = document.querySelector('.overlay__content')
-  
-  
-  laodButton.addEventListener("click", function() {
-    overlayElement.style.display = "flex";
-  });
-  
-  var closeElement = overlayElement.querySelector(".close");
-  closeElement.addEventListener("click", function(e) {
-    e.preventDefault();
-    overlayElement.style.display = "none";
-  });
-  
-  overlayElement.addEventListener("click", function(e) {
-    if (e.target === overlayElement) {
-      closeElement.click();
-    }
   });
 
 
@@ -184,9 +170,7 @@ myForm.addEventListener('submit', event => {
       closeReview.addEventListener("click", function(e) {
         e.preventDefault();
         modalReviewDiv.style.display = "none";
-      
     });
-    
     modalReviewDiv.addEventListener("click", function(e) {
         if (e.target === modalReviewDiv) {
           closeElement.click();
