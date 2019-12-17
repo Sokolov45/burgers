@@ -1393,9 +1393,6 @@ table {
   display: -ms-flexbox;
   display: flex;
   opacity: 100;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1712,7 +1709,8 @@ table {
 
 .team-description__list {
   max-width: 70%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  height: 70%; }
   @media screen and (max-width: 768px) {
     .team-description__list {
       display: -webkit-box;
@@ -1724,7 +1722,7 @@ table {
       flex-direction: column; } }
 
 .team-description__item {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   cursor: pointer; }
   @media screen and (max-width: 768px) {
     .team-description__item {
@@ -1893,7 +1891,8 @@ table {
         font-size: 1rem; } }
 
 .menu__item--active article {
-  width: 40vw; }
+  width: 40vw;
+  padding: 5%; }
 
 .menu__item-title {
   display: -webkit-box;
@@ -2201,8 +2200,7 @@ table {
   margin-right: 1rem;
   -webkit-box-flex: 1;
   -ms-flex: 1;
-  flex: 1;
-  cursor: pointer; }
+  flex: 1; }
   .form__block:nth-last-child(1) {
     margin-right: 0; }
 
@@ -2211,8 +2209,7 @@ table {
   border-radius: 5%;
   width: 100%;
   outline: none;
-  border: 1px solid transparent;
-  cursor: pointer; }
+  border: 1px solid transparent; }
   .form__input--street {
     margin-bottom: 2rem; }
     @media screen and (max-width: 768px) {
@@ -2248,7 +2245,8 @@ table {
   align-items: center; }
 
 .radio {
-  display: none; }
+  display: none;
+  cursor: pointer; }
 
 .radio:checked ~ .form__question-title:before {
   background-image: url("../img/Ellipse-full.png"); }
@@ -2267,8 +2265,7 @@ table {
     background-image: url("../img/Ellipse 5.png"); }
 
 .form__question {
-  margin-bottom: 2rem;
-  cursor: pointer; }
+  margin-bottom: 2rem; }
   .form__question .form__question-change {
     margin-right: 1rem;
     display: -webkit-box;
@@ -2308,7 +2305,8 @@ table {
   color: white;
   font-family: 'Ubuntu';
   font-weight: 300;
-  font-size: 0.87rem; }
+  font-size: 0.87rem;
+  cursor: pointer; }
   .reset:hover {
     cursor: pointer;
     color: #ee8d0f; }

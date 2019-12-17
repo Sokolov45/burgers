@@ -1,14 +1,13 @@
+// ==========================слайдер =======================================================
 
 var slides = document.getElementsByClassName("slide");
 var currentSlide = 0;
-
 function show(currentSlide) {
-
   for (var i=0; i < slides.length; i++){
     slides[i].className = 'slide';
   }
   slides[currentSlide].className = 'slide visible';
-}
+};
 
 function nextSlide() {
   if (currentSlide == 4) {
@@ -44,23 +43,6 @@ t.addEventListener('click', function(e){
 
 // аккордеон для меню-----------------------------------------------------------
 
-// var listMenu = document.getElementsByClassName("menu__item");
-// for (var i = 0; i < listMenu.length; i++) {
-//   listMenu[i].addEventListener("click", accordeon);
-// };
-
-// function accordeon() {
-//     for (var i=0; i < 3; i++){
-//       if(this.classList.contains('menu__item--active') ) {
-//         continue}else{
-//           listMenu[i].classList.remove("menu__item--active");
-//         };
-//     };
-//     this.classList.toggle("menu__item--active");
-//   };
-
-
-  // баг ios 
 var listMenu = document.getElementsByClassName("menu__item");
 for (var i = 0; i < listMenu.length; i++) {
   listMenu[i].addEventListener("click", function(){
@@ -73,6 +55,18 @@ for (var i = 0; i < listMenu.length; i++) {
     this.classList.toggle("menu__item--active");
 });
 } ;
+
+var sectionMenu = document.querySelector('.menu');
+var titleMenu = document.querySelector('.title--menu');
+sectionMenu.addEventListener("click", function(e) {
+  if (e.target === sectionMenu || e.target === titleMenu) {
+  for (var i = 0; i < listMenu.length; i++) {
+    listMenu[i].classList.remove("menu__item--active");
+    };
+  };
+});
+
+
 // аккордеон для команды ----------------------------------------------------
 
 var listTeam = document.getElementsByClassName("team-description__item");
@@ -87,6 +81,17 @@ for (var i = 0; i < listTeam.length; i++) {
     this.classList.toggle("team-description__item--active");
   });
 };
+
+  var team = document.querySelector('.team');
+  var teamList = document.querySelector('.team-description__list');
+  var teamDescript = document.querySelector('.team-description');
+  team.addEventListener("click", function(e) {
+    if (e.target === team || e.target === teamDescript) {
+      for (var i = 0; i < listTeam.length; i++) {
+        listTeam[i].classList.remove("team-description__item--active");
+          };
+    };
+  });
 
 // всплывашка состав бургера ----------------------------------------------------
 
@@ -125,6 +130,7 @@ closeElement.addEventListener("click", function(e) {
   overlayElement.style.display = "none";
 });
 
+// эта штука для того чтобы не закрвалось когда на контент кликаешь
 overlayElement.addEventListener("click", function(e) {
   if (e.target === overlayElement) {
     closeElement.click();
@@ -134,9 +140,9 @@ overlayElement.addEventListener("click", function(e) {
 myForm.addEventListener('submit', event => {
   event.preventDefault();
   var formData = new FormData(myForm);
-  formData.append("name", myForm.elements.name.value);
-  formData.append("phone", myForm.elements.phone.value);
-  formData.append("comment", myForm.elements.comment.value);
+  // formData.append("name", myForm.elements.name.value);
+  // formData.append("phone", myForm.elements.phone.value);
+  // formData.append("comment", myForm.elements.comment.value);
   formData.append("to", 'mail@mail.com');
   
   var xhr = new XMLHttpRequest();
