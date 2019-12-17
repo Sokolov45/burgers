@@ -1,6 +1,5 @@
 .section-form {
     height: 100vh;
-    // min-height: 40.62rem;
     width: 100%;
     position: relative;
     background: url(../img/bg_forms.jpg) center center no-repeat;
@@ -83,7 +82,7 @@
 .form__block {
     margin-right: 1rem;
     flex: 1;
-    cursor: pointer;
+    // cursor: pointer;
     
     
     &:nth-last-child(1) {
@@ -100,7 +99,7 @@
     width: 100%;
     outline: none;
     border: 1px solid transparent;
-    cursor: pointer;
+    // cursor: pointer;
     &--street {
         margin-bottom: 2rem;
         @include tablets {
@@ -138,12 +137,11 @@
 }
 
 .radio {
-    // margin-right: 0.5rem;
     display: none;
+    cursor: pointer;
 }
 .radio:checked ~ .form__question-title:before {
     background-image: url('../img/Ellipse-full.png');
-    // background-image: url('../img/Ellipse 5.png');
  }
 
 
@@ -165,7 +163,7 @@
 
 .form__question {
     margin-bottom: 2rem;
-    cursor: pointer;
+    // cursor: pointer;
     .form__question-change {
         margin-right: 1rem;
         display: flex;
@@ -204,6 +202,7 @@
     font-family: 'Ubuntu';
     font-weight: 300;
     font-size: 0.87rem;
+    cursor: pointer;
     &:hover {
         cursor: pointer;
         color: rgb(238, 141, 15);
