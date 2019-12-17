@@ -12,32 +12,42 @@
   }
   
   .overlay__content-wrap {
+    width: 17rem;
+    height: 9rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(243, 243, 243);
+    border-radius: 5px;
   }
   
   .overlay__content {
     position: relative;
-    width: 400px;
-    background: #444;
-    border-radius: 5px;
+    width: 100%;
     padding: 10px;
-    color: #fff;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    color: rgb(70, 68, 68);
     font: 16px Helvetica, sans-serif;
     margin: 0;
+    text-align: center;
   }
   
   .close {
+    
     font: 16px Helvetica, sans-serif;
     color: #fff;
-    position: absolute;
-    right: -5px;
-    top: -10px;
-    background: #d00;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    padding: 0.7rem 1rem;
+    background: #e45028;
+    border-radius: 5px;
     line-height: 20px;
     text-align: center;
     text-decoration: none;
+    &:hover {
+      background: #8a321a;
+
+    }
   }
   

@@ -130,7 +130,7 @@ closeElement.addEventListener("click", function(e) {
   overlayElement.style.display = "none";
 });
 
-// эта штука для того чтобы не закрвалось когда на контент кликаешь
+// эта штука для того чтобы не закрывалось когда на контент кликаешь
 overlayElement.addEventListener("click", function(e) {
   if (e.target === overlayElement) {
     closeElement.click();
@@ -167,6 +167,7 @@ myForm.addEventListener('submit', event => {
   // модалка у отзывов---------------------------------------------------------------------------
   var modalReviewBtn = document.querySelectorAll(".review__btn");
   var modalReviewDiv = document.querySelector(".reviews__modal");
+  var modalReviewBtn480 = document.querySelectorAll(".review__btn-480");
   for (let i = 0; i < modalReviewBtn.length; i++) {
         
     modalReviewBtn[i].addEventListener("click", function(e) {
@@ -183,4 +184,20 @@ myForm.addEventListener('submit', event => {
         }
       });
   });
+
+  modalReviewBtn480[i].addEventListener("click", function(e) {
+    e.preventDefault();
+    modalReviewDiv.style.display = "flex";
+    var closeReview = document.querySelector(".revies-close");
+    closeReview.addEventListener("click", function(e) {
+      e.preventDefault();
+      modalReviewDiv.style.display = "none";
+  });
+  modalReviewDiv.addEventListener("click", function(e) {
+      if (e.target === modalReviewDiv) {
+        closeElement.click();
+      }
+    });
+});
+
 };
