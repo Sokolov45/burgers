@@ -23,32 +23,29 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
+
   @include tablets {
     width: 100%;
     display: flex;
     flex-direction: column;
-    
   }
-
 }
 
 .team-description__list {
   max-width: 70%;
   margin: 0 auto;
-
+  height: 70%;
   @include tablets {
     display: flex;
     flex-direction: column;
     // justify-content: center;
     // align-items: center;
-    
   }
 }
 
 .team-description__item {
-  margin-bottom: 10%;
-  
+  margin-bottom: 5%;
+  cursor: pointer;
   @include tablets {
     margin-bottom: 5%;
     display: flex;
@@ -67,6 +64,9 @@
   font-size: 14px;
   margin-bottom: 5%;
   position: relative;
+  &:hover {
+    color: $title-color;
+  }
 
   &::before {
       display: block;
@@ -83,7 +83,7 @@
         left: -17%;
         }
     }
-      transition: 0.5s;
+      transition: 0.3s;
   }
 
 
@@ -93,6 +93,8 @@
   font-size: 14px;
   height: 0;
   overflow: hidden;
+  transition: 0.3s;
+
 
   @include tablets {
     display: flex;
@@ -101,7 +103,7 @@
     align-items: center;
     text-align: center;
     max-width: 80%;
-    
+
   }
 }
 
@@ -128,7 +130,11 @@
 
   }
   .team-description__item-description {
-    height: auto;
+    height: 7rem;
+    transition: 0.3s;
+    @include tablets {
+      height: 15rem;
+      }
   }
 
 }
