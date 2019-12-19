@@ -598,6 +598,40 @@
     </section>
 <!-- секция как мы работаем --------------------------------->
     <section class="player">
+      <div class="container container--player">
+        <h2 class="title title--player">как мы работаем</h2>
+        <div class="video">
+          <div class="video__player">
+            <video class='video-target' src="./video/ny.mp4" poster="">
+            </video>
+            <svg class="video__player-btn">
+              <use xlink:href="sprite.svg#play"></use>
+            </svg>
+          </div>
+          <div class="panel">
+            <div class="panel__stop">
+              <div class="video__playpause-btn">
+                  <svg class="video__icon video__icon--on">
+                      <use xlink:href="sprite.svg#play"></use>
+                  </svg>
+              </div>
+              <div class="video__progress-bar">
+                  <div class="video__progress-current"></div>
+              </div>
+            </div>
+            <div class="controls-volume">
+              <div class="video__volume-btn">
+                <svg class="video__icon volume__icon--on">
+                    <use xlink:href="sprite.svg#volume"></use>
+                </svg>
+              </div>
+              <div class="video__volume-bar">
+                <div class="video__volume-current"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 <!-- секция формы ------------------------------------------->
     <section class='section-form'>
@@ -680,8 +714,7 @@
       </div>
     </section>
 <!-- секция контакты ------------------------------------------>
-    <section class="item contacts" id='map'>
-    <section class="contacts">
+    <section class="contacts" id='map'>
       <footer class="footer">
         <div class="container footer-conteiner">
           <div class="contacts-wrap">
