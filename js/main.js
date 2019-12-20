@@ -232,10 +232,10 @@ myForm.addEventListener('submit', event => {
       // .add('searchControl'); // Строка с поиском
     /* Создаем кастомные метки */
     var myPlacemark0 = new ymaps.Placemark([59.90999, 30.358478], { // Создаем метку с такими координатами и суем в переменную
-            balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
+            // balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
           }, {
-            iconImageHref: '/maps/d../../jsapi/doc/2.1/examples/images/myIcon.gif',
-          // iconImageHref: './icons/map-marker.svg', // картинка иконки
+          iconLayout: 'default#image',
+          iconImageHref: './icons/map-marker.svg', // картинка иконки
           iconImageSize: [40, 40], // размер иконки
           iconImageOffset: [-32, -64], // позиция иконки
             balloonContentSize: [270, 99],
@@ -257,6 +257,7 @@ myForm.addEventListener('submit', event => {
       myPlacemark1 = new ymaps.Placemark([59.88999, 30.358478], { // Создаем метку с такими координатами и суем в переменную
         balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
       }, {
+        iconLayout: 'default#image',
       iconImageHref: '../icons/map-marker.svg', // картинка иконки
       iconImageSize: [40, 40], // размер иконки
       iconImageOffset: [-32, -64], // позиция иконки
@@ -278,6 +279,7 @@ myMap.geoObjects
   myPlacemark2 = new ymaps.Placemark([59.950000, 30.241119], { // Создаем метку с такими координатами и суем в переменную
     balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
   }, {
+    iconLayout: 'default#image',
   iconImageHref: '../icons/map-marker.svg', // картинка иконки
   iconImageSize: [40, 40], // размер иконки
   iconImageOffset: [-32, -64], // позиция иконки
@@ -299,6 +301,7 @@ myMap.geoObjects
 myPlacemark3 = new ymaps.Placemark([59.951100, 30.311119], { // Создаем метку с такими координатами и суем в переменную
   balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
 }, {
+  iconLayout: 'default#image',
 iconImageHref: '../icons/map-marker.svg', // картинка иконки
 iconImageSize: [40, 40], // размер иконки
 iconImageOffset: [-32, -64], // позиция иконки
