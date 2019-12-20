@@ -262,12 +262,12 @@ myForm.addEventListener('submit', event => {
       iconImageSize: [40, 40], // размер иконки
       iconImageOffset: [-32, -64], // позиция иконки
         balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
-        balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
-       // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
-        balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
-        balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
-        balloonShadow: false,
-        balloonAutoPan: false // для фикса кривого выравнивания
+      //   balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
+      //  // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
+      //   balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
+      //   balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
+      //   balloonShadow: false,
+      //   balloonAutoPan: false // для фикса кривого выравнивания
         });
     /* тоже самое для других меток */
 /* Добавляем */
