@@ -1,0 +1,26 @@
+{
+  "name": "burgers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-cli": "^2.2.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sokolov45/burgers.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sokolov45/burgers/issues"
+  },
+  "homepage": "https://github.com/Sokolov45/burgers#readme"
+}

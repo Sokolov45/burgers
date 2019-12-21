@@ -41,6 +41,9 @@
   opacity: 100;
 }
 
-.dotnav__link--active:before {
+// .dotnav__link--active:before {
+// }
+.dotnav__item--active .dotnav__link::before {
   opacity: 100;
+
 }
