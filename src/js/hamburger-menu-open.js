@@ -1,6 +1,6 @@
 // гамбургер------------------------------------------------------------
 
-;(function() {
+(function() {
 
 var hamburger = document.getElementById('hamburger');
 var sectMenu = document.getElementById('hamburger-menu');

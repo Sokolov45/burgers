@@ -1,6 +1,6 @@
 // форма
 
-
+(function() {
 var myForm = document.querySelector('#myForm');
 var laodButton = document.querySelector('#loadButton');
 var overlayElement = document.querySelector(".overlay");
@@ -44,4 +44,4 @@ myForm.addEventListener('submit', event => {
     }
   });
   });
-
+})();

@@ -1,6 +1,6 @@
 // one page scroll--------------------------------------------------------------
 
-;(function() {
+(function() {
 
 
 const sections = $('.section');
@@ -97,14 +97,14 @@ $("[data-scroll-to]").on('click', e => {
 //     { passive: false }
 //   );
 
-  // $("body").swipe({
-  //   swipe: (event, direction) => {
-  //     let scrollDirecrion;
-  //     if (direction === "up") scrollDirecrion = "next";
-  //     if (direction === "down") scrollDirecrion = "prev";
-  //     scrollViewport(scrollDirecrion);
-  //   }
-  // });
+//   $("body").swipe({
+//     swipe: (event, direction) => {
+//       let scrollDirecrion;
+//       if (direction === "up") scrollDirecrion = "next";
+//       if (direction === "down") scrollDirecrion = "prev";
+//       scrollViewport(scrollDirecrion);
+//     }
+//   });
 // }
 
 })();

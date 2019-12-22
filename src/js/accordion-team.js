@@ -1,7 +1,7 @@
 
 
 // аккордеон для команды ----------------------------------------------------
-;(function() {
+(function() {
 var listTeam = document.getElementsByClassName("team-description__item");
 for (var i = 0; i < listTeam.length; i++) {
   listTeam[i].addEventListener("click", function() {

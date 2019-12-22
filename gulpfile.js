@@ -70,7 +70,7 @@ task('styles', () => {
     .pipe(concat('main.min.scss'))
     .pipe(sassGlob())
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulpif(env==='dev',
+    .pipe(gulpif(env==='prod',
         autoprefixer({
             // каскад отбивает пробелами название свойства от его префиксов
           cascade: false
@@ -96,7 +96,7 @@ task('scripts', () => {
             presets: ['@babel/env']
         })
     )  */
-    .pipe(gulpif(env==='prod', uglify()))
+    // .pipe(gulpif(env==='prod', uglify()))
     .pipe(sourcemaps.write(''))
     .pipe(dest('dist'))
     .pipe(reload({ stream: true}));
@@ -132,11 +132,11 @@ watch('./src/js/**/*.js', series('scripts'));
 // таск дефолт чтобы не путаться что за чем, он запускается при npm run gulp
 task('default',
  series(
-    //  "clean",
+     "clean",
      "copy:html",
      'styles',
      'scripts',
-    //  "icons", /* сгенерировать svg спрайт */
+     "icons", /* сгенерировать svg спрайт */
      'copy:fonts',
      'copy:video',
      'copy:png',

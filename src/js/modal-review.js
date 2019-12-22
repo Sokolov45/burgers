@@ -1,6 +1,6 @@
 // модалка у отзывов---------------------------------------------------------------------------
 
-;(function() {
+(function() {
 
 var modalReviewBtn = document.querySelectorAll(".review__btn");
 var modalReviewDiv = document.querySelector(".reviews__modal");

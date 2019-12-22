@@ -1,6 +1,6 @@
 
 // аккордеон для меню-----------------------------------------------------------
-;(function() {
+(function() {
   
 var listMenu = document.getElementsByClassName("menu__item");
 for (var i = 0; i < listMenu.length; i++) {
