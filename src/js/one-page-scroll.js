@@ -86,25 +86,27 @@ $("[data-scroll-to]").on('click', e => {
   performTransition(target);
 });
 
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
 
 
-// if (isMobile) {
-//   window.addEventListener(
-//     "touchmove",
-//     e => {
-//       e.preventDefault();
-//     },
-//     { passive: false }
-//   );
+if (isMobile) {
+  window.addEventListener(
+    "touchmove",
+    e => {
+      e.preventDefault();
+    },
+    { passive: false }
+  );
 
-//   $("body").swipe({
-//     swipe: (event, direction) => {
-//       let scrollDirecrion;
-//       if (direction === "up") scrollDirecrion = "next";
-//       if (direction === "down") scrollDirecrion = "prev";
-//       scrollViewport(scrollDirecrion);
-//     }
-//   });
-// }
+  $("body").swipe({
+    swipe: (event, direction) => {
+      let scrollDirecrion;
+      if (direction === "up") scrollDirecrion = "next";
+      if (direction === "down") scrollDirecrion = "prev";
+      scrollViewport(scrollDirecrion);
+    }
+  });
+}
 
 })();
