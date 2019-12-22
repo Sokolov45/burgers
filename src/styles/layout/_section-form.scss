@@ -4,7 +4,7 @@
     position: relative;
     background: url(images/jpg/bg_forms.jpg) center center no-repeat;
     background-size: cover;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     @include tablets {
         min-height: 0;
@@ -199,7 +199,7 @@
     outline: none;
     background: none;
     color: white;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
     font-size: 0.87rem;
     cursor: pointer;

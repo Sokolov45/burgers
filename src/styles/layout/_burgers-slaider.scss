@@ -5,12 +5,6 @@
   background: linear-gradient(to top, #f9b43b, #eb8c38, #f9b43b);
   position: relative;
   display: flex;
-  // @include tablets {
-  //   min-height: 0;
-  // }
-  // @include phones {
-  //   min-height: 0;
-  // }
 }
 
 .burgers-container {
@@ -57,20 +51,20 @@
 
 @keyframes ququ {
   0% {
-    opacity: 0;
-    transform: scale(.1);
+    opacity: 100;
+    transform: scale(0);
   }
   10% {
     opacity: 100;
-    transform: scale(.1);
-  }
-
-  20% {
     transform: scale(0.2);
   }
 
-  40% {
+  20% {
     transform: scale(0.4);
+  }
+
+  40% {
+    transform: scale(0.5);
   }
 
   60% {
@@ -90,7 +84,6 @@
 .burgers__pic-wrap {
   flex: 1;
   @include tablets {
-    // height: 30%;
     flex: 1;
     width: 50vw;
     display: flex;
@@ -98,7 +91,6 @@
     align-items: flex-end;
     }
     @include phones {
-      
       flex: 1;
       width: 70vw;
       display: flex;
@@ -107,9 +99,7 @@
       }
 
   img {
-      // max-width: 100%;
-      // object-fit: cover;
-      object-fit: scale-down;
+    object-fit: scale-down;
     height: 100%;
     width: 100%;
   }
@@ -186,7 +176,7 @@
   opacity: 100;
   display: block;
   left: 100%;
-  transition: 0.2s;
+  transition: opacity 0.41s;
 }
 .burgers__icon-kkal {
   position: absolute;
@@ -212,9 +202,7 @@
     left: 22%;
     font-family: 'gagalin';
     font-size: 0.87rem;
-    // transform: translate(-50%, 0);
   }
-
   @include tablets {
     left: 85%;
     bottom: 87%;
@@ -251,7 +239,7 @@
 
 .composition--visible {
   opacity: 100;
-  transition: 0.5s;
+  transition: 0.01s;
   left: 100%;
 }
 

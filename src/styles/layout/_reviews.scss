@@ -6,8 +6,8 @@
   width: 100%;
   background-color: #cfd8dc;
   background-size: cover;
-  font-family: 'Ubuntu';
-  font-weight: 300;
+ font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
   @include tablets {
     min-height: 0;
   }
@@ -67,8 +67,8 @@
   .reviews__modal-title {
     font-size: 1.7rem;
     color: rgb(0, 0, 0);
-    font-family: 'Ubuntu';
-    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
     @include phones {
       font-size: 1.4rem;
     }
