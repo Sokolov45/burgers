@@ -14,15 +14,38 @@
 
   }
   &--hamburger-menu {
+    @include flex;
+  font-size: 0.76rem;
+  font-weight: 600;
+  flex-wrap: nowrap;
+  // margin-right: 0.8rem;
+  font-family: 'Ubuntu';
+  font-weight: 500;
+  @include tablets {
+    font-size: 0.7rem;
+  }
+  @include tablets {
+    display: flex;
+
+  }
+
+
+
+
     display: flex;
     flex-direction: column;
     font-family: 'Ubuntu';
     font-weight: 500;
     @include tablets {
       font-size: 1.5rem;
-    .nav__item {
+      
+      .nav__item {
+        display: flex;
       list-style-type: none;
-
+    }
+    @include phones {
+      display: flex;
+  
     }
     }
 
