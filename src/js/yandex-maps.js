@@ -13,8 +13,8 @@
               zoom: 12, // тут масштаб
               controls: []
           });
-      // myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
-      // .add('zoomControl', { left: 5, top: 5 }) //Масштаб
+      myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
+      .add('zoomControl', { left: 5, top: 5 }) //Масштаб
       // .add('typeSelector') //Список типов карты
       // .add('mapTools', { left: 35, top: 5 }) // Стандартный набор кнопок
       // .add('searchControl'); // Строка с поиском

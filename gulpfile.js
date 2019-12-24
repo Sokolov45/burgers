@@ -132,11 +132,11 @@ watch('./src/js/**/*.js', series('scripts'));
 // таск дефолт чтобы не путаться что за чем, он запускается при npm run gulp
 task('default',
  series(
-     "clean",
+    //  "clean",
      "copy:html",
      'styles',
      'scripts',
-     "icons", /* сгенерировать svg спрайт */
+    //  "icons", /* сгенерировать svg спрайт */
      'copy:fonts',
      'copy:video',
      'copy:png',
