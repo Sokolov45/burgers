@@ -26,9 +26,14 @@ $(document).ready(function(){
   video.addEventListener('volumechange', updateVolumeControls);
   volumeBar.addEventListener('click', setCurrentVolume);
   
+  pause = document.querySelector(".video__icon-pause");
+  panelPlay = document.querySelector(".video__playpause-btn");
+  
 
   function clickPlayButton(){
     $(".video__player-btn").toggleClass("video__player-btn--active");
+    $(".video__icon--on").toggleClass("video__player-btn--active");
+    $(".video__icon-pause").toggleClass("video__icon-pause--active");
     
     video.muted = false;
     volumeCurrent.style.width = `100%`;

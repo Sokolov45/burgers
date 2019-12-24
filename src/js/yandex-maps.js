@@ -13,11 +13,12 @@
               zoom: 12, // тут масштаб
               controls: []
           });
-      myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
+      // myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
       // .add('zoomControl', { left: 5, top: 5 }) //Масштаб
       // .add('typeSelector') //Список типов карты
       // .add('mapTools', { left: 35, top: 5 }) // Стандартный набор кнопок
       // .add('searchControl'); // Строка с поиском
+      myMap.behaviors.disable('scrollZoom'); 
     /* Создаем кастомные метки */
     var myPlacemark0 = new ymaps.Placemark([59.90999, 30.358478], { // Создаем метку с такими координатами и суем в переменную
             // balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
