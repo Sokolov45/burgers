@@ -1,7 +1,48 @@
+// ==========================слайдер =======================================================
+
+var slides = document.getElementsByClassName("slide");
+var currentSlide = 0;
+function show(currentSlide) {
+  for (var i=0; i < slides.length; i++){
+    slides[i].className = 'slide';
+  }
+  slides[currentSlide].className = 'slide visible';
+};
+
+function nextSlide() {
+  if (currentSlide == 4) {
+    currentSlide = 0;
+    show(currentSlide);
+    return currentSlide;
+  } else{
+    ++currentSlide;
+    show(currentSlide);
+  }
+}
+
+function prevSlide() {
+  if (currentSlide == 0) {
+    currentSlide = slides.length - 1;
+    show(currentSlide);
+    return currentSlide;
+  }else{
+    --currentSlide;
+    show(currentSlide);
+  }
+}
+
+show(currentSlide);
+
+
+var t = document.getElementById('test');
+t.addEventListener('click', function(e){
+  e.preventDefault();
+  nextSlide();
+});
+
 
 // аккордеон для меню-----------------------------------------------------------
-(function() {
-  
+
 var listMenu = document.getElementsByClassName("menu__item");
 for (var i = 0; i < listMenu.length; i++) {
   listMenu[i].addEventListener("click", function(){
@@ -26,10 +67,8 @@ sectionMenu.addEventListener("click", function(e) {
 });
 
 
-})();;
-
 // аккордеон для команды ----------------------------------------------------
-(function() {
+
 var listTeam = document.getElementsByClassName("team-description__item");
 for (var i = 0; i < listTeam.length; i++) {
   listTeam[i].addEventListener("click", function() {
@@ -54,23 +93,32 @@ for (var i = 0; i < listTeam.length; i++) {
     };
   });
 
-
-})();;
 // всплывашка состав бургера ----------------------------------------------------
-(function() {
+
 var iconBurg = document.getElementById('icon-burger');
 var compBurg = document.getElementById('composition');
 iconBurg.addEventListener("click", function(){
     compBurg.classList.toggle("composition--visible");
 });
 
+// гамбургер------------------------------------------------------------
 
-})();
+var hamburger = document.getElementById('hamburger');
+var sectMenu = document.getElementById('hamburger-menu');
+var hamburgerOpen = document.getElementById('hamburger-open');
+var html = document.querySelector('html');
 
-  
-;// форма
+hamburger.addEventListener("click", function(){
+    sectMenu.style.top = 0;
+    html.style.overflowY = 'hidden';
+});
+hamburgerOpen.addEventListener("click", function(){
+    sectMenu.style.top = 100 + 'rem';
+    html.style.overflowY = 'auto';
+});
 
-(function() {
+
+// форма
 var myForm = document.querySelector('#myForm');
 var laodButton = document.querySelector('#loadButton');
 var overlayElement = document.querySelector(".overlay");
@@ -114,35 +162,30 @@ myForm.addEventListener('submit', event => {
     }
   });
   });
-})();
-;// гамбургер------------------------------------------------------------
 
-(function() {
 
-var hamburger = document.getElementById('hamburger');
-var sectMenu = document.getElementById('hamburger-menu');
-var hamburgerOpen = document.getElementById('hamburger-open');
-var html = document.querySelector('html');
+  // модалка у отзывов---------------------------------------------------------------------------
+  var modalReviewBtn = document.querySelectorAll(".review__btn");
+  var modalReviewDiv = document.querySelector(".reviews__modal");
+  var modalReviewBtn480 = document.querySelectorAll(".review__btn-480");
+  for (let i = 0; i < modalReviewBtn.length; i++) {
+        
+    modalReviewBtn[i].addEventListener("click", function(e) {
+      e.preventDefault();
+      modalReviewDiv.style.display = "flex";
+      var closeReview = document.querySelector(".revies-close");
+      closeReview.addEventListener("click", function(e) {
+        e.preventDefault();
+        modalReviewDiv.style.display = "none";
+    });
+    modalReviewDiv.addEventListener("click", function(e) {
+        if (e.target === modalReviewDiv) {
+          closeElement.click();
+        }
+      });
+  });
 
-hamburger.addEventListener("click", function(){
-    sectMenu.style.top = 0;
-    html.style.overflowY = 'hidden';
-});
-hamburgerOpen.addEventListener("click", function(){
-    sectMenu.style.top = 100 + 'rem';
-    html.style.overflowY = 'auto';
-});
-
-})();;// модалка у отзывов---------------------------------------------------------------------------
-
-(function() {
-
-var modalReviewBtn = document.querySelectorAll(".review__btn");
-var modalReviewDiv = document.querySelector(".reviews__modal");
-var modalReviewBtn480 = document.querySelectorAll(".review__btn-480");
-for (let i = 0; i < modalReviewBtn.length; i++) {
-      
-  modalReviewBtn[i].addEventListener("click", function(e) {
+  modalReviewBtn480[i].addEventListener("click", function(e) {
     e.preventDefault();
     modalReviewDiv.style.display = "flex";
     var closeReview = document.querySelector(".revies-close");
@@ -157,150 +200,149 @@ for (let i = 0; i < modalReviewBtn.length; i++) {
     });
 });
 
-modalReviewBtn480[i].addEventListener("click", function(e) {
-  e.preventDefault();
-  modalReviewDiv.style.display = "flex";
-  var closeReview = document.querySelector(".revies-close");
-  closeReview.addEventListener("click", function(e) {
-    e.preventDefault();
-    modalReviewDiv.style.display = "none";
-});
-modalReviewDiv.addEventListener("click", function(e) {
-    if (e.target === modalReviewDiv) {
-      closeElement.click();
-    }
-  });
-});
-
 };
 
-})();;(function() {
-
-var fullMenuLink = document.getElementsByClassName('full-menu-link');
-var hamburgerMenu = document.getElementById('hamburger-menu');
-
-for (let index = 0; index < fullMenuLink.length; index++) {
-
-    fullMenuLink[index].addEventListener('click', () => {
-        hamburgerMenu.style.top = 100 +'rem';
-    })
-    
-}
-
-})();;// one page scroll--------------------------------------------------------------
-
-(function() {
+// яндекс карты--------------------------------------------------------------------------
+//  var myMap;
+//   ymaps.ready(init); // Ожидание загрузки API с сервера Яндекса
+//   function init () {
+//     myMap = new ymaps.Map("map", {
+//       center: [55.76, 37.64], // Координаты центра карты
+//       zoom: 10 // Zoom
+//     });
+//   }
 
 
-const sections = $('.section');
-const display = $('.maincontent');
-let inScroll = false;
 
-const performTransition = sectionEq => {
-  if(inScroll === false) {
-    inScroll = true;
-    const position = sectionEq * -100;
-    // eq - метод в jquery
-    sections
-    .eq(sectionEq)
-    .addClass('active')
-    .siblings()
-    .removeClass('active');
-    
-    display.css({
-      //тут ковычка вот нихуя не одинарная ---- внимание!!!!!!!!!!
-    transform: `translateY(${position}%)`
+
+
+  ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
+  var myMap; // заглобалим переменную карты чтобы можно было ею вертеть из любого места
+  function init () { // функция - собиралка карты и фигни
+      myMap = new ymaps.Map("map", { // создаем и присваиваем глобальной переменной карту и суем её в див с id="map"
+              center: [59.90999, 30.358478], // ну тут центр
+              behaviors: ['default', 'scrollZoom'], // скроллинг колесом
+              zoom: 12, // тут масштаб
+              controls: []
+          });
+      myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
+      // .add('zoomControl', { left: 5, top: 5 }) //Масштаб
+      // .add('typeSelector') //Список типов карты
+      // .add('mapTools', { left: 35, top: 5 }) // Стандартный набор кнопок
+      // .add('searchControl'); // Строка с поиском
+    /* Создаем кастомные метки */
+    var myPlacemark0 = new ymaps.Placemark([59.90999, 30.358478], { // Создаем метку с такими координатами и суем в переменную
+            // balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
+          }, {
+          iconLayout: 'default#image',
+          iconImageHref: './icons/map-marker.svg', // картинка иконки
+          iconImageSize: [40, 40], // размер иконки
+          iconImageOffset: [-32, -64], // позиция иконки
+            balloonContentSize: [270, 99],
+            layout: 'default#image' // размер нашего кастомного балуна в пикселях
+          //   balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
+          //  // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
+          //   balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
+          //   balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
+          //   balloonShadow: false,
+          //   balloonAutoPan: false // для фикса кривого выравнивания
+            });
+        /* тоже самое для других меток */
+    /* Добавляем */
+    myMap.geoObjects
+      .add(myPlacemark0);
+
+
+      // 2 метка--------------------------------------------------------------------------------------------------------------------
+      myPlacemark1 = new ymaps.Placemark([59.88999, 30.358478], { // Создаем метку с такими координатами и суем в переменную
+        balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
+      }, {
+        iconLayout: 'default#image',
+      iconImageHref: '../icons/map-marker.svg', // картинка иконки
+      iconImageSize: [40, 40], // размер иконки
+      iconImageOffset: [-32, -64], // позиция иконки
+        balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
+      //   balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
+      //  // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
+      //   balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
+      //   balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
+      //   balloonShadow: false,
+      //   balloonAutoPan: false // для фикса кривого выравнивания
+        });
+    /* тоже самое для других меток */
+/* Добавляем */
+myMap.geoObjects
+  .add(myPlacemark1);
+
+
+  // 3 метка------------------------------------------------------------------------------------------------
+  myPlacemark2 = new ymaps.Placemark([59.950000, 30.241119], { // Создаем метку с такими координатами и суем в переменную
+    balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
+  }, {
+    iconLayout: 'default#image',
+  iconImageHref: './icons/map-marker.svg', // картинка иконки
+  iconImageSize: [40, 40], // размер иконки
+  iconImageOffset: [-32, -64], // позиция иконки
+    balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
+    balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
+   // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
+    balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
+    balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
+    balloonShadow: false,
+    balloonAutoPan: false // для фикса кривого выравнивания
     });
-
-    setTimeout(() => {
-      inScroll = false;
-    }, 800);
-
-    $('.dotnav__item')
-    .eq(sectionEq)
-    .addClass('dotnav__item--active')
-    .siblings()
-    .removeClass('dotnav__item--active');
-
-  }
-};
-
-const scrollToSection = direction => {
-  const activeSection = sections.filter('.active');
-  const nextSection = activeSection.next();
-  const prevSection = activeSection.prev();
-
-  if (direction === "next" && nextSection.length) {
-    performTransition(nextSection.index());
-  }
-  if (direction === "prev" && prevSection.length) {
-    performTransition(prevSection.index());
-  }
-
-}
-
-$(window).on("wheel", e => {
-  const deltaY = e.originalEvent.deltaY;
-  console.log("wheel");
-  if (deltaY > 0) {
-    // console.log('prev');
-    scrollToSection('next');
-  }
-  if (deltaY < 0) {
-    scrollToSection('prev');
-  }
-});
-
-$(window).on("keydown", e => {
-  const tagName = e.target.tagName.toLowerCase();
-  
-  if(tagName !== 'input' && tagName !== 'textarea'){
-    switch(e.keyCode) {
-      case 38:
-        scrollToSection('prev');
-        break;
-      case 40:
-        scrollToSection('next');
-        break;
-    }
-  }
-});
+/* тоже самое для других меток */
+/* Добавляем */
+myMap.geoObjects
+.add(myPlacemark2);
 
 
-$("[data-scroll-to]").on('click', e => {
-  e.preventDefault();
-  const $this = $(e.currentTarget);
-  const target = $this.attr("data-scroll-to");
+// 4 метка ------------------------------------------------------------------------------------------------------------
+myPlacemark3 = new ymaps.Placemark([59.951100, 30.311119], { // Создаем метку с такими координатами и суем в переменную
+  balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
+}, {
+  iconLayout: 'default#image',
+iconImageHref: './icons/map-marker.svg', // картинка иконки
+iconImageSize: [40, 40], // размер иконки
+iconImageOffset: [-32, -64], // позиция иконки
+  balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
+  balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
+ // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
+  balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
+  balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
+  balloonShadow: false,
+  balloonAutoPan: false // для фикса кривого выравнивания
+  });
+/* тоже самое для других меток */
+/* Добавляем */
+myMap.geoObjects
+.add(myPlacemark3);
 
-  performTransition(target);
-});
 
-const mobileDetect = new MobileDetect(window.navigator.userAgent);
-const isMobile = mobileDetect.mobile();
-
-
-if (isMobile) {
-  window.addEventListener(
-    "touchmove",
-    e => {
-      e.preventDefault();
-    },
-    { passive: false }
-  );
-
-  $("body").swipe({
-    swipe: (event, direction) => {
-      let scrollDirecrion;
-      if (direction === "up") scrollDirecrion = "next";
-      if (direction === "down") scrollDirecrion = "prev";
-      scrollViewport(scrollDirecrion);
-    }
+    /* Фикс кривого выравнивания кастомных балунов */
+myMap.geoObjects.events.add([
+      'balloonopen'
+  ], function (e) {
+      var geoObject = e.get('target');
+      myMap.panTo(geoObject.geometry.getCoordinates(), {
+                                  delay: 0
+                              });
   });
 }
+// ymaps.ready(init);
+// one page scroll--------------------------------------------------------------
 
-})();;// / плеер------------------------------------------------------------------------
-;(function() {
 
+
+
+
+
+
+
+
+
+
+// плеер------------------------------------------------------------------------
 $(document).ready(function(){
   
   let interval;
@@ -334,7 +376,7 @@ $(document).ready(function(){
     volumeCurrent.style.width = `100%`;
 
     if(video.paused){
-      // alert('werw');
+
       video.play();
       interval = setInterval(() => {
           const percents = video.currentTime / video.duration * 100;
@@ -389,180 +431,3 @@ $(document).ready(function(){
 
 });
 
-})();;// ==========================слайдер =======================================================
-
-;(function() {
-
-
-var slides = document.getElementsByClassName("slide");
-var currentSlide = 0;
-function show(currentSlide) {
-  for (var i=0; i < slides.length; i++){
-    slides[i].className = 'slide';
-  }
-  slides[currentSlide].className = 'slide visible';
-};
-
-function nextSlide() {
-  if (currentSlide == 4) {
-    currentSlide = 0;
-    show(currentSlide);
-    return currentSlide;
-  } else{
-    ++currentSlide;
-    show(currentSlide);
-  }
-}
-
-function prevSlide() {
-  if (currentSlide == 0) {
-    currentSlide = slides.length - 1;
-    show(currentSlide);
-    return currentSlide;
-  }else{
-    --currentSlide;
-    show(currentSlide);
-  }
-}
-
-show(currentSlide);
-
-
-var nextBurger = document.getElementById('nextBurger');
-var prevBurger = document.getElementById('prevBurger');
-nextBurger.addEventListener('click', function(e){
-  e.preventDefault();
-  nextSlide();
-});
-prevBurger.addEventListener('click', function(e){
-  e.preventDefault();
-  prevSlide();
-});
-
-})();;// яндекс карты--------------------------------------------------------------------------
-
-
-(function() {
-
-
-  ymaps.ready(init); // карта соберется после загрузки скрипта и элементов
-  var myMap; // заглобалим переменную карты чтобы можно было ею вертеть из любого места
-  function init () { // функция - собиралка карты и фигни
-      myMap = new ymaps.Map("map", { // создаем и присваиваем глобальной переменной карту и суем её в див с id="map"
-              center: [59.90999, 30.358478], // ну тут центр
-              behaviors: ['default', 'scrollZoom'], // скроллинг колесом
-              zoom: 12, // тут масштаб
-              controls: []
-          });
-      myMap.controls // добавим всяких кнопок, в скобках их позиции в блоке
-      // .add('zoomControl', { left: 5, top: 5 }) //Масштаб
-      // .add('typeSelector') //Список типов карты
-      // .add('mapTools', { left: 35, top: 5 }) // Стандартный набор кнопок
-      // .add('searchControl'); // Строка с поиском
-    /* Создаем кастомные метки */
-    var myPlacemark0 = new ymaps.Placemark([59.90999, 30.358478], { // Создаем метку с такими координатами и суем в переменную
-            // balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
-          }, {
-          iconLayout: 'default#image',
-          iconImageHref: 'images/icons/map-marker.svg', // картинка иконки
-          iconImageSize: [40, 40], // размер иконки
-          iconImageOffset: [-32, -64], // позиция иконки
-            balloonContentSize: [270, 99],
-            layout: 'default#image' // размер нашего кастомного балуна в пикселях
-          //   balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
-          //  // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
-          //   balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
-          //   balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
-          //   balloonShadow: false,
-          //   balloonAutoPan: false // для фикса кривого выравнивания
-            });
-        /* тоже самое для других меток */
-    /* Добавляем */
-    myMap.geoObjects
-      .add(myPlacemark0);
-
-
-      // 2 метка--------------------------------------------------------------------------------------------------------------------
-      myPlacemark1 = new ymaps.Placemark([59.88999, 30.358478], { // Создаем метку с такими координатами и суем в переменную
-        balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
-      }, {
-        iconLayout: 'default#image',
-      iconImageHref: 'images/icons/map-marker.svg', // картинка иконки
-      iconImageSize: [40, 40], // размер иконки
-      iconImageOffset: [-32, -64], // позиция иконки
-        balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
-      //   balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
-      //  // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
-      //   balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
-      //   balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
-      //   balloonShadow: false,
-      //   balloonAutoPan: false // для фикса кривого выравнивания
-        });
-    /* тоже самое для других меток */
-/* Добавляем */
-myMap.geoObjects
-  .add(myPlacemark1);
-
-
-  // 3 метка------------------------------------------------------------------------------------------------
-  myPlacemark2 = new ymaps.Placemark([59.950000, 30.241119], { // Создаем метку с такими координатами и суем в переменную
-    balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
-  }, {
-    iconLayout: 'default#image',
-  iconImageHref: 'images/icons/map-marker.svg', // картинка иконки
-  iconImageSize: [40, 40], // размер иконки
-  iconImageOffset: [-32, -64], // позиция иконки
-    balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
-    balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
-   // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
-    balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
-    balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
-    balloonShadow: false,
-    balloonAutoPan: false // для фикса кривого выравнивания
-    });
-/* тоже самое для других меток */
-/* Добавляем */
-myMap.geoObjects
-.add(myPlacemark2);
-
-
-// 4 метка ------------------------------------------------------------------------------------------------------------
-myPlacemark3 = new ymaps.Placemark([59.951100, 30.311119], { // Создаем метку с такими координатами и суем в переменную
-  balloonContent: '<div class="ballon"><img src="img/hh.jpg" class="ll"/><span>Заголовок метки 1</span><br/><p>Немного инфы о том, о сем. Лорем ипсум чото там.</p><img class="close" onclick="myMap.balloon.close()" src="img/close.png"/></div>' // сдесь содержимое балуна в формате html, все стили в css
-}, {
-  iconLayout: 'default#image',
-iconImageHref: 'images/icons/map-marker.svg', // картинка иконки
-iconImageSize: [40, 40], // размер иконки
-iconImageOffset: [-32, -64], // позиция иконки
-  balloonContentSize: [270, 99], // размер нашего кастомного балуна в пикселях
-  balloonLayout: "default#imageWithContent", // указываем что содержимое балуна кастомная херь
- // balloonImageHref: 'img/ballon1.png', // Картинка заднего фона балуна
-  balloonImageOffset: [-65, -89], // смещание балуна, надо подогнать под стрелочку
-  balloonImageSize: [260, 89], // размер картинки-бэкграунда балуна
-  balloonShadow: false,
-  balloonAutoPan: false // для фикса кривого выравнивания
-  });
-/* тоже самое для других меток */
-/* Добавляем */
-myMap.geoObjects
-.add(myPlacemark3);
-
-
-    /* Фикс кривого выравнивания кастомных балунов */
-myMap.geoObjects.events.add([
-      'balloonopen'
-  ], function (e) {
-      var geoObject = e.get('target');
-      myMap.panTo(geoObject.geometry.getCoordinates(), {
-                                  delay: 0
-                              });
-  });
-}
-
-
-
-
-
-
-})();
-//# sourceMappingURL=main.min.js.map

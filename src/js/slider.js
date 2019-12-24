@@ -45,7 +45,7 @@ nextBurger.addEventListener('click', function(e){
 });
 prevBurger.addEventListener('click', function(e){
   e.preventDefault();
-  nextSlide();
+  prevSlide();
 });
 
 })();
